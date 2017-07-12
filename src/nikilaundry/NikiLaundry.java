@@ -5,6 +5,8 @@
  */
 package nikilaundry;
 
+import view.LoginView;
+
 /**
  *
  * @author Eling Supriyatno
@@ -16,6 +18,8 @@ public class NikiLaundry {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        LoginView loginView = new LoginView();
+        loginView.show();
     }
     
 }
