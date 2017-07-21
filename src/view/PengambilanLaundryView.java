@@ -1,20 +1,21 @@
+package view;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package view;
 
 /**
  *
  * @author Eling Supriyatno
  */
-public class PenyerahanLaundryView extends javax.swing.JInternalFrame {
+public class PengambilanLaundryView extends javax.swing.JInternalFrame {
 
     /**
-     * Creates new form PenyerahanLaundryView
+     * Creates new form PengambilanLaundryView
      */
-    public PenyerahanLaundryView() {
+    public PengambilanLaundryView() {
         initComponents();
     }
 
@@ -29,7 +30,7 @@ public class PenyerahanLaundryView extends javax.swing.JInternalFrame {
 
         jDesktopPane1 = new javax.swing.JDesktopPane();
 
-        setTitle("Penyerahan Laundry");
+        setTitle("Pengambilan Laundry");
 
         javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
         jDesktopPane1.setLayout(jDesktopPane1Layout);

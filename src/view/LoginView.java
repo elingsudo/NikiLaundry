@@ -5,8 +5,12 @@
  */
 package view;
 
+import java.awt.Component;
+import java.awt.Container;
 import java.util.Timer;
 import java.util.TimerTask;
+import javax.swing.AbstractButton;
+import javax.swing.JRootPane;
 
 /**
  *
@@ -45,7 +49,6 @@ public class LoginView extends javax.swing.JFrame {
         loading = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new java.awt.CardLayout());
 
         PanelBg.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -193,7 +196,16 @@ public class LoginView extends javax.swing.JFrame {
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        getContentPane().add(PanelBg, "card2");
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(PanelBg, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(PanelBg, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -224,11 +236,18 @@ public class LoginView extends javax.swing.JFrame {
         new Timer().schedule(new TimerTask() {
             @Override
             public void run() {
-                MenuUtamaView menuUtama = new MenuUtamaView();
-                menuUtama.setExtendedState(MAXIMIZED_BOTH);
-                menuUtama.show();
+//                MenuUtamaView menuUtama = new MenuUtamaView();
+//                menuUtama.setExtendedState(MAXIMIZED_BOTH);
+//                menuUtama.show();
+
+                NikiLaundryView nikiLaundryView = new NikiLaundryView();
+                nikiLaundryView.setExtendedState(NikiLaundryView.MAXIMIZED_VERT);
+                //nikiLaundryView.getRootPane().setWindowDecorationStyle(JRootPane.NONE);
+                nikiLaundryView.setVisible(true);
+                nikiLaundryView.show();
                 
-                dispose();
+                
+                //dispose();
             }
         }, 1000 * 2);
     }//GEN-LAST:event_btnLoginActionPerformed

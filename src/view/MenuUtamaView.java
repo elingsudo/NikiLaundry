@@ -30,6 +30,7 @@ public class MenuUtamaView extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jDesktopPane1 = new javax.swing.JDesktopPane();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem3 = new javax.swing.JMenuItem();
@@ -42,7 +43,19 @@ public class MenuUtamaView extends javax.swing.JFrame {
         jMenu3 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Menu Utama");
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+
+        javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
+        jDesktopPane1.setLayout(jDesktopPane1Layout);
+        jDesktopPane1Layout.setHorizontalGroup(
+            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jDesktopPane1Layout.setVerticalGroup(
+            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 277, Short.MAX_VALUE)
+        );
 
         jMenu1.setText("File");
 
@@ -69,6 +82,11 @@ public class MenuUtamaView extends javax.swing.JFrame {
         jMenu4.add(menuPenyerahanLaundry);
 
         menuPengambilanLaundry.setText("Pengambilan Laundry");
+        menuPengambilanLaundry.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuPengambilanLaundryActionPerformed(evt);
+            }
+        });
         jMenu4.add(menuPengambilanLaundry);
 
         jMenuBar1.add(jMenu4);
@@ -85,11 +103,11 @@ public class MenuUtamaView extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jDesktopPane1)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 277, Short.MAX_VALUE)
+            .addComponent(jDesktopPane1)
         );
 
         pack();
@@ -98,12 +116,20 @@ public class MenuUtamaView extends javax.swing.JFrame {
     private void menuPenyerahanLaundryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuPenyerahanLaundryActionPerformed
         // TODO add your handling code here:
         PenyerahanLaundryView penyerahanLaundryView = new PenyerahanLaundryView();
+        jDesktopPane1.add(penyerahanLaundryView);
         Dimension screen = this.getSize();
         Dimension frame = penyerahanLaundryView.getSize();
-        penyerahanLaundryView.setLocation ((screen.width - frame.width) / 2, (screen.height - frame.height) / 2);
+        //penyerahanLaundryView.setLocation ((screen.width - frame.width) / 2, (screen.height - frame.height) / 2);
         penyerahanLaundryView.setVisible(true);
-        penyerahanLaundryView.show();
+        //penyerahanLaundryView.show();
     }//GEN-LAST:event_menuPenyerahanLaundryActionPerformed
+
+    private void menuPengambilanLaundryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuPengambilanLaundryActionPerformed
+        // TODO add your handling code here:
+        PengambilanLaundryView pengambilanLaundryView = new PengambilanLaundryView();
+        jDesktopPane1.add(pengambilanLaundryView);
+        pengambilanLaundryView.setVisible(true);
+    }//GEN-LAST:event_menuPengambilanLaundryActionPerformed
 
     /**
      * @param args the command line arguments
@@ -142,6 +168,7 @@ public class MenuUtamaView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
