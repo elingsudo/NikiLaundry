@@ -8,6 +8,7 @@ package nikilaundry;
 import java.awt.Dimension;
 import jdk.nashorn.internal.codegen.CompilerConstants;
 import view.LoginView;
+import view.NikiLaundryView;
 
 /**
  *
@@ -20,10 +21,16 @@ public class NikiLaundry {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        LoginView loginView = new LoginView();
-        Dimension frame = loginView.getSize();
-        loginView.setLocation (frame.width / 2, frame.height / 2);
-        loginView.show();
+//        LoginView loginView = new LoginView();
+//        Dimension frame = loginView.getSize();
+//        loginView.setLocation (frame.width / 2, frame.height / 2);
+//        loginView.show();
+        
+        NikiLaundryView nikiLaundryView = new NikiLaundryView();
+        Dimension frame = nikiLaundryView.getSize();
+        nikiLaundryView.setLocation(frame.width /2, frame.height/2);
+        
+        nikiLaundryView.show();
     }
     
 }

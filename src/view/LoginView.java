@@ -49,6 +49,7 @@ public class LoginView extends javax.swing.JFrame {
         loading = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
 
         PanelBg.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -247,7 +248,7 @@ public class LoginView extends javax.swing.JFrame {
                 nikiLaundryView.show();
                 
                 
-                //dispose();
+                dispose();
             }
         }, 1000 * 2);
     }//GEN-LAST:event_btnLoginActionPerformed
