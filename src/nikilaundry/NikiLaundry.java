@@ -16,6 +16,7 @@
  */
 package nikilaundry;
 
+import util.HibernateUtil;
 import view.NikiLaundryView;
 
 /**
@@ -33,6 +34,8 @@ public class NikiLaundry {
     //loginView.setLocation (frame.width / 2, frame.height / 2);
     //loginView.show();
 
+    HibernateUtil.constructConfiguration();
+    
     NikiLaundryView nikiLaundryView = new NikiLaundryView();
     nikiLaundryView.setLocationRelativeTo(null);
     nikiLaundryView.setVisible(true);
