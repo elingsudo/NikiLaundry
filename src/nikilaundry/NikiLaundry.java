@@ -17,6 +17,7 @@
 package nikilaundry;
 
 import util.HibernateUtil;
+import util.InitialDB;
 import view.NikiLaundryView;
 
 /**
@@ -34,8 +35,12 @@ public class NikiLaundry {
     //loginView.setLocation (frame.width / 2, frame.height / 2);
     //loginView.show();
 
+    // construct hibernate session factory
     HibernateUtil.constructConfiguration();
-    
+
+    // inital database
+    InitialDB.init();
+
     NikiLaundryView nikiLaundryView = new NikiLaundryView();
     nikiLaundryView.setLocationRelativeTo(null);
     nikiLaundryView.setVisible(true);

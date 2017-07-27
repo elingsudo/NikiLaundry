@@ -41,6 +41,7 @@ Contributor(s):
 -->
 <hibernate-configuration>
   <session-factory>
+
     <!-- Hibernate Core Configuration -->
     <property name="hibernate.dialect">${hibernate.dialect}</property>
     <property name="hibernate.connection.driver_class">${hibernate.connection.driver_class}</property>
@@ -60,7 +61,11 @@ Contributor(s):
 
     <!-- Hibernate Core Miscellaneous Configuration -->
     <property name="hibernate.show_sql">true</property>
-    <property name="hibernate.hbm2ddl.auto">update</property>
+    <property name="hibernate.hbm2ddl.auto">create</property>
     <property name="hibernate.default_batch_fetch_size">20</property>
+
+    <!-- Mapping Class -->
+    <mapping class="model.Member"/>
+
   </session-factory>
 </hibernate-configuration>
