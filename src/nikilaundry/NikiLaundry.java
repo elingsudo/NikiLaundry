@@ -27,10 +27,8 @@ public class NikiLaundry {
 //        loginView.show();
         
         NikiLaundryView nikiLaundryView = new NikiLaundryView();
-        Dimension frame = nikiLaundryView.getSize();
-        nikiLaundryView.setLocation(frame.width /2, frame.height/2);
-        
-        nikiLaundryView.show();
+        nikiLaundryView.setLocationRelativeTo(null);
+        nikiLaundryView.setVisible(true);
     }
     
 }
