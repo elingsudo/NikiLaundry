@@ -16,6 +16,10 @@
  */
 package nikilaundry;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
 import util.HibernateUtil;
 import util.InitialDB;
 import view.NikiLaundryView;
@@ -30,20 +34,29 @@ public class NikiLaundry {
    * @param args the command line arguments
    */
   public static void main(String[] args) {
-    //LoginView loginView = new LoginView();
-    //Dimension frame = loginView.getSize();
-    //loginView.setLocation (frame.width / 2, frame.height / 2);
-    //loginView.show();
+    try {
+      //LoginView loginView = new LoginView();
+      //Dimension frame = loginView.getSize();
+      //loginView.setLocation (frame.width / 2, frame.height / 2);
+      //loginView.show();
 
-    // construct hibernate session factory
-    HibernateUtil.constructConfiguration();
+      // construct hibernate session factory
+      HibernateUtil.constructConfiguration();
 
-    // inital database
-    InitialDB.init();
+      // inital database
+      InitialDB.init();
 
-    NikiLaundryView nikiLaundryView = new NikiLaundryView();
-    nikiLaundryView.setLocationRelativeTo(null);
-    nikiLaundryView.setVisible(true);
+      // set default look and feel
+      UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+
+      NikiLaundryView nikiLaundryView = new NikiLaundryView();
+      nikiLaundryView.setLocationRelativeTo(null);
+      nikiLaundryView.setVisible(true);
+
+    } catch (ClassNotFoundException | InstantiationException
+            | IllegalAccessException | UnsupportedLookAndFeelException ex) {
+      Logger.getLogger(NikiLaundry.class.getName()).log(Level.SEVERE, null, ex);
+    }
   }
 
 }

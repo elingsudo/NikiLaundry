@@ -26,7 +26,7 @@ import service.MemberService;
  */
 public class InitialDB {
 
-  private MemberService service;
+  private final MemberService service;
 
   public InitialDB() {
     service = new MemberImplementation();
