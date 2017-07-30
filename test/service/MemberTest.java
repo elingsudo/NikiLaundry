@@ -14,37 +14,33 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package implementation;
+package service;
 
-import java.util.ArrayList;
-import java.util.List;
+import implementation.MemberImplementation;
 import model.Member;
-import service.MemberService;
+import org.junit.Test;
 
 /**
  *
  * @author Me
  */
-public class MemberImplementation implements MemberService {
+public class MemberTest {
 
-  @Override
-  public String save(Member member) {
-    return member.toString();
+  private final MemberService memberService;
+
+  public MemberTest() {
+    memberService = new MemberImplementation();
   }
 
-  @Override
-  public String update(Member member) {
-    return member.toString();
-  }
-
-  @Override
-  public String delete(Member member) {
-    return member.toString();
-  }
-
-  @Override
-  public List<Member> findAll() {
-    return new ArrayList<>();
+  @Test
+  public void insertMemberTest() {
+    Member member = new Member();
+    member.setNama("NAMA");
+    member.setAlamat("ALAMAT");
+    member.setNoHp("089000000");
+    member.setPassword("PASSWORD");
+    member.setUsername("USERNAME");
+    System.out.println(memberService.save(member));
   }
 
 }
