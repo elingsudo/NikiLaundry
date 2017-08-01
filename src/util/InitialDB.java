@@ -16,7 +16,7 @@
  */
 package util;
 
-import implementation.PenggunarImplementation;
+import implementation.PenggunaImplementation;
 import model.Pengguna;
 import service.PenggunaService;
 
@@ -29,9 +29,9 @@ public class InitialDB {
   private final PenggunaService service;
 
   public InitialDB() {
-    service = new PenggunarImplementation();
+    service = new PenggunaImplementation(Pengguna.class);
   }
-  
+
   public static void init() {
     InitialDB initialDB = new InitialDB();
     initialDB.insertMember();
@@ -39,6 +39,7 @@ public class InitialDB {
 
   private void insertMember() {
     Pengguna pengguna = new Pengguna();
+    pengguna.setId(1);
     pengguna.setUsername("username");
     pengguna.setPassword("password");
     pengguna.setNama("nama");

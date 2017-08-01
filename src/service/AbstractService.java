@@ -30,6 +30,8 @@ public interface AbstractService<T> {
   String update(T t);
 
   String delete(T t);
+  
+  T findOneById(int id);
 
   List<T> findAll();
 

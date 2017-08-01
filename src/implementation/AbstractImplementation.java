@@ -18,33 +18,109 @@ package implementation;
 
 import java.util.ArrayList;
 import java.util.List;
+import org.hibernate.HibernateException;
+import org.hibernate.Session;
 import service.AbstractService;
+import util.HibernateUtil;
 
 /**
  *
  * @author Me
  * @param <T>
  */
-public class AbstractImplementation<T> implements AbstractService<T> {
+public class AbstractImplementation<T> extends HibernateUtil implements AbstractService<T> {
+
+  protected Class<T> model;
+
+  public AbstractImplementation(Class<T> model) {
+    this.model = model;
+  }
 
   @Override
   public String save(T t) {
+    Session session = HibernateUtil.getSessionFactory().openSession();
+    try {
+      session.beginTransaction();
+      session.save(t);
+      session.getTransaction().commit();
+    } catch (Exception e) {
+      session.getTransaction().rollback();
+      System.out.println(e.getMessage());
+      throw e;
+    } finally {
+      session.close();
+    }
     return t.toString();
   }
 
   @Override
   public String update(T t) {
+    Session session = HibernateUtil.getSessionFactory().openSession();
+    try {
+      session.beginTransaction();
+      session.update(t);
+      session.getTransaction().commit();
+    } catch (Exception e) {
+      session.getTransaction().rollback();
+      System.out.println(e.getMessage());
+      throw e;
+    } finally {
+      session.close();
+    }
     return t.toString();
   }
 
   @Override
   public String delete(T t) {
+    Session session = HibernateUtil.getSessionFactory().openSession();
+    try {
+      session.beginTransaction();
+      session.delete(t);
+      session.getTransaction().commit();
+    } catch (Exception e) {
+      session.getTransaction().rollback();
+      System.out.println(e.getMessage());
+      throw e;
+    } finally {
+      session.close();
+    }
     return t.toString();
   }
 
   @Override
+  public T findOneById(int id) {
+    T t = null;
+    Session session = HibernateUtil.getSessionFactory().openSession();
+    try {
+      session.beginTransaction();
+      t = (T) session.get((Class) t, id);
+      session.getTransaction().commit();
+    } catch (Exception e) {
+      session.getTransaction().rollback();
+      System.out.println(e.getMessage());
+      throw e;
+    } finally {
+      session.close();
+    }
+    return t;
+  }
+
+  @Override
   public List<T> findAll() {
-    return new ArrayList<>();
+    List<T> list = new ArrayList<>();
+    Session session = HibernateUtil.getSessionFactory().openSession();
+    try {
+      session.beginTransaction();
+      list = session.createCriteria(model).list();
+      session.getTransaction().commit();
+    } catch (HibernateException e) {
+      session.getTransaction().rollback();
+      System.out.println(e.getMessage());
+      throw e;
+    } finally {
+      session.close();
+    }
+    return list;
   }
 
 }

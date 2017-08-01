@@ -16,20 +16,22 @@
  */
 package service;
 
-import implementation.PenggunarImplementation;
+import implementation.PenggunaImplementation;
+import java.util.List;
 import model.Pengguna;
+import org.junit.Assert;
 import org.junit.Test;
 
 /**
  *
  * @author Me
  */
-public class MemberTest {
+public class PenggunaTest {
 
   private final PenggunaService memberService;
 
-  public MemberTest() {
-    memberService = new PenggunarImplementation();
+  public PenggunaTest() {
+    memberService = new PenggunaImplementation(Pengguna.class);
   }
 
   @Test
@@ -42,6 +44,15 @@ public class MemberTest {
     member.setUsername("USERNAME");
     member.setIsMember(true);
     System.out.println(memberService.save(member));
+    Assert.assertEquals(1, member.getId());
+  }
+
+  @Test
+  public void findAllTest() {
+    List<Pengguna> findAll = memberService.findAll();
+    for (Pengguna pengguna : findAll) {
+      System.out.println(pengguna.getNama());
+    }
   }
 
 }

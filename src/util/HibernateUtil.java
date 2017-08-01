@@ -21,7 +21,9 @@ import java.io.InputStream;
 import java.net.URL;
 import java.util.Properties;
 import org.hibernate.HibernateException;
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
 /**
@@ -32,7 +34,7 @@ import org.hibernate.cfg.Configuration;
 public class HibernateUtil {
 
   private static final SessionFactory SESSION_FACTORY;
-
+  
   static {
     try {
       URL url = HibernateUtil.class.getResource("/hibernate.cfg.xml");
@@ -52,11 +54,14 @@ public class HibernateUtil {
       throw new ExceptionInInitializerError(ex);
     }
   }
-
+  
+  /* PUBLIC */
+  
   public static SessionFactory getSessionFactory() {
     return SESSION_FACTORY;
   }
 
+  
   public static void constructConfiguration() {
     if (!SESSION_FACTORY.isClosed()) {
       System.out.println("Initial Session Factory");
@@ -64,4 +69,5 @@ public class HibernateUtil {
       System.out.println("Re-Initial Session Factory");
     }
   }
+
 }

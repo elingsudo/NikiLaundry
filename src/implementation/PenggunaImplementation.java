@@ -23,5 +23,9 @@ import service.PenggunaService;
  *
  * @author Me
  */
-public class PenggunarImplementation extends AbstractImplementation<Pengguna> implements PenggunaService {
+public class PenggunaImplementation extends AbstractImplementation<Pengguna> implements PenggunaService {
+
+  public PenggunaImplementation(Class<Pengguna> model) {
+    super(model);
+  }
 }
