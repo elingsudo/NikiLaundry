@@ -14,38 +14,37 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package util;
+package implementation;
 
-import implementation.PenggunarImplementation;
-import model.Pengguna;
-import service.PenggunaService;
+import java.util.ArrayList;
+import java.util.List;
+import service.AbstractService;
 
 /**
  *
  * @author Me
+ * @param <T>
  */
-public class InitialDB {
+public class AbstractImplementation<T> implements AbstractService<T> {
 
-  private final PenggunaService service;
-
-  public InitialDB() {
-    service = new PenggunarImplementation();
-  }
-  
-  public static void init() {
-    InitialDB initialDB = new InitialDB();
-    initialDB.insertMember();
+  @Override
+  public String save(T t) {
+    return t.toString();
   }
 
-  private void insertMember() {
-    Pengguna pengguna = new Pengguna();
-    pengguna.setUsername("username");
-    pengguna.setPassword("password");
-    pengguna.setNama("nama");
-    pengguna.setAlamat("alamat");
-    pengguna.setNoHp("hp");
-    pengguna.setIsMember(true);
-    String message = service.save(pengguna);
-    System.out.println(message);
+  @Override
+  public String update(T t) {
+    return t.toString();
   }
+
+  @Override
+  public String delete(T t) {
+    return t.toString();
+  }
+
+  @Override
+  public List<T> findAll() {
+    return new ArrayList<>();
+  }
+
 }

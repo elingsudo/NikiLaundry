@@ -16,8 +16,8 @@
  */
 package service;
 
-import implementation.MemberImplementation;
-import model.Member;
+import implementation.PenggunarImplementation;
+import model.Pengguna;
 import org.junit.Test;
 
 /**
@@ -26,15 +26,15 @@ import org.junit.Test;
  */
 public class MemberTest {
 
-  private final MemberService memberService;
+  private final PenggunaService memberService;
 
   public MemberTest() {
-    memberService = new MemberImplementation();
+    memberService = new PenggunarImplementation();
   }
 
   @Test
   public void insertMemberTest() {
-    Member member = new Member();
+    Pengguna member = new Pengguna();
     member.setNama("NAMA");
     member.setAlamat("ALAMAT");
     member.setNoHp("089000000");

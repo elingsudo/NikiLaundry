@@ -14,38 +14,14 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package util;
+package service;
 
-import implementation.PenggunarImplementation;
 import model.Pengguna;
-import service.PenggunaService;
 
 /**
  *
  * @author Me
  */
-public class InitialDB {
+public interface PenggunaService extends AbstractService<Pengguna> {
 
-  private final PenggunaService service;
-
-  public InitialDB() {
-    service = new PenggunarImplementation();
-  }
-  
-  public static void init() {
-    InitialDB initialDB = new InitialDB();
-    initialDB.insertMember();
-  }
-
-  private void insertMember() {
-    Pengguna pengguna = new Pengguna();
-    pengguna.setUsername("username");
-    pengguna.setPassword("password");
-    pengguna.setNama("nama");
-    pengguna.setAlamat("alamat");
-    pengguna.setNoHp("hp");
-    pengguna.setIsMember(true);
-    String message = service.save(pengguna);
-    System.out.println(message);
-  }
 }

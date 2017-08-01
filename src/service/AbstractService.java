@@ -14,37 +14,23 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package implementation;
+package service;
 
-import java.util.ArrayList;
 import java.util.List;
-import model.Member;
-import service.MemberService;
 
 /**
  *
  * @author Me
+ * @param <T>
  */
-public class MemberImplementation implements MemberService {
+public interface AbstractService<T> {
 
-  @Override
-  public String save(Member member) {
-    return member.toString();
-  }
+  String save(T t);
 
-  @Override
-  public String update(Member member) {
-    return member.toString();
-  }
+  String update(T t);
 
-  @Override
-  public String delete(Member member) {
-    return member.toString();
-  }
+  String delete(T t);
 
-  @Override
-  public List<Member> findAll() {
-    return new ArrayList<>();
-  }
+  List<T> findAll();
 
 }

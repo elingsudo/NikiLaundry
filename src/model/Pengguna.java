@@ -26,7 +26,7 @@ import javax.persistence.Id;
  * @author Me
  */
 @Entity
-public class Member {
+public class Pengguna {
 
   @Id
   @GeneratedValue
@@ -38,6 +38,8 @@ public class Member {
 
   @Column(name = "no_hp")
   private String noHp;
+
+  private boolean isMember;
 
   public int getId() {
     return id;
@@ -87,9 +89,17 @@ public class Member {
     this.noHp = noHp;
   }
 
+  public boolean isIsMember() {
+    return isMember;
+  }
+
+  public void setIsMember(boolean isMember) {
+    this.isMember = isMember;
+  }
+
   @Override
   public String toString() {
-    return "Member{" + "id=" + id + ", username=" + username + ", password=" + password
+    return "Pengguna{" + "id=" + id + ", username=" + username + ", password=" + password
             + ", nama=" + nama + ", alamat=" + alamat + ", noHp=" + noHp + '}';
   }
 

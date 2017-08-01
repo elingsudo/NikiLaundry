@@ -14,22 +14,14 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package service;
+package implementation;
 
-import java.util.List;
-import model.Member;
+import model.Pengguna;
+import service.PenggunaService;
 
 /**
  *
  * @author Me
  */
-public interface MemberService {
-
-  String save(Member member);
-
-  String update(Member member);
-
-  String delete(Member member);
-
-  List<Member> findAll();
+public class PenggunarImplementation extends AbstractImplementation<Pengguna> implements PenggunaService {
 }
