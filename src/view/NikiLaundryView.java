@@ -42,6 +42,12 @@ public class NikiLaundryView extends javax.swing.JFrame {
   private void initComponents() {
 
     bg = new javax.swing.JPanel();
+    panelWelcome = new javax.swing.JPanel();
+    txtNikiLaundry2 = new javax.swing.JLabel();
+    jLabel1 = new javax.swing.JLabel();
+    jLabel2 = new javax.swing.JLabel();
+    jLabel3 = new javax.swing.JLabel();
+    jLabel4 = new javax.swing.JLabel();
     loginPanel = new javax.swing.JPanel();
     txtNikiLaundry1 = new javax.swing.JLabel();
     sparatorNikiLaundry1 = new javax.swing.JSeparator();
@@ -70,6 +76,8 @@ public class NikiLaundryView extends javax.swing.JFrame {
     btnLaporan = new javax.swing.JPanel();
     penyerahanLaundriIcon1 = new javax.swing.JLabel();
     penyerahanLaundryTxt1 = new javax.swing.JLabel();
+    btnExit = new javax.swing.JLabel();
+    panelMenuLaundry = new javax.swing.JPanel();
     ribon1 = new javax.swing.JPanel();
     jTextField1 = new javax.swing.JTextField();
     jTextField2 = new javax.swing.JTextField();
@@ -79,7 +87,28 @@ public class NikiLaundryView extends javax.swing.JFrame {
     jTextField6 = new javax.swing.JTextField();
     jScrollPane1 = new javax.swing.JScrollPane();
     tabelData = new javax.swing.JTable();
-    btnExit = new javax.swing.JLabel();
+    panelMenuMaster = new javax.swing.JPanel();
+    Pakaian = new javax.swing.JTabbedPane();
+    jPanel1 = new javax.swing.JPanel();
+    jPanel2 = new javax.swing.JPanel();
+    jPanel3 = new javax.swing.JPanel();
+    jPanel4 = new javax.swing.JPanel();
+    jScrollPane2 = new javax.swing.JScrollPane();
+    tabelData1 = new javax.swing.JTable();
+    panelMenuAset = new javax.swing.JPanel();
+    ribon3 = new javax.swing.JPanel();
+    jTextField13 = new javax.swing.JTextField();
+    jTextField14 = new javax.swing.JTextField();
+    jTextField15 = new javax.swing.JTextField();
+    jTextField16 = new javax.swing.JTextField();
+    jTextField17 = new javax.swing.JTextField();
+    jTextField18 = new javax.swing.JTextField();
+    jScrollPane3 = new javax.swing.JScrollPane();
+    tabelData2 = new javax.swing.JTable();
+    panelMenuLaporan = new javax.swing.JPanel();
+    ribon4 = new javax.swing.JPanel();
+    jScrollPane4 = new javax.swing.JScrollPane();
+    tabelData3 = new javax.swing.JTable();
 
     setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
     setLocationByPlatform(true);
@@ -91,6 +120,63 @@ public class NikiLaundryView extends javax.swing.JFrame {
     });
 
     bg.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+    panelWelcome.setBackground(new java.awt.Color(255, 0, 255));
+
+    txtNikiLaundry2.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
+    txtNikiLaundry2.setForeground(new java.awt.Color(54, 33, 89));
+    txtNikiLaundry2.setText("Niki Laundry");
+
+    jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+    jLabel1.setForeground(new java.awt.Color(54, 33, 89));
+    jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/checkbox.png"))); // NOI18N
+    jLabel1.setText("Profesional");
+
+    jLabel2.setForeground(new java.awt.Color(54, 33, 89));
+    jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/checkbox.png"))); // NOI18N
+    jLabel2.setText("Bersih");
+
+    jLabel3.setForeground(new java.awt.Color(54, 33, 89));
+    jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/checkbox.png"))); // NOI18N
+    jLabel3.setText("Rapi");
+
+    jLabel4.setForeground(new java.awt.Color(54, 33, 89));
+    jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/checkbox.png"))); // NOI18N
+    jLabel4.setText("Wangi");
+
+    javax.swing.GroupLayout panelWelcomeLayout = new javax.swing.GroupLayout(panelWelcome);
+    panelWelcome.setLayout(panelWelcomeLayout);
+    panelWelcomeLayout.setHorizontalGroup(
+      panelWelcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+      .addGroup(panelWelcomeLayout.createSequentialGroup()
+        .addGap(111, 111, 111)
+        .addGroup(panelWelcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+          .addComponent(txtNikiLaundry2, javax.swing.GroupLayout.PREFERRED_SIZE, 409, javax.swing.GroupLayout.PREFERRED_SIZE)
+          .addGroup(panelWelcomeLayout.createSequentialGroup()
+            .addComponent(jLabel1)
+            .addGap(18, 18, 18)
+            .addComponent(jLabel2)
+            .addGap(18, 18, 18)
+            .addComponent(jLabel3)
+            .addGap(18, 18, 18)
+            .addComponent(jLabel4)))
+        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+    );
+    panelWelcomeLayout.setVerticalGroup(
+      panelWelcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+      .addGroup(panelWelcomeLayout.createSequentialGroup()
+        .addGap(57, 57, 57)
+        .addComponent(txtNikiLaundry2)
+        .addGap(18, 18, 18)
+        .addGroup(panelWelcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+          .addComponent(jLabel1)
+          .addComponent(jLabel2)
+          .addComponent(jLabel3)
+          .addComponent(jLabel4))
+        .addContainerGap(395, Short.MAX_VALUE))
+    );
+
+    bg.add(panelWelcome, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 40, 730, 560));
 
     loginPanel.setBackground(new java.awt.Color(255, 255, 255));
     loginPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -105,7 +191,7 @@ public class NikiLaundryView extends javax.swing.JFrame {
     sparatorNikiLaundry1.setPreferredSize(new java.awt.Dimension(50, 5));
     loginPanel.add(sparatorNikiLaundry1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 220, 20));
 
-    iconUserName.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/username.png"))); // NOI18N
+    iconUserName.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/user.png"))); // NOI18N
     loginPanel.add(iconUserName, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, -1, -1));
 
     txtUserName.setBackground(new java.awt.Color(255, 255, 255));
@@ -161,7 +247,7 @@ public class NikiLaundryView extends javax.swing.JFrame {
         btnLoginActionPerformed(evt);
       }
     });
-    loginPanel.add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 320, 80, 30));
+    loginPanel.add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 270, 80, 30));
 
     bg.add(loginPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 270, 600));
 
@@ -360,6 +446,16 @@ public class NikiLaundryView extends javax.swing.JFrame {
 
     bg.add(sidePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 270, 600));
 
+    btnExit.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+    btnExit.setForeground(new java.awt.Color(54, 33, 89));
+    btnExit.setText("X");
+    btnExit.addMouseListener(new java.awt.event.MouseAdapter() {
+      public void mousePressed(java.awt.event.MouseEvent evt) {
+        btnExitMousePressed(evt);
+      }
+    });
+    bg.add(btnExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 10, -1, 20));
+
     ribon1.setBackground(new java.awt.Color(142, 53, 239));
 
     jTextField1.setText("Nama");
@@ -442,8 +538,6 @@ public class NikiLaundryView extends javax.swing.JFrame {
         .addContainerGap())
     );
 
-    bg.add(ribon1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 60, 730, 130));
-
     tabelData.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
     tabelData.setModel(new javax.swing.table.DefaultTableModel(
       new Object [][] {
@@ -458,17 +552,289 @@ public class NikiLaundryView extends javax.swing.JFrame {
     ));
     jScrollPane1.setViewportView(tabelData);
 
-    bg.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 200, 700, 390));
+    javax.swing.GroupLayout panelMenuLaundryLayout = new javax.swing.GroupLayout(panelMenuLaundry);
+    panelMenuLaundry.setLayout(panelMenuLaundryLayout);
+    panelMenuLaundryLayout.setHorizontalGroup(
+      panelMenuLaundryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+      .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelMenuLaundryLayout.createSequentialGroup()
+        .addGap(0, 0, Short.MAX_VALUE)
+        .addComponent(ribon1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+      .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelMenuLaundryLayout.createSequentialGroup()
+        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 700, javax.swing.GroupLayout.PREFERRED_SIZE)
+        .addContainerGap())
+    );
+    panelMenuLaundryLayout.setVerticalGroup(
+      panelMenuLaundryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+      .addGroup(panelMenuLaundryLayout.createSequentialGroup()
+        .addGap(74, 74, 74)
+        .addComponent(ribon1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 384, javax.swing.GroupLayout.PREFERRED_SIZE)
+        .addContainerGap())
+    );
 
-    btnExit.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-    btnExit.setForeground(new java.awt.Color(54, 33, 89));
-    btnExit.setText("X");
-    btnExit.addMouseListener(new java.awt.event.MouseAdapter() {
-      public void mousePressed(java.awt.event.MouseEvent evt) {
-        btnExitMousePressed(evt);
+    bg.add(panelMenuLaundry, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 40, 730, 560));
+
+    javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+    jPanel1.setLayout(jPanel1Layout);
+    jPanel1Layout.setHorizontalGroup(
+      jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+      .addGap(0, 698, Short.MAX_VALUE)
+    );
+    jPanel1Layout.setVerticalGroup(
+      jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+      .addGap(0, 107, Short.MAX_VALUE)
+    );
+
+    Pakaian.addTab("Pelanggan", jPanel1);
+
+    javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+    jPanel2.setLayout(jPanel2Layout);
+    jPanel2Layout.setHorizontalGroup(
+      jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+      .addGap(0, 698, Short.MAX_VALUE)
+    );
+    jPanel2Layout.setVerticalGroup(
+      jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+      .addGap(0, 107, Short.MAX_VALUE)
+    );
+
+    Pakaian.addTab("Pewangi", jPanel2);
+
+    javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+    jPanel3.setLayout(jPanel3Layout);
+    jPanel3Layout.setHorizontalGroup(
+      jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+      .addGap(0, 698, Short.MAX_VALUE)
+    );
+    jPanel3Layout.setVerticalGroup(
+      jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+      .addGap(0, 107, Short.MAX_VALUE)
+    );
+
+    Pakaian.addTab("Layanan", jPanel3);
+
+    javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+    jPanel4.setLayout(jPanel4Layout);
+    jPanel4Layout.setHorizontalGroup(
+      jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+      .addGap(0, 698, Short.MAX_VALUE)
+    );
+    jPanel4Layout.setVerticalGroup(
+      jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+      .addGap(0, 107, Short.MAX_VALUE)
+    );
+
+    Pakaian.addTab("Pakaian", jPanel4);
+
+    tabelData1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+    tabelData1.setModel(new javax.swing.table.DefaultTableModel(
+      new Object [][] {
+        {null, null, null, null},
+        {null, null, null, null},
+        {null, null, null, null},
+        {null, null, null, null}
+      },
+      new String [] {
+        "Title 1", "Title 2", "Title 3", "Title 4"
+      }
+    ));
+    jScrollPane2.setViewportView(tabelData1);
+
+    javax.swing.GroupLayout panelMenuMasterLayout = new javax.swing.GroupLayout(panelMenuMaster);
+    panelMenuMaster.setLayout(panelMenuMasterLayout);
+    panelMenuMasterLayout.setHorizontalGroup(
+      panelMenuMasterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+      .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelMenuMasterLayout.createSequentialGroup()
+        .addContainerGap(24, Short.MAX_VALUE)
+        .addGroup(panelMenuMasterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+          .addComponent(jScrollPane2)
+          .addComponent(Pakaian))
+        .addContainerGap())
+    );
+    panelMenuMasterLayout.setVerticalGroup(
+      panelMenuMasterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+      .addGroup(panelMenuMasterLayout.createSequentialGroup()
+        .addContainerGap(21, Short.MAX_VALUE)
+        .addComponent(Pakaian, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+        .addGap(18, 18, 18)
+        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 384, javax.swing.GroupLayout.PREFERRED_SIZE)
+        .addContainerGap())
+    );
+
+    bg.add(panelMenuMaster, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 40, 730, 560));
+
+    ribon3.setBackground(new java.awt.Color(142, 53, 239));
+
+    jTextField13.setText("Nama");
+    jTextField13.setToolTipText("");
+    jTextField13.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        jTextField13ActionPerformed(evt);
       }
     });
-    bg.add(btnExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 10, -1, 20));
+
+    jTextField14.setText("No. Nota");
+    jTextField14.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        jTextField14ActionPerformed(evt);
+      }
+    });
+
+    jTextField15.setText("Pewangi");
+    jTextField15.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        jTextField15ActionPerformed(evt);
+      }
+    });
+
+    jTextField16.setText("Tgl. Terima");
+    jTextField16.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        jTextField16ActionPerformed(evt);
+      }
+    });
+
+    jTextField17.setText("Tgl. Jadi");
+    jTextField17.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        jTextField17ActionPerformed(evt);
+      }
+    });
+
+    jTextField18.setText("Jumlah (Kg)");
+    jTextField18.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        jTextField18ActionPerformed(evt);
+      }
+    });
+
+    javax.swing.GroupLayout ribon3Layout = new javax.swing.GroupLayout(ribon3);
+    ribon3.setLayout(ribon3Layout);
+    ribon3Layout.setHorizontalGroup(
+      ribon3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+      .addGroup(ribon3Layout.createSequentialGroup()
+        .addGap(18, 18, 18)
+        .addGroup(ribon3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+          .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+          .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+          .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 135, Short.MAX_VALUE)
+        .addGroup(ribon3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+          .addComponent(jTextField17, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+          .addComponent(jTextField16, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+          .addComponent(jTextField18, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
+        .addGap(211, 211, 211))
+    );
+    ribon3Layout.setVerticalGroup(
+      ribon3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+      .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ribon3Layout.createSequentialGroup()
+        .addContainerGap(40, Short.MAX_VALUE)
+        .addGroup(ribon3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+          .addGroup(ribon3Layout.createSequentialGroup()
+            .addComponent(jTextField16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addComponent(jTextField17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addComponent(jTextField18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+          .addGroup(ribon3Layout.createSequentialGroup()
+            .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+        .addContainerGap())
+    );
+
+    tabelData2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+    tabelData2.setModel(new javax.swing.table.DefaultTableModel(
+      new Object [][] {
+        {null, null, null, null},
+        {null, null, null, null},
+        {null, null, null, null},
+        {null, null, null, null}
+      },
+      new String [] {
+        "Title 1", "Title 2", "Title 3", "Title 4"
+      }
+    ));
+    jScrollPane3.setViewportView(tabelData2);
+
+    javax.swing.GroupLayout panelMenuAsetLayout = new javax.swing.GroupLayout(panelMenuAset);
+    panelMenuAset.setLayout(panelMenuAsetLayout);
+    panelMenuAsetLayout.setHorizontalGroup(
+      panelMenuAsetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+      .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelMenuAsetLayout.createSequentialGroup()
+        .addGap(0, 0, Short.MAX_VALUE)
+        .addComponent(ribon3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+      .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelMenuAsetLayout.createSequentialGroup()
+        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 700, javax.swing.GroupLayout.PREFERRED_SIZE)
+        .addContainerGap())
+    );
+    panelMenuAsetLayout.setVerticalGroup(
+      panelMenuAsetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+      .addGroup(panelMenuAsetLayout.createSequentialGroup()
+        .addGap(74, 74, 74)
+        .addComponent(ribon3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 384, javax.swing.GroupLayout.PREFERRED_SIZE)
+        .addContainerGap())
+    );
+
+    bg.add(panelMenuAset, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 40, 730, 560));
+
+    ribon4.setBackground(new java.awt.Color(142, 53, 239));
+
+    javax.swing.GroupLayout ribon4Layout = new javax.swing.GroupLayout(ribon4);
+    ribon4.setLayout(ribon4Layout);
+    ribon4Layout.setHorizontalGroup(
+      ribon4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+      .addGap(0, 730, Short.MAX_VALUE)
+    );
+    ribon4Layout.setVerticalGroup(
+      ribon4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+      .addGap(0, 130, Short.MAX_VALUE)
+    );
+
+    tabelData3.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+    tabelData3.setModel(new javax.swing.table.DefaultTableModel(
+      new Object [][] {
+        {null, null, null, null},
+        {null, null, null, null},
+        {null, null, null, null},
+        {null, null, null, null}
+      },
+      new String [] {
+        "Title 1", "Title 2", "Title 3", "Title 4"
+      }
+    ));
+    jScrollPane4.setViewportView(tabelData3);
+
+    javax.swing.GroupLayout panelMenuLaporanLayout = new javax.swing.GroupLayout(panelMenuLaporan);
+    panelMenuLaporan.setLayout(panelMenuLaporanLayout);
+    panelMenuLaporanLayout.setHorizontalGroup(
+      panelMenuLaporanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+      .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelMenuLaporanLayout.createSequentialGroup()
+        .addGap(0, 0, Short.MAX_VALUE)
+        .addComponent(ribon4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+      .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelMenuLaporanLayout.createSequentialGroup()
+        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 700, javax.swing.GroupLayout.PREFERRED_SIZE)
+        .addContainerGap())
+    );
+    panelMenuLaporanLayout.setVerticalGroup(
+      panelMenuLaporanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+      .addGroup(panelMenuLaporanLayout.createSequentialGroup()
+        .addGap(74, 74, 74)
+        .addComponent(ribon4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 384, javax.swing.GroupLayout.PREFERRED_SIZE)
+        .addContainerGap())
+    );
+
+    bg.add(panelMenuLaporan, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 40, 730, 560));
 
     javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
     getContentPane().setLayout(layout);
@@ -525,6 +891,11 @@ public class NikiLaundryView extends javax.swing.JFrame {
       resetColor(btnMaster);
       resetColor(btnAset);
       resetColor(btnLaporan);
+
+      panelMenuLaundry.show();
+      panelMenuMaster.hide();
+      panelMenuAset.hide();
+      panelMenuLaporan.hide();
     }//GEN-LAST:event_btnPenyerahanLaundryMousePressed
 
     private void btnPengambilanLaundryMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnPengambilanLaundryMousePressed
@@ -534,6 +905,12 @@ public class NikiLaundryView extends javax.swing.JFrame {
       resetColor(btnMaster);
       resetColor(btnAset);
       resetColor(btnLaporan);
+      
+      panelWelcome.hide();
+      panelMenuLaundry.hide();
+      panelMenuMaster.hide();
+      panelMenuAset.hide();
+      panelMenuLaporan.hide();
     }//GEN-LAST:event_btnPengambilanLaundryMousePressed
 
     private void btnMasterMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMasterMousePressed
@@ -543,6 +920,12 @@ public class NikiLaundryView extends javax.swing.JFrame {
       setColor(btnMaster);
       resetColor(btnAset);
       resetColor(btnLaporan);
+
+      panelWelcome.hide();
+      panelMenuLaundry.hide();
+      panelMenuMaster.show();
+      panelMenuAset.hide();
+      panelMenuLaporan.hide();
     }//GEN-LAST:event_btnMasterMousePressed
 
     private void btnAsetMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAsetMousePressed
@@ -552,6 +935,12 @@ public class NikiLaundryView extends javax.swing.JFrame {
       resetColor(btnMaster);
       setColor(btnAset);
       resetColor(btnLaporan);
+
+      panelWelcome.hide();
+      panelMenuLaundry.hide();
+      panelMenuMaster.hide();
+      panelMenuAset.show();
+      panelMenuLaporan.hide();
     }//GEN-LAST:event_btnAsetMousePressed
 
     private void btnLaporanMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLaporanMousePressed
@@ -561,6 +950,12 @@ public class NikiLaundryView extends javax.swing.JFrame {
       resetColor(btnMaster);
       resetColor(btnAset);
       setColor(btnLaporan);
+
+      panelWelcome.hide();
+      panelMenuLaundry.hide();
+      panelMenuMaster.hide();
+      panelMenuAset.hide();
+      panelMenuLaporan.show();
     }//GEN-LAST:event_btnLaporanMousePressed
 
     private void txtPasswordFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtPasswordFocusGained
@@ -571,29 +966,6 @@ public class NikiLaundryView extends javax.swing.JFrame {
     private void txtPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPasswordActionPerformed
       // TODO add your handling code here:
     }//GEN-LAST:event_txtPasswordActionPerformed
-
-    private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
-      // TODO add your handling code here:
-      loginPanel.hide();
-      sidePanel.show();
-
-//        new Timer().schedule(new TimerTask() {
-//            @Override
-//            public void run() {
-//                //                MenuUtamaView menuUtama = new MenuUtamaView();
-//                //                menuUtama.setExtendedState(MAXIMIZED_BOTH);
-//                //                menuUtama.show();
-//
-//                NikiLaundryView nikiLaundryView = new NikiLaundryView();
-//                nikiLaundryView.setExtendedState(NikiLaundryView.MAXIMIZED_VERT);
-//                //nikiLaundryView.getRootPane().setWindowDecorationStyle(JRootPane.NONE);
-//                nikiLaundryView.setVisible(true);
-//                nikiLaundryView.show();
-//
-//                dispose();
-//            }
-//        }, 1000 * 2);
-    }//GEN-LAST:event_btnLoginActionPerformed
 
     private void txtUserNameFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtUserNameFocusGained
       // TODO add your handling code here:
@@ -614,6 +986,47 @@ public class NikiLaundryView extends javax.swing.JFrame {
     }
   }//GEN-LAST:event_formWindowClosing
 
+  private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
+    // TODO add your handling code here:
+    loginPanel.hide();
+    sidePanel.show();
+    resetColor(btnPenyerahanLaundry);
+    resetColor(btnPengambilanLaundry);
+    resetColor(btnMaster);
+    resetColor(btnAset);
+    resetColor(btnLaporan);
+
+    panelWelcome.show();
+    panelMenuLaundry.hide();
+    panelMenuMaster.hide();
+    panelMenuAset.hide();
+    panelMenuLaporan.hide();
+  }//GEN-LAST:event_btnLoginActionPerformed
+
+  private void jTextField13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField13ActionPerformed
+    // TODO add your handling code here:
+  }//GEN-LAST:event_jTextField13ActionPerformed
+
+  private void jTextField14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField14ActionPerformed
+    // TODO add your handling code here:
+  }//GEN-LAST:event_jTextField14ActionPerformed
+
+  private void jTextField15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField15ActionPerformed
+    // TODO add your handling code here:
+  }//GEN-LAST:event_jTextField15ActionPerformed
+
+  private void jTextField16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField16ActionPerformed
+    // TODO add your handling code here:
+  }//GEN-LAST:event_jTextField16ActionPerformed
+
+  private void jTextField17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField17ActionPerformed
+    // TODO add your handling code here:
+  }//GEN-LAST:event_jTextField17ActionPerformed
+
+  private void jTextField18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField18ActionPerformed
+    // TODO add your handling code here:
+  }//GEN-LAST:event_jTextField18ActionPerformed
+
   void setColor(JPanel panel) {
     panel.setBackground(new Color(85, 65, 118));
   }
@@ -623,6 +1036,7 @@ public class NikiLaundryView extends javax.swing.JFrame {
   }
 
   // Variables declaration - do not modify//GEN-BEGIN:variables
+  private javax.swing.JTabbedPane Pakaian;
   private javax.swing.JPanel bg;
   private javax.swing.JPanel btnAset;
   private javax.swing.JLabel btnExit;
@@ -633,14 +1047,36 @@ public class NikiLaundryView extends javax.swing.JFrame {
   private javax.swing.JPanel btnPenyerahanLaundry;
   private javax.swing.JLabel iconPassword;
   private javax.swing.JLabel iconUserName;
+  private javax.swing.JLabel jLabel1;
+  private javax.swing.JLabel jLabel2;
+  private javax.swing.JLabel jLabel3;
+  private javax.swing.JLabel jLabel4;
+  private javax.swing.JPanel jPanel1;
+  private javax.swing.JPanel jPanel2;
+  private javax.swing.JPanel jPanel3;
+  private javax.swing.JPanel jPanel4;
   private javax.swing.JScrollPane jScrollPane1;
+  private javax.swing.JScrollPane jScrollPane2;
+  private javax.swing.JScrollPane jScrollPane3;
+  private javax.swing.JScrollPane jScrollPane4;
   private javax.swing.JTextField jTextField1;
+  private javax.swing.JTextField jTextField13;
+  private javax.swing.JTextField jTextField14;
+  private javax.swing.JTextField jTextField15;
+  private javax.swing.JTextField jTextField16;
+  private javax.swing.JTextField jTextField17;
+  private javax.swing.JTextField jTextField18;
   private javax.swing.JTextField jTextField2;
   private javax.swing.JTextField jTextField3;
   private javax.swing.JTextField jTextField4;
   private javax.swing.JTextField jTextField5;
   private javax.swing.JTextField jTextField6;
   private javax.swing.JPanel loginPanel;
+  private javax.swing.JPanel panelMenuAset;
+  private javax.swing.JPanel panelMenuLaporan;
+  private javax.swing.JPanel panelMenuLaundry;
+  private javax.swing.JPanel panelMenuMaster;
+  private javax.swing.JPanel panelWelcome;
   private javax.swing.JLabel penyerahanLaundriIcon;
   private javax.swing.JLabel penyerahanLaundriIcon1;
   private javax.swing.JLabel penyerahanLaundriIcon2;
@@ -652,14 +1088,20 @@ public class NikiLaundryView extends javax.swing.JFrame {
   private javax.swing.JLabel penyerahanLaundryTxt5;
   private javax.swing.JLabel penyerahanLaundryTxt6;
   private javax.swing.JPanel ribon1;
+  private javax.swing.JPanel ribon3;
+  private javax.swing.JPanel ribon4;
   private javax.swing.JPanel sidePanel;
   private javax.swing.JSeparator sparatorNikiLaundry;
   private javax.swing.JSeparator sparatorNikiLaundry1;
   private javax.swing.JSeparator sparatorUserName;
   private javax.swing.JSeparator sparatuorPassword;
   private javax.swing.JTable tabelData;
+  private javax.swing.JTable tabelData1;
+  private javax.swing.JTable tabelData2;
+  private javax.swing.JTable tabelData3;
   private javax.swing.JLabel txtNikiLaundry;
   private javax.swing.JLabel txtNikiLaundry1;
+  private javax.swing.JLabel txtNikiLaundry2;
   private javax.swing.JPasswordField txtPassword;
   private javax.swing.JTextField txtUserName;
   // End of variables declaration//GEN-END:variables
