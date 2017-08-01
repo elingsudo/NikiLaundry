@@ -65,7 +65,7 @@ Contributor(s):
     <property name="hibernate.default_batch_fetch_size">20</property>
 
     <!-- Mapping Class -->
-    <mapping class="model.Member"/>
+    <mapping class="model.Pengguna"/>
 
   </session-factory>
 </hibernate-configuration>

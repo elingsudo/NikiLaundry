@@ -40,6 +40,7 @@ public class MemberTest {
     member.setNoHp("089000000");
     member.setPassword("PASSWORD");
     member.setUsername("USERNAME");
+    member.setIsMember(true);
     System.out.println(memberService.save(member));
   }
 
