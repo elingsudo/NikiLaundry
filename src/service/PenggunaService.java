@@ -24,4 +24,5 @@ import model.Pengguna;
  */
 public interface PenggunaService extends AbstractService<Pengguna> {
 
+  Pengguna findOneByNama(String nama);
 }
