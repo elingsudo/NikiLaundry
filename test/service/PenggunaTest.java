@@ -17,9 +17,9 @@
 package service;
 
 import implementation.PenggunaImplementation;
-import java.util.List;
 import model.Pengguna;
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 
 /**
@@ -28,31 +28,38 @@ import org.junit.Test;
  */
 public class PenggunaTest {
 
-  private final PenggunaService memberService;
+  private final PenggunaService penggunaService;
 
   public PenggunaTest() {
-    memberService = new PenggunaImplementation(Pengguna.class);
+    penggunaService = new PenggunaImplementation(Pengguna.class);
   }
 
   @Test
-  public void insertMemberTest() {
-    Pengguna member = new Pengguna();
-    member.setNama("NAMA");
-    member.setAlamat("ALAMAT");
-    member.setNoHp("089000000");
-    member.setPassword("PASSWORD");
-    member.setUsername("USERNAME");
-    member.setIsMember(true);
-    System.out.println(memberService.save(member));
-    Assert.assertEquals(1, member.getId());
+  public void insertPenggunaTest() {
+    Pengguna penggunaBaru = new Pengguna();
+    penggunaBaru.setNama("FANI");
+    penggunaBaru.setAlamat("ALAMAT");
+    penggunaBaru.setNoHp("089000000");
+    penggunaBaru.setPassword("PASSWORD");
+    penggunaBaru.setUsername("USERNAME");
+    penggunaBaru.setIsMember(true);
+    penggunaService.save(penggunaBaru);
+    Assert.assertEquals("FANI", penggunaBaru.getNama());
   }
 
   @Test
-  public void findAllTest() {
-    List<Pengguna> findAll = memberService.findAll();
-    for (Pengguna pengguna : findAll) {
-      System.out.println(pengguna.getNama());
-    }
+  public void findOneByIDTest() {
+    Pengguna penggunaBaru = new Pengguna();
+    penggunaBaru.setNama("FANI");
+    penggunaBaru.setAlamat("ALAMAT");
+    penggunaBaru.setNoHp("089000000");
+    penggunaBaru.setPassword("PASSWORD");
+    penggunaBaru.setUsername("USERNAME");
+    penggunaBaru.setIsMember(true);
+    penggunaService.save(penggunaBaru);
+
+    Pengguna pengguna = penggunaService.findOneByNama("FANI");
+    Assert.assertEquals(1, pengguna.getId());
   }
 
 }

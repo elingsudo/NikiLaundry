@@ -17,7 +17,9 @@
 package implementation;
 
 import model.Pengguna;
+import org.hibernate.Session;
 import service.PenggunaService;
+import util.HibernateUtil;
 
 /**
  *
@@ -27,5 +29,24 @@ public class PenggunaImplementation extends AbstractImplementation<Pengguna> imp
 
   public PenggunaImplementation(Class<Pengguna> model) {
     super(model);
+  }
+
+  @Override
+  public Pengguna findOneByNama(String nama) {
+    Pengguna pengguna = null;
+    Session session = HibernateUtil.getSessionFactory().openSession();
+    try {
+      session.beginTransaction();
+      pengguna = (Pengguna) session.createQuery("FROM Pengguna pengguna WHERE pengguna.nama = :nama")
+              .setString("nama", nama).uniqueResult();
+      session.getTransaction().commit();
+    } catch (Exception e) {
+      session.getTransaction().rollback();
+      System.out.println(e.getMessage());
+      throw e;
+    } finally {
+      session.close();
+    }
+    return pengguna;
   }
 }
