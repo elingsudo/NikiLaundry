@@ -42,12 +42,6 @@ public class NikiLaundryView extends javax.swing.JFrame {
   private void initComponents() {
 
     bg = new javax.swing.JPanel();
-    panelWelcome = new javax.swing.JPanel();
-    txtNikiLaundry2 = new javax.swing.JLabel();
-    jLabel1 = new javax.swing.JLabel();
-    jLabel2 = new javax.swing.JLabel();
-    jLabel3 = new javax.swing.JLabel();
-    jLabel4 = new javax.swing.JLabel();
     loginPanel = new javax.swing.JPanel();
     txtNikiLaundry1 = new javax.swing.JLabel();
     sparatorNikiLaundry1 = new javax.swing.JSeparator();
@@ -58,6 +52,12 @@ public class NikiLaundryView extends javax.swing.JFrame {
     txtPassword = new javax.swing.JPasswordField();
     sparatuorPassword = new javax.swing.JSeparator();
     btnLogin = new javax.swing.JButton();
+    panelWelcome = new javax.swing.JPanel();
+    txtNikiLaundry2 = new javax.swing.JLabel();
+    jLabel1 = new javax.swing.JLabel();
+    jLabel2 = new javax.swing.JLabel();
+    jLabel3 = new javax.swing.JLabel();
+    jLabel4 = new javax.swing.JLabel();
     sidePanel = new javax.swing.JPanel();
     txtNikiLaundry = new javax.swing.JLabel();
     sparatorNikiLaundry = new javax.swing.JSeparator();
@@ -73,39 +73,38 @@ public class NikiLaundryView extends javax.swing.JFrame {
     btnLaporan = new javax.swing.JPanel();
     penyerahanLaundriIcon1 = new javax.swing.JLabel();
     penyerahanLaundryTxt1 = new javax.swing.JLabel();
-    btnExit = new javax.swing.JLabel();
     panelMenuLaundry = new javax.swing.JPanel();
     menuLaundry = new javax.swing.JTabbedPane();
     tabPenyerahan = new javax.swing.JPanel();
     jTextField1 = new javax.swing.JTextField();
     jTextField2 = new javax.swing.JTextField();
-    jTextField3 = new javax.swing.JTextField();
     jTextField4 = new javax.swing.JTextField();
     jTextField5 = new javax.swing.JTextField();
     jTextField6 = new javax.swing.JTextField();
-    jTextField22 = new javax.swing.JTextField();
     jLabel5 = new javax.swing.JLabel();
     jScrollPane1 = new javax.swing.JScrollPane();
     tabelData = new javax.swing.JTable();
+    cbPewangi = new javax.swing.JComboBox<>();
+    cbLayanan = new javax.swing.JComboBox<>();
     tabPengambilan = new javax.swing.JPanel();
     jTextField23 = new javax.swing.JTextField();
     jTextField24 = new javax.swing.JTextField();
-    jTextField25 = new javax.swing.JTextField();
     jTextField26 = new javax.swing.JTextField();
     jTextField27 = new javax.swing.JTextField();
     jTextField28 = new javax.swing.JTextField();
-    jTextField29 = new javax.swing.JTextField();
     jLabel6 = new javax.swing.JLabel();
     jScrollPane6 = new javax.swing.JScrollPane();
     tabelData4 = new javax.swing.JTable();
+    cbLayanan1 = new javax.swing.JComboBox<>();
+    cbPewangi1 = new javax.swing.JComboBox<>();
     panelMenuMaster = new javax.swing.JPanel();
     Pakaian = new javax.swing.JTabbedPane();
     tabPelanggan = new javax.swing.JPanel();
     jTextField7 = new javax.swing.JTextField();
     jTextField8 = new javax.swing.JTextField();
-    jComboBox2 = new javax.swing.JComboBox<>();
+    cbJenisKelamin = new javax.swing.JComboBox<>();
     jTextField9 = new javax.swing.JTextField();
-    jComboBox3 = new javax.swing.JComboBox<>();
+    cbJenisPelanggan = new javax.swing.JComboBox<>();
     jScrollPane5 = new javax.swing.JScrollPane();
     jTextArea1 = new javax.swing.JTextArea();
     jButton1 = new javax.swing.JButton();
@@ -126,21 +125,31 @@ public class NikiLaundryView extends javax.swing.JFrame {
     jTextField21 = new javax.swing.JTextField();
     jButton5 = new javax.swing.JButton();
     jButton6 = new javax.swing.JButton();
+    jScrollPane8 = new javax.swing.JScrollPane();
+    tabelData6 = new javax.swing.JTable();
     tabLayanan = new javax.swing.JPanel();
+    jTextField22 = new javax.swing.JTextField();
+    jTextField25 = new javax.swing.JTextField();
+    jTextField29 = new javax.swing.JTextField();
+    jButton7 = new javax.swing.JButton();
+    jButton8 = new javax.swing.JButton();
+    jScrollPane9 = new javax.swing.JScrollPane();
+    tabelData7 = new javax.swing.JTable();
     panelMenuAset = new javax.swing.JPanel();
-    ribon3 = new javax.swing.JPanel();
+    menuAset = new javax.swing.JTabbedPane();
+    tabAset = new javax.swing.JPanel();
+    jTextField3 = new javax.swing.JTextField();
     jTextField13 = new javax.swing.JTextField();
     jTextField14 = new javax.swing.JTextField();
-    jTextField15 = new javax.swing.JTextField();
-    jTextField16 = new javax.swing.JTextField();
-    jTextField17 = new javax.swing.JTextField();
-    jTextField18 = new javax.swing.JTextField();
     jScrollPane3 = new javax.swing.JScrollPane();
     tabelData2 = new javax.swing.JTable();
+    jTextField17 = new javax.swing.JTextField();
+    jTextField18 = new javax.swing.JTextField();
     panelMenuLaporan = new javax.swing.JPanel();
     ribon4 = new javax.swing.JPanel();
     jScrollPane4 = new javax.swing.JScrollPane();
     tabelData3 = new javax.swing.JTable();
+    btnExit = new javax.swing.JLabel();
 
     setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
     setLocationByPlatform(true);
@@ -157,63 +166,6 @@ public class NikiLaundryView extends javax.swing.JFrame {
     });
 
     bg.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-    panelWelcome.setBackground(new java.awt.Color(255, 0, 255));
-
-    txtNikiLaundry2.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
-    txtNikiLaundry2.setForeground(new java.awt.Color(54, 33, 89));
-    txtNikiLaundry2.setText("Niki Laundry");
-
-    jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-    jLabel1.setForeground(new java.awt.Color(54, 33, 89));
-    jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/checkbox.png"))); // NOI18N
-    jLabel1.setText("Profesional");
-
-    jLabel2.setForeground(new java.awt.Color(54, 33, 89));
-    jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/checkbox.png"))); // NOI18N
-    jLabel2.setText("Bersih");
-
-    jLabel3.setForeground(new java.awt.Color(54, 33, 89));
-    jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/checkbox.png"))); // NOI18N
-    jLabel3.setText("Rapi");
-
-    jLabel4.setForeground(new java.awt.Color(54, 33, 89));
-    jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/checkbox.png"))); // NOI18N
-    jLabel4.setText("Wangi");
-
-    javax.swing.GroupLayout panelWelcomeLayout = new javax.swing.GroupLayout(panelWelcome);
-    panelWelcome.setLayout(panelWelcomeLayout);
-    panelWelcomeLayout.setHorizontalGroup(
-      panelWelcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addGroup(panelWelcomeLayout.createSequentialGroup()
-        .addGap(111, 111, 111)
-        .addGroup(panelWelcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-          .addComponent(txtNikiLaundry2, javax.swing.GroupLayout.PREFERRED_SIZE, 409, javax.swing.GroupLayout.PREFERRED_SIZE)
-          .addGroup(panelWelcomeLayout.createSequentialGroup()
-            .addComponent(jLabel1)
-            .addGap(18, 18, 18)
-            .addComponent(jLabel2)
-            .addGap(18, 18, 18)
-            .addComponent(jLabel3)
-            .addGap(18, 18, 18)
-            .addComponent(jLabel4)))
-        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-    );
-    panelWelcomeLayout.setVerticalGroup(
-      panelWelcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addGroup(panelWelcomeLayout.createSequentialGroup()
-        .addGap(57, 57, 57)
-        .addComponent(txtNikiLaundry2)
-        .addGap(18, 18, 18)
-        .addGroup(panelWelcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-          .addComponent(jLabel1)
-          .addComponent(jLabel2)
-          .addComponent(jLabel3)
-          .addComponent(jLabel4))
-        .addContainerGap(395, Short.MAX_VALUE))
-    );
-
-    bg.add(panelWelcome, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 40, 730, 560));
 
     loginPanel.setBackground(new java.awt.Color(54, 33, 89));
     loginPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -287,6 +239,63 @@ public class NikiLaundryView extends javax.swing.JFrame {
     loginPanel.add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 270, 80, 30));
 
     bg.add(loginPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 270, 600));
+
+    panelWelcome.setBackground(new java.awt.Color(255, 0, 255));
+
+    txtNikiLaundry2.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
+    txtNikiLaundry2.setForeground(new java.awt.Color(54, 33, 89));
+    txtNikiLaundry2.setText("Niki Laundry");
+
+    jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+    jLabel1.setForeground(new java.awt.Color(54, 33, 89));
+    jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/checkbox.png"))); // NOI18N
+    jLabel1.setText("Profesional");
+
+    jLabel2.setForeground(new java.awt.Color(54, 33, 89));
+    jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/checkbox.png"))); // NOI18N
+    jLabel2.setText("Bersih");
+
+    jLabel3.setForeground(new java.awt.Color(54, 33, 89));
+    jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/checkbox.png"))); // NOI18N
+    jLabel3.setText("Rapi");
+
+    jLabel4.setForeground(new java.awt.Color(54, 33, 89));
+    jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/checkbox.png"))); // NOI18N
+    jLabel4.setText("Wangi");
+
+    javax.swing.GroupLayout panelWelcomeLayout = new javax.swing.GroupLayout(panelWelcome);
+    panelWelcome.setLayout(panelWelcomeLayout);
+    panelWelcomeLayout.setHorizontalGroup(
+      panelWelcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+      .addGroup(panelWelcomeLayout.createSequentialGroup()
+        .addGap(111, 111, 111)
+        .addGroup(panelWelcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+          .addComponent(txtNikiLaundry2, javax.swing.GroupLayout.PREFERRED_SIZE, 409, javax.swing.GroupLayout.PREFERRED_SIZE)
+          .addGroup(panelWelcomeLayout.createSequentialGroup()
+            .addComponent(jLabel1)
+            .addGap(18, 18, 18)
+            .addComponent(jLabel2)
+            .addGap(18, 18, 18)
+            .addComponent(jLabel3)
+            .addGap(18, 18, 18)
+            .addComponent(jLabel4)))
+        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+    );
+    panelWelcomeLayout.setVerticalGroup(
+      panelWelcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+      .addGroup(panelWelcomeLayout.createSequentialGroup()
+        .addGap(57, 57, 57)
+        .addComponent(txtNikiLaundry2)
+        .addGap(18, 18, 18)
+        .addGroup(panelWelcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+          .addComponent(jLabel1)
+          .addComponent(jLabel2)
+          .addComponent(jLabel3)
+          .addComponent(jLabel4))
+        .addContainerGap(395, Short.MAX_VALUE))
+    );
+
+    bg.add(panelWelcome, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 40, 730, 560));
 
     sidePanel.setBackground(new java.awt.Color(54, 33, 89));
     sidePanel.setEnabled(false);
@@ -453,16 +462,6 @@ public class NikiLaundryView extends javax.swing.JFrame {
 
     bg.add(sidePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 270, 600));
 
-    btnExit.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-    btnExit.setForeground(new java.awt.Color(54, 33, 89));
-    btnExit.setText("X");
-    btnExit.addMouseListener(new java.awt.event.MouseAdapter() {
-      public void mousePressed(java.awt.event.MouseEvent evt) {
-        btnExitMousePressed(evt);
-      }
-    });
-    bg.add(btnExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 10, -1, 20));
-
     menuLaundry.setBackground(new java.awt.Color(142, 53, 239));
     menuLaundry.setPreferredSize(new java.awt.Dimension(730, 130));
 
@@ -481,13 +480,6 @@ public class NikiLaundryView extends javax.swing.JFrame {
     jTextField2.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
         jTextField2ActionPerformed(evt);
-      }
-    });
-
-    jTextField3.setText("Pewangi");
-    jTextField3.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jTextField3ActionPerformed(evt);
       }
     });
 
@@ -512,13 +504,6 @@ public class NikiLaundryView extends javax.swing.JFrame {
       }
     });
 
-    jTextField22.setText("Layanan");
-    jTextField22.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jTextField22ActionPerformed(evt);
-      }
-    });
-
     jLabel5.setText("anda sudah [...] kali cuci");
 
     tabelData.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
@@ -534,6 +519,10 @@ public class NikiLaundryView extends javax.swing.JFrame {
       }
     ));
     jScrollPane1.setViewportView(tabelData);
+
+    cbPewangi.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+    cbLayanan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
     javax.swing.GroupLayout tabPenyerahanLayout = new javax.swing.GroupLayout(tabPenyerahan);
     tabPenyerahan.setLayout(tabPenyerahanLayout);
@@ -556,9 +545,9 @@ public class NikiLaundryView extends javax.swing.JFrame {
             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 716, javax.swing.GroupLayout.PREFERRED_SIZE))
           .addGroup(tabPenyerahanLayout.createSequentialGroup()
             .addContainerGap()
-            .addGroup(tabPenyerahanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-              .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-              .addComponent(jTextField22, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(tabPenyerahanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+              .addComponent(cbPewangi, 0, 183, Short.MAX_VALUE)
+              .addComponent(cbLayanan, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGap(133, 133, 133)
             .addGroup(tabPenyerahanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
               .addComponent(jTextField6)
@@ -578,15 +567,15 @@ public class NikiLaundryView extends javax.swing.JFrame {
           .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
         .addGroup(tabPenyerahanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-          .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-          .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+          .addComponent(cbPewangi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+          .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
         .addGroup(tabPenyerahanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-          .addComponent(jTextField22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-          .addComponent(jLabel5))
+          .addComponent(jLabel5)
+          .addComponent(cbLayanan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         .addGap(18, 18, 18)
-        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 371, javax.swing.GroupLayout.PREFERRED_SIZE)
-        .addGap(25, 25, 25))
+        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 388, Short.MAX_VALUE)
+        .addContainerGap())
     );
 
     menuLaundry.addTab("Penyerahan", tabPenyerahan);
@@ -605,13 +594,6 @@ public class NikiLaundryView extends javax.swing.JFrame {
     jTextField24.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
         jTextField24ActionPerformed(evt);
-      }
-    });
-
-    jTextField25.setText("Pewangi");
-    jTextField25.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jTextField25ActionPerformed(evt);
       }
     });
 
@@ -636,13 +618,6 @@ public class NikiLaundryView extends javax.swing.JFrame {
       }
     });
 
-    jTextField29.setText("Layanan");
-    jTextField29.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jTextField29ActionPerformed(evt);
-      }
-    });
-
     jLabel6.setText("anda sudah [...] kali cuci");
 
     tabelData4.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
@@ -658,6 +633,10 @@ public class NikiLaundryView extends javax.swing.JFrame {
       }
     ));
     jScrollPane6.setViewportView(tabelData4);
+
+    cbLayanan1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+    cbPewangi1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
     javax.swing.GroupLayout tabPengambilanLayout = new javax.swing.GroupLayout(tabPengambilan);
     tabPengambilan.setLayout(tabPengambilanLayout);
@@ -681,8 +660,8 @@ public class NikiLaundryView extends javax.swing.JFrame {
           .addGroup(tabPengambilanLayout.createSequentialGroup()
             .addContainerGap()
             .addGroup(tabPengambilanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-              .addComponent(jTextField25, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-              .addComponent(jTextField29, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
+              .addComponent(cbLayanan1, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+              .addComponent(cbPewangi1, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGap(133, 133, 133)
             .addGroup(tabPengambilanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
               .addComponent(jTextField28)
@@ -702,15 +681,17 @@ public class NikiLaundryView extends javax.swing.JFrame {
           .addComponent(jTextField24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
         .addGroup(tabPengambilanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-          .addComponent(jTextField28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-          .addComponent(jTextField25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-        .addGroup(tabPengambilanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-          .addComponent(jTextField29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-          .addComponent(jLabel6))
+          .addGroup(tabPengambilanLayout.createSequentialGroup()
+            .addComponent(jTextField28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addComponent(jLabel6))
+          .addGroup(tabPengambilanLayout.createSequentialGroup()
+            .addComponent(cbPewangi1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addComponent(cbLayanan1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
         .addGap(18, 18, 18)
-        .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 371, javax.swing.GroupLayout.PREFERRED_SIZE)
-        .addGap(25, 25, 25))
+        .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 388, Short.MAX_VALUE)
+        .addContainerGap())
     );
 
     menuLaundry.addTab("Pengambilan", tabPengambilan);
@@ -746,7 +727,7 @@ public class NikiLaundryView extends javax.swing.JFrame {
       }
     });
 
-    jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+    cbJenisKelamin.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
     jTextField9.setText("No. HP");
     jTextField9.addActionListener(new java.awt.event.ActionListener() {
@@ -755,7 +736,7 @@ public class NikiLaundryView extends javax.swing.JFrame {
       }
     });
 
-    jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+    cbJenisPelanggan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
     jTextArea1.setColumns(20);
     jTextArea1.setRows(5);
@@ -787,15 +768,18 @@ public class NikiLaundryView extends javax.swing.JFrame {
         .addContainerGap()
         .addGroup(tabPelangganLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
           .addGroup(tabPelangganLayout.createSequentialGroup()
+            .addComponent(jScrollPane2)
+            .addContainerGap())
+          .addGroup(tabPelangganLayout.createSequentialGroup()
             .addGroup(tabPelangganLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
               .addComponent(jTextField8)
               .addComponent(jTextField7)
-              .addComponent(jComboBox2, 0, 209, Short.MAX_VALUE)
+              .addComponent(cbJenisKelamin, 0, 209, Short.MAX_VALUE)
               .addComponent(jTextField9))
             .addGap(69, 69, 69)
             .addGroup(tabPelangganLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
               .addGroup(tabPelangganLayout.createSequentialGroup()
-                .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(cbJenisPelanggan, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
               .addGroup(tabPelangganLayout.createSequentialGroup()
                 .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -803,8 +787,7 @@ public class NikiLaundryView extends javax.swing.JFrame {
                 .addGroup(tabPelangganLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                   .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
                   .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(35, 35, 35))))
-          .addComponent(jScrollPane2)))
+                .addGap(35, 35, 35))))))
     );
     tabPelangganLayout.setVerticalGroup(
       tabPelangganLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -812,13 +795,13 @@ public class NikiLaundryView extends javax.swing.JFrame {
         .addContainerGap()
         .addGroup(tabPelangganLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
           .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-          .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+          .addComponent(cbJenisPelanggan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         .addGap(6, 6, 6)
         .addGroup(tabPelangganLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
           .addGroup(tabPelangganLayout.createSequentialGroup()
             .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(cbJenisKelamin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
             .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
           .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -827,7 +810,7 @@ public class NikiLaundryView extends javax.swing.JFrame {
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
             .addComponent(jButton2)))
         .addGap(18, 18, 18)
-        .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 386, Short.MAX_VALUE)
+        .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 388, Short.MAX_VALUE)
         .addContainerGap())
     );
 
@@ -877,19 +860,15 @@ public class NikiLaundryView extends javax.swing.JFrame {
         .addContainerGap()
         .addGroup(tabPewangiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
           .addGroup(tabPewangiLayout.createSequentialGroup()
-            .addGroup(tabPewangiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-              .addGroup(tabPewangiLayout.createSequentialGroup()
-                .addGroup(tabPewangiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                  .addComponent(jTextField11, javax.swing.GroupLayout.DEFAULT_SIZE, 209, Short.MAX_VALUE)
-                  .addComponent(jTextField10))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-              .addGroup(tabPewangiLayout.createSequentialGroup()
-                .addComponent(jTextField12, javax.swing.GroupLayout.DEFAULT_SIZE, 209, Short.MAX_VALUE)
-                .addGap(418, 418, 418)))
+            .addGroup(tabPewangiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+              .addComponent(jTextField11, javax.swing.GroupLayout.DEFAULT_SIZE, 209, Short.MAX_VALUE)
+              .addComponent(jTextField10)
+              .addComponent(jTextField12))
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(tabPewangiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
               .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
               .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)))
-          .addComponent(jScrollPane7))
+          .addComponent(jScrollPane7, javax.swing.GroupLayout.DEFAULT_SIZE, 716, Short.MAX_VALUE))
         .addContainerGap())
     );
     tabPewangiLayout.setVerticalGroup(
@@ -908,7 +887,7 @@ public class NikiLaundryView extends javax.swing.JFrame {
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
             .addComponent(jButton4)))
         .addGap(18, 18, 18)
-        .addComponent(jScrollPane7, javax.swing.GroupLayout.DEFAULT_SIZE, 420, Short.MAX_VALUE)
+        .addComponent(jScrollPane7)
         .addContainerGap())
     );
 
@@ -916,14 +895,14 @@ public class NikiLaundryView extends javax.swing.JFrame {
 
     tabPakaian.setBackground(new java.awt.Color(142, 53, 239));
 
-    jTextField19.setText("idPewangi");
+    jTextField19.setText("idPakaian");
     jTextField19.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
         jTextField19ActionPerformed(evt);
       }
     });
 
-    jTextField20.setText("Nama Pewangi");
+    jTextField20.setText("Nama Pakaian");
     jTextField20.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
         jTextField20ActionPerformed(evt);
@@ -936,21 +915,38 @@ public class NikiLaundryView extends javax.swing.JFrame {
 
     jButton6.setText("Delete");
 
+    tabelData6.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+    tabelData6.setModel(new javax.swing.table.DefaultTableModel(
+      new Object [][] {
+        {null, null, null, null},
+        {null, null, null, null},
+        {null, null, null, null},
+        {null, null, null, null}
+      },
+      new String [] {
+        "Title 1", "Title 2", "Title 3", "Title 4"
+      }
+    ));
+    jScrollPane8.setViewportView(tabelData6);
+
     javax.swing.GroupLayout tabPakaianLayout = new javax.swing.GroupLayout(tabPakaian);
     tabPakaian.setLayout(tabPakaianLayout);
     tabPakaianLayout.setHorizontalGroup(
       tabPakaianLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
       .addGroup(tabPakaianLayout.createSequentialGroup()
         .addContainerGap()
-        .addGroup(tabPakaianLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-          .addComponent(jTextField20)
-          .addComponent(jTextField19)
-          .addComponent(jTextField21))
-        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 439, Short.MAX_VALUE)
-        .addGroup(tabPakaianLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-          .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-          .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
-        .addGap(95, 95, 95))
+        .addGroup(tabPakaianLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+          .addGroup(tabPakaianLayout.createSequentialGroup()
+            .addGroup(tabPakaianLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+              .addComponent(jTextField19)
+              .addComponent(jTextField20, javax.swing.GroupLayout.DEFAULT_SIZE, 209, Short.MAX_VALUE)
+              .addComponent(jTextField21))
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(tabPakaianLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+              .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+              .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)))
+          .addComponent(jScrollPane8, javax.swing.GroupLayout.DEFAULT_SIZE, 716, Short.MAX_VALUE))
+        .addContainerGap())
     );
     tabPakaianLayout.setVerticalGroup(
       tabPakaianLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -967,22 +963,86 @@ public class NikiLaundryView extends javax.swing.JFrame {
             .addComponent(jTextField20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
             .addComponent(jTextField21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-        .addContainerGap(444, Short.MAX_VALUE))
+        .addGap(18, 18, 18)
+        .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        .addContainerGap(8, Short.MAX_VALUE))
     );
 
     Pakaian.addTab("Pakaian", tabPakaian);
 
     tabLayanan.setBackground(new java.awt.Color(142, 53, 239));
 
+    jTextField22.setText("idLayanan");
+    jTextField22.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        jTextField22ActionPerformed(evt);
+      }
+    });
+
+    jTextField25.setText("Nama Layanan");
+    jTextField25.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        jTextField25ActionPerformed(evt);
+      }
+    });
+
+    jTextField29.setText("Harga");
+
+    jButton7.setText("Delete");
+
+    jButton8.setText("Save");
+
+    tabelData7.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+    tabelData7.setModel(new javax.swing.table.DefaultTableModel(
+      new Object [][] {
+        {null, null, null, null},
+        {null, null, null, null},
+        {null, null, null, null},
+        {null, null, null, null}
+      },
+      new String [] {
+        "Title 1", "Title 2", "Title 3", "Title 4"
+      }
+    ));
+    jScrollPane9.setViewportView(tabelData7);
+
     javax.swing.GroupLayout tabLayananLayout = new javax.swing.GroupLayout(tabLayanan);
     tabLayanan.setLayout(tabLayananLayout);
     tabLayananLayout.setHorizontalGroup(
       tabLayananLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addGap(0, 728, Short.MAX_VALUE)
+      .addGroup(tabLayananLayout.createSequentialGroup()
+        .addContainerGap()
+        .addGroup(tabLayananLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+          .addComponent(jScrollPane9, javax.swing.GroupLayout.DEFAULT_SIZE, 716, Short.MAX_VALUE)
+          .addGroup(tabLayananLayout.createSequentialGroup()
+            .addGroup(tabLayananLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+              .addComponent(jTextField22)
+              .addComponent(jTextField25, javax.swing.GroupLayout.DEFAULT_SIZE, 209, Short.MAX_VALUE)
+              .addComponent(jTextField29))
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(tabLayananLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+              .addComponent(jButton8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+              .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))))
+        .addContainerGap())
     );
     tabLayananLayout.setVerticalGroup(
       tabLayananLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addGap(0, 534, Short.MAX_VALUE)
+      .addGroup(tabLayananLayout.createSequentialGroup()
+        .addContainerGap()
+        .addGroup(tabLayananLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+          .addGroup(tabLayananLayout.createSequentialGroup()
+            .addComponent(jButton8)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addComponent(jButton7))
+          .addGroup(tabLayananLayout.createSequentialGroup()
+            .addComponent(jTextField22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addComponent(jTextField25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addComponent(jTextField29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+        .addGap(18, 18, 18)
+        .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        .addContainerGap(8, Short.MAX_VALUE))
     );
 
     Pakaian.addTab("Layanan", tabLayanan);
@@ -1000,87 +1060,33 @@ public class NikiLaundryView extends javax.swing.JFrame {
 
     bg.add(panelMenuMaster, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 40, 730, 560));
 
-    ribon3.setBackground(new java.awt.Color(142, 53, 239));
+    menuAset.setBackground(new java.awt.Color(142, 53, 239));
+    menuAset.setPreferredSize(new java.awt.Dimension(730, 130));
 
-    jTextField13.setText("Nama");
-    jTextField13.setToolTipText("");
+    tabAset.setBackground(new java.awt.Color(142, 53, 239));
+    tabAset.setPreferredSize(new java.awt.Dimension(730, 130));
+
+    jTextField3.setText("Nama");
+    jTextField3.setToolTipText("");
+    jTextField3.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        jTextField3ActionPerformed(evt);
+      }
+    });
+
+    jTextField13.setText("idAset");
     jTextField13.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
         jTextField13ActionPerformed(evt);
       }
     });
 
-    jTextField14.setText("No. Nota");
+    jTextField14.setText("Tgl. Tambah");
     jTextField14.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
         jTextField14ActionPerformed(evt);
       }
     });
-
-    jTextField15.setText("Pewangi");
-    jTextField15.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jTextField15ActionPerformed(evt);
-      }
-    });
-
-    jTextField16.setText("Tgl. Terima");
-    jTextField16.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jTextField16ActionPerformed(evt);
-      }
-    });
-
-    jTextField17.setText("Tgl. Jadi");
-    jTextField17.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jTextField17ActionPerformed(evt);
-      }
-    });
-
-    jTextField18.setText("Jumlah (Kg)");
-    jTextField18.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jTextField18ActionPerformed(evt);
-      }
-    });
-
-    javax.swing.GroupLayout ribon3Layout = new javax.swing.GroupLayout(ribon3);
-    ribon3.setLayout(ribon3Layout);
-    ribon3Layout.setHorizontalGroup(
-      ribon3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addGroup(ribon3Layout.createSequentialGroup()
-        .addGap(18, 18, 18)
-        .addGroup(ribon3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-          .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-          .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-          .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
-        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 135, Short.MAX_VALUE)
-        .addGroup(ribon3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-          .addComponent(jTextField17, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-          .addComponent(jTextField16, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-          .addComponent(jTextField18, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
-        .addGap(211, 211, 211))
-    );
-    ribon3Layout.setVerticalGroup(
-      ribon3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ribon3Layout.createSequentialGroup()
-        .addContainerGap(40, Short.MAX_VALUE)
-        .addGroup(ribon3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-          .addGroup(ribon3Layout.createSequentialGroup()
-            .addComponent(jTextField16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addComponent(jTextField17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addComponent(jTextField18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-          .addGroup(ribon3Layout.createSequentialGroup()
-            .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-        .addContainerGap())
-    );
 
     tabelData2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
     tabelData2.setModel(new javax.swing.table.DefaultTableModel(
@@ -1096,26 +1102,85 @@ public class NikiLaundryView extends javax.swing.JFrame {
     ));
     jScrollPane3.setViewportView(tabelData2);
 
+    jTextField17.setText("Harga");
+    jTextField17.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        jTextField17ActionPerformed(evt);
+      }
+    });
+
+    jTextField18.setText("Merek");
+    jTextField18.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        jTextField18ActionPerformed(evt);
+      }
+    });
+
+    javax.swing.GroupLayout tabAsetLayout = new javax.swing.GroupLayout(tabAset);
+    tabAset.setLayout(tabAsetLayout);
+    tabAsetLayout.setHorizontalGroup(
+      tabAsetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+      .addGroup(tabAsetLayout.createSequentialGroup()
+        .addGroup(tabAsetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+          .addGroup(tabAsetLayout.createSequentialGroup()
+            .addGroup(tabAsetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+              .addGroup(tabAsetLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jTextField18, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
+              .addGroup(tabAsetLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(tabAsetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                  .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+                  .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(133, 133, 133)
+                .addGroup(tabAsetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                  .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+                  .addComponent(jTextField17, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))))
+            .addGap(0, 217, Short.MAX_VALUE))
+          .addGroup(tabAsetLayout.createSequentialGroup()
+            .addContainerGap()
+            .addComponent(jScrollPane3)))
+        .addContainerGap())
+    );
+    tabAsetLayout.setVerticalGroup(
+      tabAsetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+      .addGroup(tabAsetLayout.createSequentialGroup()
+        .addGap(6, 6, 6)
+        .addGroup(tabAsetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+          .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+          .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+        .addGroup(tabAsetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+          .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+          .addComponent(jTextField17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+        .addComponent(jTextField18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        .addGap(18, 18, 18)
+        .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 410, Short.MAX_VALUE)
+        .addContainerGap())
+    );
+
+    menuAset.addTab("Tambah Aset", tabAset);
+
     javax.swing.GroupLayout panelMenuAsetLayout = new javax.swing.GroupLayout(panelMenuAset);
     panelMenuAset.setLayout(panelMenuAsetLayout);
     panelMenuAsetLayout.setHorizontalGroup(
       panelMenuAsetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addGroup(panelMenuAsetLayout.createSequentialGroup()
-        .addComponent(ribon3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-        .addGap(0, 0, Short.MAX_VALUE))
-      .addGroup(panelMenuAsetLayout.createSequentialGroup()
-        .addContainerGap()
-        .addComponent(jScrollPane3)
-        .addContainerGap())
+      .addGap(0, 742, Short.MAX_VALUE)
+      .addGroup(panelMenuAsetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(panelMenuAsetLayout.createSequentialGroup()
+          .addContainerGap()
+          .addComponent(menuAset, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+          .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
     );
     panelMenuAsetLayout.setVerticalGroup(
       panelMenuAsetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addGroup(panelMenuAsetLayout.createSequentialGroup()
-        .addGap(54, 54, 54)
-        .addComponent(ribon3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-        .addGap(18, 18, 18)
-        .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 352, Short.MAX_VALUE)
-        .addContainerGap())
+      .addGap(0, 560, Short.MAX_VALUE)
+      .addGroup(panelMenuAsetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(panelMenuAsetLayout.createSequentialGroup()
+          .addContainerGap()
+          .addComponent(menuAset, javax.swing.GroupLayout.DEFAULT_SIZE, 548, Short.MAX_VALUE)
+          .addContainerGap()))
     );
 
     bg.add(panelMenuAset, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 40, 730, 560));
@@ -1130,7 +1195,7 @@ public class NikiLaundryView extends javax.swing.JFrame {
     );
     ribon4Layout.setVerticalGroup(
       ribon4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addGap(0, 130, Short.MAX_VALUE)
+      .addGap(0, 140, Short.MAX_VALUE)
     );
 
     tabelData3.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
@@ -1151,7 +1216,7 @@ public class NikiLaundryView extends javax.swing.JFrame {
     panelMenuLaporan.setLayout(panelMenuLaporanLayout);
     panelMenuLaporanLayout.setHorizontalGroup(
       panelMenuLaporanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addGroup(panelMenuLaporanLayout.createSequentialGroup()
+      .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelMenuLaporanLayout.createSequentialGroup()
         .addComponent(ribon4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         .addGap(0, 0, Short.MAX_VALUE))
       .addGroup(panelMenuLaporanLayout.createSequentialGroup()
@@ -1162,14 +1227,23 @@ public class NikiLaundryView extends javax.swing.JFrame {
     panelMenuLaporanLayout.setVerticalGroup(
       panelMenuLaporanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
       .addGroup(panelMenuLaporanLayout.createSequentialGroup()
-        .addGap(55, 55, 55)
         .addComponent(ribon4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         .addGap(18, 18, 18)
-        .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 351, Short.MAX_VALUE)
+        .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 396, Short.MAX_VALUE)
         .addContainerGap())
     );
 
     bg.add(panelMenuLaporan, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 40, 730, 560));
+
+    btnExit.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+    btnExit.setForeground(new java.awt.Color(54, 33, 89));
+    btnExit.setText("X");
+    btnExit.addMouseListener(new java.awt.event.MouseAdapter() {
+      public void mousePressed(java.awt.event.MouseEvent evt) {
+        btnExitMousePressed(evt);
+      }
+    });
+    bg.add(btnExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 10, -1, 20));
 
     javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
     getContentPane().setLayout(layout);
@@ -1202,10 +1276,6 @@ public class NikiLaundryView extends javax.swing.JFrame {
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
       // TODO add your handling code here:
     }//GEN-LAST:event_jTextField2ActionPerformed
-
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
-      // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
 
     private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
       // TODO add your handling code here:
@@ -1318,30 +1388,6 @@ public class NikiLaundryView extends javax.swing.JFrame {
     panelMenuLaporan.hide();
   }//GEN-LAST:event_btnLoginActionPerformed
 
-  private void jTextField13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField13ActionPerformed
-    // TODO add your handling code here:
-  }//GEN-LAST:event_jTextField13ActionPerformed
-
-  private void jTextField14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField14ActionPerformed
-    // TODO add your handling code here:
-  }//GEN-LAST:event_jTextField14ActionPerformed
-
-  private void jTextField15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField15ActionPerformed
-    // TODO add your handling code here:
-  }//GEN-LAST:event_jTextField15ActionPerformed
-
-  private void jTextField16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField16ActionPerformed
-    // TODO add your handling code here:
-  }//GEN-LAST:event_jTextField16ActionPerformed
-
-  private void jTextField17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField17ActionPerformed
-    // TODO add your handling code here:
-  }//GEN-LAST:event_jTextField17ActionPerformed
-
-  private void jTextField18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField18ActionPerformed
-    // TODO add your handling code here:
-  }//GEN-LAST:event_jTextField18ActionPerformed
-
   private void sidePanelComponentHidden(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_sidePanelComponentHidden
     // TODO add your handling code here:
   }//GEN-LAST:event_sidePanelComponentHidden
@@ -1378,10 +1424,6 @@ public class NikiLaundryView extends javax.swing.JFrame {
     // TODO add your handling code here:
   }//GEN-LAST:event_jTextField9ActionPerformed
 
-  private void jTextField22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField22ActionPerformed
-    // TODO add your handling code here:
-  }//GEN-LAST:event_jTextField22ActionPerformed
-
   private void jTextField23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField23ActionPerformed
     // TODO add your handling code here:
   }//GEN-LAST:event_jTextField23ActionPerformed
@@ -1389,10 +1431,6 @@ public class NikiLaundryView extends javax.swing.JFrame {
   private void jTextField24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField24ActionPerformed
     // TODO add your handling code here:
   }//GEN-LAST:event_jTextField24ActionPerformed
-
-  private void jTextField25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField25ActionPerformed
-    // TODO add your handling code here:
-  }//GEN-LAST:event_jTextField25ActionPerformed
 
   private void jTextField26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField26ActionPerformed
     // TODO add your handling code here:
@@ -1406,9 +1444,33 @@ public class NikiLaundryView extends javax.swing.JFrame {
     // TODO add your handling code here:
   }//GEN-LAST:event_jTextField28ActionPerformed
 
-  private void jTextField29ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField29ActionPerformed
+    private void jTextField22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField22ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField22ActionPerformed
+
+  private void jTextField25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField25ActionPerformed
     // TODO add your handling code here:
-  }//GEN-LAST:event_jTextField29ActionPerformed
+  }//GEN-LAST:event_jTextField25ActionPerformed
+
+  private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    // TODO add your handling code here:
+  }//GEN-LAST:event_jTextField3ActionPerformed
+
+  private void jTextField13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField13ActionPerformed
+    // TODO add your handling code here:
+  }//GEN-LAST:event_jTextField13ActionPerformed
+
+  private void jTextField14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField14ActionPerformed
+    // TODO add your handling code here:
+  }//GEN-LAST:event_jTextField14ActionPerformed
+
+  private void jTextField17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField17ActionPerformed
+    // TODO add your handling code here:
+  }//GEN-LAST:event_jTextField17ActionPerformed
+
+  private void jTextField18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField18ActionPerformed
+    // TODO add your handling code here:
+  }//GEN-LAST:event_jTextField18ActionPerformed
 
   void setColor(JPanel panel) {
     panel.setBackground(new Color(85, 65, 118));
@@ -1427,6 +1489,12 @@ public class NikiLaundryView extends javax.swing.JFrame {
   private javax.swing.JPanel btnLaundry;
   private javax.swing.JButton btnLogin;
   private javax.swing.JPanel btnMaster;
+  private javax.swing.JComboBox<String> cbJenisKelamin;
+  private javax.swing.JComboBox<String> cbJenisPelanggan;
+  private javax.swing.JComboBox<String> cbLayanan;
+  private javax.swing.JComboBox<String> cbLayanan1;
+  private javax.swing.JComboBox<String> cbPewangi;
+  private javax.swing.JComboBox<String> cbPewangi1;
   private javax.swing.JLabel iconPassword;
   private javax.swing.JLabel iconUserName;
   private javax.swing.JButton jButton1;
@@ -1435,8 +1503,8 @@ public class NikiLaundryView extends javax.swing.JFrame {
   private javax.swing.JButton jButton4;
   private javax.swing.JButton jButton5;
   private javax.swing.JButton jButton6;
-  private javax.swing.JComboBox<String> jComboBox2;
-  private javax.swing.JComboBox<String> jComboBox3;
+  private javax.swing.JButton jButton7;
+  private javax.swing.JButton jButton8;
   private javax.swing.JLabel jLabel1;
   private javax.swing.JLabel jLabel2;
   private javax.swing.JLabel jLabel3;
@@ -1450,6 +1518,8 @@ public class NikiLaundryView extends javax.swing.JFrame {
   private javax.swing.JScrollPane jScrollPane5;
   private javax.swing.JScrollPane jScrollPane6;
   private javax.swing.JScrollPane jScrollPane7;
+  private javax.swing.JScrollPane jScrollPane8;
+  private javax.swing.JScrollPane jScrollPane9;
   private javax.swing.JTextArea jTextArea1;
   private javax.swing.JTextField jTextField1;
   private javax.swing.JTextField jTextField10;
@@ -1457,8 +1527,6 @@ public class NikiLaundryView extends javax.swing.JFrame {
   private javax.swing.JTextField jTextField12;
   private javax.swing.JTextField jTextField13;
   private javax.swing.JTextField jTextField14;
-  private javax.swing.JTextField jTextField15;
-  private javax.swing.JTextField jTextField16;
   private javax.swing.JTextField jTextField17;
   private javax.swing.JTextField jTextField18;
   private javax.swing.JTextField jTextField19;
@@ -1481,6 +1549,7 @@ public class NikiLaundryView extends javax.swing.JFrame {
   private javax.swing.JTextField jTextField8;
   private javax.swing.JTextField jTextField9;
   private javax.swing.JPanel loginPanel;
+  private javax.swing.JTabbedPane menuAset;
   private javax.swing.JTabbedPane menuLaundry;
   private javax.swing.JPanel panelMenuAset;
   private javax.swing.JPanel panelMenuLaporan;
@@ -1495,13 +1564,13 @@ public class NikiLaundryView extends javax.swing.JFrame {
   private javax.swing.JLabel penyerahanLaundryTxt1;
   private javax.swing.JLabel penyerahanLaundryTxt4;
   private javax.swing.JLabel penyerahanLaundryTxt5;
-  private javax.swing.JPanel ribon3;
   private javax.swing.JPanel ribon4;
   private javax.swing.JPanel sidePanel;
   private javax.swing.JSeparator sparatorNikiLaundry;
   private javax.swing.JSeparator sparatorNikiLaundry1;
   private javax.swing.JSeparator sparatorUserName;
   private javax.swing.JSeparator sparatuorPassword;
+  private javax.swing.JPanel tabAset;
   private javax.swing.JPanel tabLayanan;
   private javax.swing.JPanel tabPakaian;
   private javax.swing.JPanel tabPelanggan;
@@ -1514,6 +1583,8 @@ public class NikiLaundryView extends javax.swing.JFrame {
   private javax.swing.JTable tabelData3;
   private javax.swing.JTable tabelData4;
   private javax.swing.JTable tabelData5;
+  private javax.swing.JTable tabelData6;
+  private javax.swing.JTable tabelData7;
   private javax.swing.JLabel txtNikiLaundry;
   private javax.swing.JLabel txtNikiLaundry1;
   private javax.swing.JLabel txtNikiLaundry2;
