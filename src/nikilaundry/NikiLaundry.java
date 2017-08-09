@@ -34,12 +34,9 @@ public class NikiLaundry {
    * @param args the command line arguments
    */
   public static void main(String[] args) {
-    try {
-      //LoginView loginView = new LoginView();
-      //Dimension frame = loginView.getSize();
-      //loginView.setLocation (frame.width / 2, frame.height / 2);
-      //loginView.show();
 
+    /* Create and display the form */
+    java.awt.EventQueue.invokeLater(() -> {
       // construct hibernate session factory
       HibernateUtil.constructConfiguration();
 
@@ -47,16 +44,17 @@ public class NikiLaundry {
       InitialDB.init();
 
       // set default look and feel
-      UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+      System.setProperty("Quaqua.tabLayoutPolicy", "wrap");
+      try {
+        UIManager.setLookAndFeel(ch.randelshofer.quaqua.QuaquaManager.getLookAndFeel());
+      } catch (UnsupportedLookAndFeelException ex) {
+        System.out.println(ex);
+      }
 
       NikiLaundryView nikiLaundryView = new NikiLaundryView();
       nikiLaundryView.setLocationRelativeTo(null);
       nikiLaundryView.setVisible(true);
-
-    } catch (ClassNotFoundException | InstantiationException
-            | IllegalAccessException | UnsupportedLookAndFeelException ex) {
-      Logger.getLogger(NikiLaundry.class.getName()).log(Level.SEVERE, null, ex);
-    }
+    });
   }
 
 }

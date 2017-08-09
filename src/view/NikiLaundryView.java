@@ -227,7 +227,7 @@ public class NikiLaundryView extends javax.swing.JFrame {
     loginPanel.add(sparatuorPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 250, 170, 20));
 
     btnLogin.setBackground(new java.awt.Color(255, 0, 255));
-    btnLogin.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+    btnLogin.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
     btnLogin.setForeground(new java.awt.Color(255, 255, 255));
     btnLogin.setText("Login");
     btnLogin.setBorder(null);
@@ -965,7 +965,7 @@ public class NikiLaundryView extends javax.swing.JFrame {
             .addComponent(jTextField21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
         .addGap(18, 18, 18)
         .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-        .addContainerGap(8, Short.MAX_VALUE))
+        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
     );
 
     Pakaian.addTab("Pakaian", tabPakaian);
@@ -1042,7 +1042,7 @@ public class NikiLaundryView extends javax.swing.JFrame {
             .addComponent(jTextField29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
         .addGap(18, 18, 18)
         .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-        .addContainerGap(8, Short.MAX_VALUE))
+        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
     );
 
     Pakaian.addTab("Layanan", tabLayanan);
@@ -1121,14 +1121,12 @@ public class NikiLaundryView extends javax.swing.JFrame {
     tabAsetLayout.setHorizontalGroup(
       tabAsetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
       .addGroup(tabAsetLayout.createSequentialGroup()
+        .addContainerGap()
         .addGroup(tabAsetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
           .addGroup(tabAsetLayout.createSequentialGroup()
             .addGroup(tabAsetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+              .addComponent(jTextField18, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
               .addGroup(tabAsetLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jTextField18, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
-              .addGroup(tabAsetLayout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(tabAsetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                   .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
                   .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1137,9 +1135,7 @@ public class NikiLaundryView extends javax.swing.JFrame {
                   .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
                   .addComponent(jTextField17, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))))
             .addGap(0, 217, Short.MAX_VALUE))
-          .addGroup(tabAsetLayout.createSequentialGroup()
-            .addContainerGap()
-            .addComponent(jScrollPane3)))
+          .addComponent(jScrollPane3))
         .addContainerGap())
     );
     tabAsetLayout.setVerticalGroup(
