@@ -16,6 +16,7 @@
  */
 package view;
 
+import controller.NikiLaundryController;
 import java.awt.Color;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -26,11 +27,14 @@ import javax.swing.JPanel;
  */
 public class NikiLaundryView extends javax.swing.JFrame {
 
+  private final NikiLaundryController controller;
+
   /**
    * Creates new form NikiLaundryView
    */
   public NikiLaundryView() {
     initComponents();
+    controller = new NikiLaundryController();
   }
 
   /**
@@ -163,6 +167,9 @@ public class NikiLaundryView extends javax.swing.JFrame {
       public void windowClosing(java.awt.event.WindowEvent evt) {
         formWindowClosing(evt);
       }
+      public void windowOpened(java.awt.event.WindowEvent evt) {
+        formWindowOpened(evt);
+      }
     });
 
     bg.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -227,10 +234,10 @@ public class NikiLaundryView extends javax.swing.JFrame {
     panelLogin.add(sparatuorPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 250, 170, 20));
 
     btnLogin.setBackground(new java.awt.Color(255, 0, 255));
-    btnLogin.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-    btnLogin.setForeground(new java.awt.Color(255, 255, 255));
+    btnLogin.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+    btnLogin.setForeground(new java.awt.Color(54, 33, 89));
     btnLogin.setText("Login");
-    btnLogin.setBorder(null);
+    btnLogin.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 0, 255), 1, true));
     btnLogin.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
         btnLoginActionPerformed(evt);
@@ -810,7 +817,7 @@ public class NikiLaundryView extends javax.swing.JFrame {
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
             .addComponent(btnDeletePelanggan)))
         .addGap(18, 18, 18)
-        .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 388, Short.MAX_VALUE)
+        .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 386, Short.MAX_VALUE)
         .addContainerGap())
     );
 
@@ -887,7 +894,7 @@ public class NikiLaundryView extends javax.swing.JFrame {
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
             .addComponent(btnDeletePewangi)))
         .addGap(18, 18, 18)
-        .addComponent(jScrollPane7)
+        .addComponent(jScrollPane7, javax.swing.GroupLayout.DEFAULT_SIZE, 420, Short.MAX_VALUE)
         .addContainerGap())
     );
 
@@ -1256,13 +1263,7 @@ public class NikiLaundryView extends javax.swing.JFrame {
   }// </editor-fold>//GEN-END:initComponents
 
     private void btnExitMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnExitMousePressed
-      // TODO add your handling code here:
-      String pesan = "Are You Sure to Exit?";
-      String title = "Exit Application";
-      if (JOptionPane.showConfirmDialog(this, pesan, title, JOptionPane.YES_NO_OPTION)
-              == JOptionPane.YES_OPTION) {
-        System.exit(0);
-      }
+      controller.tutupAplikasi(this);
     }//GEN-LAST:event_btnExitMousePressed
 
     private void txtNamaPenyerahanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNamaPenyerahanActionPerformed
@@ -1286,16 +1287,16 @@ public class NikiLaundryView extends javax.swing.JFrame {
     }//GEN-LAST:event_txtJumlahPenyerahanActionPerformed
 
     private void btnLaundryMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLaundryMousePressed
-      // TODO add your handling code here:
       setColor(btnLaundry);
       resetColor(btnMaster);
       resetColor(btnAset);
       resetColor(btnLaporan);
 
-      panelMenuLaundry.show();
-      panelMenuMaster.hide();
-      panelMenuAset.hide();
-      panelMenuLaporan.hide();
+      panelWelcome.setVisible(false);
+      panelMenuLaundry.setVisible(true);
+      panelMenuMaster.setVisible(false);
+      panelMenuAset.setVisible(false);
+      panelMenuLaporan.setVisible(false);
     }//GEN-LAST:event_btnLaundryMousePressed
 
     private void btnMasterMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMasterMousePressed
@@ -1359,13 +1360,7 @@ public class NikiLaundryView extends javax.swing.JFrame {
     }//GEN-LAST:event_txtUserNameActionPerformed
 
   private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
-    // TODO add your handling code here:
-    String pesan = "Are You Sure to Exit?";
-    String title = "Exit Application";
-    if (JOptionPane.showConfirmDialog(this, pesan, title, JOptionPane.YES_NO_OPTION)
-            == JOptionPane.YES_OPTION) {
-      System.exit(0);
-    }
+    controller.tutupAplikasi(this);
   }//GEN-LAST:event_formWindowClosing
 
   private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
@@ -1441,7 +1436,7 @@ public class NikiLaundryView extends javax.swing.JFrame {
   }//GEN-LAST:event_txtJumlahPengambilanActionPerformed
 
     private void txtIdLayananActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIdLayananActionPerformed
-        // TODO add your handling code here:
+      // TODO add your handling code here:
     }//GEN-LAST:event_txtIdLayananActionPerformed
 
   private void txtNamaLayananActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNamaLayananActionPerformed
@@ -1467,6 +1462,10 @@ public class NikiLaundryView extends javax.swing.JFrame {
   private void txtMerekAsetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMerekAsetActionPerformed
     // TODO add your handling code here:
   }//GEN-LAST:event_txtMerekAsetActionPerformed
+
+  private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+    controller.umpetnaPanelPasPertamaJalan(this);
+  }//GEN-LAST:event_formWindowOpened
 
   void setColor(JPanel panel) {
     panel.setBackground(new Color(85, 65, 118));
@@ -1517,12 +1516,12 @@ public class NikiLaundryView extends javax.swing.JFrame {
   private javax.swing.JTabbedPane menuLaundry;
   private javax.swing.JTabbedPane menuMaster;
   private javax.swing.JPanel panelLogin;
-  private javax.swing.JPanel panelMenu;
-  private javax.swing.JPanel panelMenuAset;
-  private javax.swing.JPanel panelMenuLaporan;
-  private javax.swing.JPanel panelMenuLaundry;
-  private javax.swing.JPanel panelMenuMaster;
-  private javax.swing.JPanel panelWelcome;
+  public static javax.swing.JPanel panelMenu;
+  public static javax.swing.JPanel panelMenuAset;
+  public static javax.swing.JPanel panelMenuLaporan;
+  public static javax.swing.JPanel panelMenuLaundry;
+  public static javax.swing.JPanel panelMenuMaster;
+  public static javax.swing.JPanel panelWelcome;
   private javax.swing.JPanel ribon4;
   private javax.swing.JSeparator sparatorNikiLaundryLogin;
   private javax.swing.JSeparator sparatorNikiLaundryMenu;

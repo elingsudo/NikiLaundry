@@ -16,8 +16,6 @@
  */
 package nikilaundry;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 import util.HibernateUtil;
@@ -46,8 +44,9 @@ public class NikiLaundry {
       // set default look and feel
       System.setProperty("Quaqua.tabLayoutPolicy", "wrap");
       try {
-        UIManager.setLookAndFeel(ch.randelshofer.quaqua.QuaquaManager.getLookAndFeel());
-      } catch (UnsupportedLookAndFeelException ex) {
+        UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+      } catch (UnsupportedLookAndFeelException | ClassNotFoundException
+              | InstantiationException | IllegalAccessException ex) {
         System.out.println(ex);
       }
 
