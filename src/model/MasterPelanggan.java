@@ -16,6 +16,7 @@
  */
 package model;
 
+import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -26,20 +27,22 @@ import javax.persistence.Id;
  * @author Me
  */
 @Entity
-public class Pengguna {
+public class MasterPelanggan implements Serializable {
 
   @Id
   @GeneratedValue
   private int id;
-  private String username;
-  private String password;
+
+  @Column(name = "no_ktp")
+  private String noKtp;
   private String nama;
-  private String alamat;
+  private String jenisKelamin;
 
   @Column(name = "no_hp")
   private String noHp;
+  private String jenisPelanggan;
 
-  private boolean isMember;
+  private String alamat;
 
   public int getId() {
     return id;
@@ -49,20 +52,12 @@ public class Pengguna {
     this.id = id;
   }
 
-  public String getUsername() {
-    return username;
+  public String getNoKtp() {
+    return noKtp;
   }
 
-  public void setUsername(String username) {
-    this.username = username;
-  }
-
-  public String getPassword() {
-    return password;
-  }
-
-  public void setPassword(String password) {
-    this.password = password;
+  public void setNoKtp(String noKtp) {
+    this.noKtp = noKtp;
   }
 
   public String getNama() {
@@ -73,12 +68,12 @@ public class Pengguna {
     this.nama = nama;
   }
 
-  public String getAlamat() {
-    return alamat;
+  public String getJenisKelamin() {
+    return jenisKelamin;
   }
 
-  public void setAlamat(String alamat) {
-    this.alamat = alamat;
+  public void setJenisKelamin(String jenisKelamin) {
+    this.jenisKelamin = jenisKelamin;
   }
 
   public String getNoHp() {
@@ -89,18 +84,27 @@ public class Pengguna {
     this.noHp = noHp;
   }
 
-  public boolean isIsMember() {
-    return isMember;
+  public String getJenisPelanggan() {
+    return jenisPelanggan;
   }
 
-  public void setIsMember(boolean isMember) {
-    this.isMember = isMember;
+  public void setJenisPelanggan(String jenisPelanggan) {
+    this.jenisPelanggan = jenisPelanggan;
+  }
+
+  public String getAlamat() {
+    return alamat;
+  }
+
+  public void setAlamat(String alamat) {
+    this.alamat = alamat;
   }
 
   @Override
   public String toString() {
-    return "Pengguna{" + "id=" + id + ", username=" + username + ", password=" + password
-            + ", nama=" + nama + ", alamat=" + alamat + ", noHp=" + noHp + '}';
+    return "MasterPelanggan{" + "id=" + id + ", noKtp=" + noKtp
+            + ", nama=" + nama + ", jenisKelamin=" + jenisKelamin + ", noHp=" + noHp
+            + ", jenisPelanggan=" + jenisPelanggan + ", alamat=" + alamat + '}';
   }
 
 }

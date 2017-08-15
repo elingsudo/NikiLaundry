@@ -16,13 +16,13 @@
  */
 package service;
 
-import model.Pengguna;
+import model.MasterPelanggan;
 
 /**
  *
  * @author Me
  */
-public interface PenggunaService extends AbstractService<Pengguna> {
+public interface MasterPelangganService extends AbstractService<MasterPelanggan> {
 
-  Pengguna findOneByNama(String nama);
+  MasterPelanggan findOneByNama(String nama);
 }

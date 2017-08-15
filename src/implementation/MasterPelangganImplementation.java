@@ -16,28 +16,29 @@
  */
 package implementation;
 
-import model.Pengguna;
+import model.MasterPelanggan;
 import org.hibernate.Session;
-import service.PenggunaService;
 import util.HibernateUtil;
+import service.MasterPelangganService;
 
 /**
  *
  * @author Me
  */
-public class PenggunaImplementation extends AbstractImplementation<Pengguna> implements PenggunaService {
+public class MasterPelangganImplementation extends AbstractImplementation<MasterPelanggan> implements MasterPelangganService {
 
-  public PenggunaImplementation(Class<Pengguna> model) {
+  public MasterPelangganImplementation(Class<MasterPelanggan> model) {
     super(model);
   }
 
   @Override
-  public Pengguna findOneByNama(String nama) {
-    Pengguna pengguna = null;
+  public MasterPelanggan findOneByNama(String nama) {
+    MasterPelanggan pengguna = null;
     Session session = HibernateUtil.getSessionFactory().openSession();
     try {
       session.beginTransaction();
-      pengguna = (Pengguna) session.createQuery("FROM Pengguna pengguna WHERE pengguna.nama = :nama")
+      pengguna = (MasterPelanggan) session
+              .createQuery("FROM MasterPelanggan masterPelanggan WHERE masterPelanggan.nama = :nama")
               .setString("nama", nama).uniqueResult();
       session.getTransaction().commit();
     } catch (Exception e) {

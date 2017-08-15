@@ -35,6 +35,7 @@ public class NikiLaundry {
 
     /* Create and display the form */
     java.awt.EventQueue.invokeLater(() -> {
+      
       // construct hibernate session factory
       HibernateUtil.constructConfiguration();
 
@@ -42,7 +43,6 @@ public class NikiLaundry {
       InitialDB.init();
 
       // set default look and feel
-      System.setProperty("Quaqua.tabLayoutPolicy", "wrap");
       try {
         UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
       } catch (UnsupportedLookAndFeelException | ClassNotFoundException

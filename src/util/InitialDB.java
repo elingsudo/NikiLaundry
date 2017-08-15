@@ -16,9 +16,9 @@
  */
 package util;
 
-import implementation.PenggunaImplementation;
-import model.Pengguna;
-import service.PenggunaService;
+import implementation.MasterPelangganImplementation;
+import model.MasterPelanggan;
+import service.MasterPelangganService;
 
 /**
  *
@@ -26,27 +26,26 @@ import service.PenggunaService;
  */
 public class InitialDB {
 
-  private final PenggunaService service;
+  private final MasterPelangganService service;
 
   public InitialDB() {
-    service = new PenggunaImplementation(Pengguna.class);
+    service = new MasterPelangganImplementation(MasterPelanggan.class);
   }
 
   public static void init() {
     InitialDB initialDB = new InitialDB();
-    initialDB.insertMember();
+    initialDB.insertPelanggan();
   }
 
-  private void insertMember() {
-    Pengguna pengguna = new Pengguna();
-    pengguna.setId(1);
-    pengguna.setUsername("username");
-    pengguna.setPassword("password");
-    pengguna.setNama("nama");
-    pengguna.setAlamat("alamat");
-    pengguna.setNoHp("hp");
-    pengguna.setIsMember(true);
-    String message = service.save(pengguna);
+  private void insertPelanggan() {
+    MasterPelanggan pelanggan = new MasterPelanggan();
+    pelanggan.setNoKtp("330400_990333_0001");
+    pelanggan.setJenisKelamin("L");
+    pelanggan.setNama("Eling");
+    pelanggan.setAlamat("alamat");
+    pelanggan.setNoHp("085444999333");
+    pelanggan.setJenisPelanggan("MEMBER");
+    String message = service.save(pelanggan);
     System.out.println(message);
   }
 }
