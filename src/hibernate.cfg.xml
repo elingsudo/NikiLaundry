@@ -65,7 +65,8 @@ Contributor(s):
     <property name="hibernate.default_batch_fetch_size">20</property>
 
     <!-- Mapping Class -->
-    <mapping class="model.MasterPelanggan"/>
+    <mapping class="model.MasterPelangganModel"/>
+    <mapping class="model.MasterPewangiModel"/>
 
   </session-factory>
 </hibernate-configuration>

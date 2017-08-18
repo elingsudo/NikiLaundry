@@ -102,8 +102,8 @@ public class MasterPelangganModel implements Serializable {
 
   @Override
   public String toString() {
-    return "MasterPelanggan{" + "id=" + id + ", noKtp=" + noKtp
-            + ", nama=" + nama + ", jenisKelamin=" + jenisKelamin + ", noHp=" + noHp
+    return "MasterPelangganModel{" + "noKtp=" + noKtp + ", nama=" + nama
+            + ", jenisKelamin=" + jenisKelamin + ", noHp=" + noHp
             + ", jenisPelanggan=" + jenisPelanggan + ", alamat=" + alamat + '}';
   }
 

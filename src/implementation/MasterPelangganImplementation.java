@@ -40,7 +40,7 @@ public class MasterPelangganImplementation
     try {
       session.beginTransaction();
       pengguna = (MasterPelangganModel) session
-              .createQuery("FROM MasterPelanggan masterPelanggan "
+              .createQuery("FROM MasterPelangganModel masterPelanggan "
                       + "WHERE masterPelanggan.nama = :nama")
               .setString("nama", nama).uniqueResult();
       session.getTransaction().commit();

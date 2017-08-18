@@ -16,7 +16,9 @@
  */
 package model;
 
+import java.io.Serializable;
 import java.math.BigInteger;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
@@ -24,7 +26,8 @@ import javax.persistence.Id;
  *
  * @author triastowo
  */
-public class MasterPewangiModel {
+@Entity
+public class MasterPewangiModel implements Serializable {
 
   @Id
   @GeneratedValue
@@ -70,7 +73,7 @@ public class MasterPewangiModel {
 
   @Override
   public String toString() {
-    return "MasterPewangi{" + "id=" + id + ", idPewangi=" + idPewangi
+    return "MasterPewangiModel{" + "idPewangi=" + idPewangi
             + ", namaPewangi=" + namaPewangi + ", harga=" + harga + '}';
   }
 
