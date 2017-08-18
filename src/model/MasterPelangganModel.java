@@ -27,7 +27,7 @@ import javax.persistence.Id;
  * @author Me
  */
 @Entity
-public class MasterPelanggan implements Serializable {
+public class MasterPelangganModel implements Serializable {
 
   @Id
   @GeneratedValue

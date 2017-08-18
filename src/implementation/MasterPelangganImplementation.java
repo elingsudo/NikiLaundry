@@ -16,7 +16,7 @@
  */
 package implementation;
 
-import model.MasterPelanggan;
+import model.MasterPelangganModel;
 import org.hibernate.Session;
 import util.HibernateUtil;
 import service.MasterPelangganService;
@@ -25,20 +25,23 @@ import service.MasterPelangganService;
  *
  * @author Me
  */
-public class MasterPelangganImplementation extends AbstractImplementation<MasterPelanggan> implements MasterPelangganService {
+public class MasterPelangganImplementation
+        extends AbstractImplementation<MasterPelangganModel>
+        implements MasterPelangganService {
 
-  public MasterPelangganImplementation(Class<MasterPelanggan> model) {
+  public MasterPelangganImplementation(Class<MasterPelangganModel> model) {
     super(model);
   }
 
   @Override
-  public MasterPelanggan findOneByNama(String nama) {
-    MasterPelanggan pengguna = null;
+  public MasterPelangganModel findOneByNama(String nama) {
+    MasterPelangganModel pengguna = null;
     Session session = HibernateUtil.getSessionFactory().openSession();
     try {
       session.beginTransaction();
-      pengguna = (MasterPelanggan) session
-              .createQuery("FROM MasterPelanggan masterPelanggan WHERE masterPelanggan.nama = :nama")
+      pengguna = (MasterPelangganModel) session
+              .createQuery("FROM MasterPelanggan masterPelanggan "
+                      + "WHERE masterPelanggan.nama = :nama")
               .setString("nama", nama).uniqueResult();
       session.getTransaction().commit();
     } catch (Exception e) {

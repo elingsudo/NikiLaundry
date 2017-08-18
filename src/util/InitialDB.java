@@ -17,7 +17,7 @@
 package util;
 
 import implementation.MasterPelangganImplementation;
-import model.MasterPelanggan;
+import model.MasterPelangganModel;
 import service.MasterPelangganService;
 
 /**
@@ -29,7 +29,7 @@ public class InitialDB {
   private final MasterPelangganService service;
 
   public InitialDB() {
-    service = new MasterPelangganImplementation(MasterPelanggan.class);
+    service = new MasterPelangganImplementation(MasterPelangganModel.class);
   }
 
   public static void init() {
@@ -38,7 +38,7 @@ public class InitialDB {
   }
 
   private void insertPelanggan() {
-    MasterPelanggan pelanggan = new MasterPelanggan();
+    MasterPelangganModel pelanggan = new MasterPelangganModel();
     pelanggan.setNoKtp("330400_990333_0001");
     pelanggan.setJenisKelamin("L");
     pelanggan.setNama("Eling");

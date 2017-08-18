@@ -17,7 +17,7 @@
 package service;
 
 import implementation.MasterPelangganImplementation;
-import model.MasterPelanggan;
+import model.MasterPelangganModel;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
@@ -31,12 +31,12 @@ public class MasterPelangganTest {
   private final MasterPelangganService penggunaService;
 
   public MasterPelangganTest() {
-    penggunaService = new MasterPelangganImplementation(MasterPelanggan.class);
+    penggunaService = new MasterPelangganImplementation(MasterPelangganModel.class);
   }
 
   @Test
   public void insertPelangganTest() {
-    MasterPelanggan pelangganBaru = new MasterPelanggan();
+    MasterPelangganModel pelangganBaru = new MasterPelangganModel();
     pelangganBaru.setNoKtp("330400_990333_0001");
     pelangganBaru.setJenisKelamin("L");
     pelangganBaru.setNama("Eling");
@@ -49,7 +49,7 @@ public class MasterPelangganTest {
 
   @Test
   public void findOneByIDTest() {
-    MasterPelanggan pelangganBaru = new MasterPelanggan();
+    MasterPelangganModel pelangganBaru = new MasterPelangganModel();
     pelangganBaru.setNoKtp("330400_990333_0001");
     pelangganBaru.setJenisKelamin("L");
     pelangganBaru.setNama("Eling");
@@ -59,7 +59,7 @@ public class MasterPelangganTest {
     penggunaService.save(pelangganBaru);
     Assert.assertEquals("Eling", pelangganBaru.getNama());
 
-    MasterPelanggan pelanggan = penggunaService.findOneByNama("Eling");
+    MasterPelangganModel pelanggan = penggunaService.findOneByNama("Eling");
     Assert.assertEquals("Eling", pelanggan.getNama());
   }
 
