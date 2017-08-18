@@ -41,8 +41,6 @@ public class MasterPewangiTest {
     model.setNamaPewangi("So Clean");
     model.setHarga(new BigInteger("10000"));
     String message = service.save(model);
-    /* "MasterPewangiModel{" + "idPewangi=" + idPewangi
-    + ", namaPewangi=" + namaPewangi + ", harga=" + harga + '}'; */
     Assert.assertEquals("MasterPewangiModel{idPewangi=01111, namaPewangi=So Clean, harga=10000}", 
             message);
   }

@@ -18,8 +18,11 @@ package view;
 
 import controller.NikiLaundryController;
 import java.awt.Color;
-import javax.swing.JOptionPane;
+import java.beans.PropertyVetoException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JPanel;
+import view.internal.WelcomeInternalFrame;
 
 /**
  *
@@ -56,12 +59,6 @@ public class NikiLaundryView extends javax.swing.JFrame {
     txtPassword = new javax.swing.JPasswordField();
     sparatuorPassword = new javax.swing.JSeparator();
     btnLogin = new javax.swing.JButton();
-    panelWelcome = new javax.swing.JPanel();
-    txtNikiLaundryWelcome = new javax.swing.JLabel();
-    txtProfesional = new javax.swing.JLabel();
-    txtBersih = new javax.swing.JLabel();
-    txtRapi = new javax.swing.JLabel();
-    txtWangi = new javax.swing.JLabel();
     panelMenu = new javax.swing.JPanel();
     txtNikiLaundryMenu = new javax.swing.JLabel();
     sparatorNikiLaundryMenu = new javax.swing.JSeparator();
@@ -77,82 +74,7 @@ public class NikiLaundryView extends javax.swing.JFrame {
     btnLaporan = new javax.swing.JPanel();
     iconBtnLaporan = new javax.swing.JLabel();
     txtBtnLaporan = new javax.swing.JLabel();
-    panelMenuLaundry = new javax.swing.JPanel();
-    menuLaundry = new javax.swing.JTabbedPane();
-    tabPenyerahan = new javax.swing.JPanel();
-    txtNamaPenyerahan = new javax.swing.JTextField();
-    txtNoNotaPenyerahan = new javax.swing.JTextField();
-    txtTglTerimaPenyerahan = new javax.swing.JTextField();
-    txtTglJadiPenyerahan = new javax.swing.JTextField();
-    txtJumlahPenyerahan = new javax.swing.JTextField();
-    txtBanyakCuciPenyerahan = new javax.swing.JLabel();
-    jScrollPane1 = new javax.swing.JScrollPane();
-    tabelPenyerahan = new javax.swing.JTable();
-    cbPewangiPenyerahan = new javax.swing.JComboBox<>();
-    cbLayananPenyerahan = new javax.swing.JComboBox<>();
-    tabPengambilan = new javax.swing.JPanel();
-    txtNamaPengambilan = new javax.swing.JTextField();
-    txtNoNotaPengambilan = new javax.swing.JTextField();
-    txtTglTerimaPengambilan = new javax.swing.JTextField();
-    txtTglJadiPengambilan = new javax.swing.JTextField();
-    txtJumlahPengambilan = new javax.swing.JTextField();
-    txtBanyaknyaCuciPengambilan = new javax.swing.JLabel();
-    jScrollPane6 = new javax.swing.JScrollPane();
-    tabelPengambilan = new javax.swing.JTable();
-    cbPewangiPengambilan = new javax.swing.JComboBox<>();
-    cdLayananPengambilan = new javax.swing.JComboBox<>();
-    panelMenuMaster = new javax.swing.JPanel();
-    menuMaster = new javax.swing.JTabbedPane();
-    tabPelanggan = new javax.swing.JPanel();
-    txtNoKtpPelanggan = new javax.swing.JTextField();
-    txtNamaPelanggan = new javax.swing.JTextField();
-    cbJenisKelaminPelanggan = new javax.swing.JComboBox<>();
-    txtNoHpPelanggan = new javax.swing.JTextField();
-    cbJenisPelanggan = new javax.swing.JComboBox<>();
-    jScrollPane5 = new javax.swing.JScrollPane();
-    txtAlamatPelanggan = new javax.swing.JTextArea();
-    btnSavePelanggan = new javax.swing.JButton();
-    btnDeletePelanggan = new javax.swing.JButton();
-    jScrollPane2 = new javax.swing.JScrollPane();
-    tabelPelanggan = new javax.swing.JTable();
-    tabPewangi = new javax.swing.JPanel();
-    txtIdPewangi = new javax.swing.JTextField();
-    txtNamaPewangi = new javax.swing.JTextField();
-    txtHargaPewangi = new javax.swing.JTextField();
-    btnSavePewangi = new javax.swing.JButton();
-    btnDeletePewangi = new javax.swing.JButton();
-    jScrollPane7 = new javax.swing.JScrollPane();
-    tabelPewangi = new javax.swing.JTable();
-    tabPakaian = new javax.swing.JPanel();
-    txtIdPakaian = new javax.swing.JTextField();
-    txtNamaPakaian = new javax.swing.JTextField();
-    txtHargaPakaian = new javax.swing.JTextField();
-    btnSavePakaian = new javax.swing.JButton();
-    btnDeletePakaian = new javax.swing.JButton();
-    jScrollPane8 = new javax.swing.JScrollPane();
-    tabelPakaian = new javax.swing.JTable();
-    tabLayanan = new javax.swing.JPanel();
-    txtIdLayanan = new javax.swing.JTextField();
-    txtNamaLayanan = new javax.swing.JTextField();
-    txtHargaLayanan = new javax.swing.JTextField();
-    btnSaveLayanan = new javax.swing.JButton();
-    btnSaveDelete = new javax.swing.JButton();
-    jScrollPane9 = new javax.swing.JScrollPane();
-    tabelLayanan = new javax.swing.JTable();
-    panelMenuAset = new javax.swing.JPanel();
-    menuAset = new javax.swing.JTabbedPane();
-    tabAset = new javax.swing.JPanel();
-    txtIdAset = new javax.swing.JTextField();
-    txtNamaAset = new javax.swing.JTextField();
-    txtMerekAset = new javax.swing.JTextField();
-    txtTglTamhabAset = new javax.swing.JTextField();
-    txtHargaAset = new javax.swing.JTextField();
-    jScrollPane3 = new javax.swing.JScrollPane();
-    tabelAset = new javax.swing.JTable();
-    panelMenuLaporan = new javax.swing.JPanel();
-    ribon4 = new javax.swing.JPanel();
-    jScrollPane4 = new javax.swing.JScrollPane();
-    tabelData3 = new javax.swing.JTable();
+    baseContainer = new javax.swing.JDesktopPane();
     btnExit = new javax.swing.JLabel();
 
     setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -194,6 +116,7 @@ public class NikiLaundryView extends javax.swing.JFrame {
     txtUserName.setForeground(new java.awt.Color(255, 0, 255));
     txtUserName.setToolTipText("enter user name");
     txtUserName.setBorder(null);
+    txtUserName.setCaretColor(new java.awt.Color(255, 255, 255));
     txtUserName.addFocusListener(new java.awt.event.FocusAdapter() {
       public void focusGained(java.awt.event.FocusEvent evt) {
         txtUserNameFocusGained(evt);
@@ -217,6 +140,7 @@ public class NikiLaundryView extends javax.swing.JFrame {
     txtPassword.setForeground(new java.awt.Color(255, 0, 255));
     txtPassword.setToolTipText("enter password");
     txtPassword.setBorder(null);
+    txtPassword.setCaretColor(new java.awt.Color(255, 255, 255));
     txtPassword.addFocusListener(new java.awt.event.FocusAdapter() {
       public void focusGained(java.awt.event.FocusEvent evt) {
         txtPasswordFocusGained(evt);
@@ -246,63 +170,6 @@ public class NikiLaundryView extends javax.swing.JFrame {
     panelLogin.add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 270, 80, 30));
 
     bg.add(panelLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 270, 600));
-
-    panelWelcome.setBackground(new java.awt.Color(255, 0, 255));
-
-    txtNikiLaundryWelcome.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
-    txtNikiLaundryWelcome.setForeground(new java.awt.Color(54, 33, 89));
-    txtNikiLaundryWelcome.setText("Niki Laundry");
-
-    txtProfesional.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-    txtProfesional.setForeground(new java.awt.Color(54, 33, 89));
-    txtProfesional.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/checkbox.png"))); // NOI18N
-    txtProfesional.setText("Profesional");
-
-    txtBersih.setForeground(new java.awt.Color(54, 33, 89));
-    txtBersih.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/checkbox.png"))); // NOI18N
-    txtBersih.setText("Bersih");
-
-    txtRapi.setForeground(new java.awt.Color(54, 33, 89));
-    txtRapi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/checkbox.png"))); // NOI18N
-    txtRapi.setText("Rapi");
-
-    txtWangi.setForeground(new java.awt.Color(54, 33, 89));
-    txtWangi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/checkbox.png"))); // NOI18N
-    txtWangi.setText("Wangi");
-
-    javax.swing.GroupLayout panelWelcomeLayout = new javax.swing.GroupLayout(panelWelcome);
-    panelWelcome.setLayout(panelWelcomeLayout);
-    panelWelcomeLayout.setHorizontalGroup(
-      panelWelcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addGroup(panelWelcomeLayout.createSequentialGroup()
-        .addGap(111, 111, 111)
-        .addGroup(panelWelcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-          .addComponent(txtNikiLaundryWelcome, javax.swing.GroupLayout.PREFERRED_SIZE, 409, javax.swing.GroupLayout.PREFERRED_SIZE)
-          .addGroup(panelWelcomeLayout.createSequentialGroup()
-            .addComponent(txtProfesional)
-            .addGap(18, 18, 18)
-            .addComponent(txtBersih)
-            .addGap(18, 18, 18)
-            .addComponent(txtRapi)
-            .addGap(18, 18, 18)
-            .addComponent(txtWangi)))
-        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-    );
-    panelWelcomeLayout.setVerticalGroup(
-      panelWelcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addGroup(panelWelcomeLayout.createSequentialGroup()
-        .addGap(57, 57, 57)
-        .addComponent(txtNikiLaundryWelcome)
-        .addGap(18, 18, 18)
-        .addGroup(panelWelcomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-          .addComponent(txtProfesional)
-          .addComponent(txtBersih)
-          .addComponent(txtRapi)
-          .addComponent(txtWangi))
-        .addContainerGap(395, Short.MAX_VALUE))
-    );
-
-    bg.add(panelWelcome, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 40, 730, 560));
 
     panelMenu.setBackground(new java.awt.Color(54, 33, 89));
     panelMenu.setEnabled(false);
@@ -469,774 +336,20 @@ public class NikiLaundryView extends javax.swing.JFrame {
 
     bg.add(panelMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 270, 600));
 
-    menuLaundry.setBackground(new java.awt.Color(142, 53, 239));
-    menuLaundry.setPreferredSize(new java.awt.Dimension(730, 130));
-
-    tabPenyerahan.setBackground(new java.awt.Color(142, 53, 239));
-    tabPenyerahan.setPreferredSize(new java.awt.Dimension(730, 130));
-
-    txtNamaPenyerahan.setText("Nama");
-    txtNamaPenyerahan.setToolTipText("");
-    txtNamaPenyerahan.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        txtNamaPenyerahanActionPerformed(evt);
-      }
-    });
-
-    txtNoNotaPenyerahan.setText("No. Nota");
-    txtNoNotaPenyerahan.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        txtNoNotaPenyerahanActionPerformed(evt);
-      }
-    });
-
-    txtTglTerimaPenyerahan.setText("Tgl. Terima");
-    txtTglTerimaPenyerahan.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        txtTglTerimaPenyerahanActionPerformed(evt);
-      }
-    });
-
-    txtTglJadiPenyerahan.setText("Tgl. Jadi");
-    txtTglJadiPenyerahan.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        txtTglJadiPenyerahanActionPerformed(evt);
-      }
-    });
-
-    txtJumlahPenyerahan.setText("Jumlah (Kg)");
-    txtJumlahPenyerahan.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        txtJumlahPenyerahanActionPerformed(evt);
-      }
-    });
-
-    txtBanyakCuciPenyerahan.setText("anda sudah [...] kali cuci");
-
-    tabelPenyerahan.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-    tabelPenyerahan.setModel(new javax.swing.table.DefaultTableModel(
-      new Object [][] {
-        {null, null, null, null},
-        {null, null, null, null},
-        {null, null, null, null},
-        {null, null, null, null}
-      },
-      new String [] {
-        "Title 1", "Title 2", "Title 3", "Title 4"
-      }
-    ));
-    jScrollPane1.setViewportView(tabelPenyerahan);
-
-    cbPewangiPenyerahan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-    cbLayananPenyerahan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-    javax.swing.GroupLayout tabPenyerahanLayout = new javax.swing.GroupLayout(tabPenyerahan);
-    tabPenyerahan.setLayout(tabPenyerahanLayout);
-    tabPenyerahanLayout.setHorizontalGroup(
-      tabPenyerahanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addGroup(tabPenyerahanLayout.createSequentialGroup()
-        .addGroup(tabPenyerahanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-          .addGroup(tabPenyerahanLayout.createSequentialGroup()
-            .addGap(6, 6, 6)
-            .addComponent(txtNamaPenyerahan, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGap(133, 133, 133)
-            .addComponent(txtTglTerimaPenyerahan, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
-          .addGroup(tabPenyerahanLayout.createSequentialGroup()
-            .addContainerGap()
-            .addComponent(txtNoNotaPenyerahan, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGap(133, 133, 133)
-            .addComponent(txtTglJadiPenyerahan, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
-          .addGroup(tabPenyerahanLayout.createSequentialGroup()
-            .addGap(6, 6, 6)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 716, javax.swing.GroupLayout.PREFERRED_SIZE))
-          .addGroup(tabPenyerahanLayout.createSequentialGroup()
-            .addContainerGap()
-            .addGroup(tabPenyerahanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-              .addComponent(cbPewangiPenyerahan, 0, 183, Short.MAX_VALUE)
-              .addComponent(cbLayananPenyerahan, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGap(133, 133, 133)
-            .addGroup(tabPenyerahanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-              .addComponent(txtJumlahPenyerahan)
-              .addComponent(txtBanyakCuciPenyerahan, javax.swing.GroupLayout.DEFAULT_SIZE, 183, Short.MAX_VALUE))))
-        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-    );
-    tabPenyerahanLayout.setVerticalGroup(
-      tabPenyerahanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addGroup(tabPenyerahanLayout.createSequentialGroup()
-        .addGap(6, 6, 6)
-        .addGroup(tabPenyerahanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-          .addComponent(txtNamaPenyerahan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-          .addComponent(txtTglTerimaPenyerahan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        .addGap(6, 6, 6)
-        .addGroup(tabPenyerahanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-          .addComponent(txtTglJadiPenyerahan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-          .addComponent(txtNoNotaPenyerahan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-        .addGroup(tabPenyerahanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-          .addComponent(cbPewangiPenyerahan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-          .addComponent(txtJumlahPenyerahan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-        .addGroup(tabPenyerahanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-          .addComponent(txtBanyakCuciPenyerahan)
-          .addComponent(cbLayananPenyerahan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        .addGap(18, 18, 18)
-        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 388, Short.MAX_VALUE)
-        .addContainerGap())
-    );
-
-    menuLaundry.addTab("Penyerahan", tabPenyerahan);
-
-    tabPengambilan.setBackground(new java.awt.Color(142, 53, 239));
-
-    txtNamaPengambilan.setText("Nama");
-    txtNamaPengambilan.setToolTipText("");
-    txtNamaPengambilan.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        txtNamaPengambilanActionPerformed(evt);
-      }
-    });
-
-    txtNoNotaPengambilan.setText("No. Nota");
-    txtNoNotaPengambilan.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        txtNoNotaPengambilanActionPerformed(evt);
-      }
-    });
-
-    txtTglTerimaPengambilan.setText("Tgl. Terima");
-    txtTglTerimaPengambilan.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        txtTglTerimaPengambilanActionPerformed(evt);
-      }
-    });
-
-    txtTglJadiPengambilan.setText("Tgl. Jadi");
-    txtTglJadiPengambilan.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        txtTglJadiPengambilanActionPerformed(evt);
-      }
-    });
-
-    txtJumlahPengambilan.setText("Jumlah (Kg)");
-    txtJumlahPengambilan.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        txtJumlahPengambilanActionPerformed(evt);
-      }
-    });
-
-    txtBanyaknyaCuciPengambilan.setText("anda sudah [...] kali cuci");
-
-    tabelPengambilan.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-    tabelPengambilan.setModel(new javax.swing.table.DefaultTableModel(
-      new Object [][] {
-        {null, null, null, null},
-        {null, null, null, null},
-        {null, null, null, null},
-        {null, null, null, null}
-      },
-      new String [] {
-        "Title 1", "Title 2", "Title 3", "Title 4"
-      }
-    ));
-    jScrollPane6.setViewportView(tabelPengambilan);
-
-    cbPewangiPengambilan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-    cdLayananPengambilan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-    javax.swing.GroupLayout tabPengambilanLayout = new javax.swing.GroupLayout(tabPengambilan);
-    tabPengambilan.setLayout(tabPengambilanLayout);
-    tabPengambilanLayout.setHorizontalGroup(
-      tabPengambilanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addGroup(tabPengambilanLayout.createSequentialGroup()
-        .addGroup(tabPengambilanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-          .addGroup(tabPengambilanLayout.createSequentialGroup()
-            .addGap(6, 6, 6)
-            .addComponent(txtNamaPengambilan, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGap(133, 133, 133)
-            .addComponent(txtTglTerimaPengambilan, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
-          .addGroup(tabPengambilanLayout.createSequentialGroup()
-            .addContainerGap()
-            .addComponent(txtNoNotaPengambilan, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGap(133, 133, 133)
-            .addComponent(txtTglJadiPengambilan, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
-          .addGroup(tabPengambilanLayout.createSequentialGroup()
-            .addGap(6, 6, 6)
-            .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 716, javax.swing.GroupLayout.PREFERRED_SIZE))
-          .addGroup(tabPengambilanLayout.createSequentialGroup()
-            .addContainerGap()
-            .addGroup(tabPengambilanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-              .addComponent(cdLayananPengambilan, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-              .addComponent(cbPewangiPengambilan, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGap(133, 133, 133)
-            .addGroup(tabPengambilanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-              .addComponent(txtJumlahPengambilan)
-              .addComponent(txtBanyaknyaCuciPengambilan, javax.swing.GroupLayout.DEFAULT_SIZE, 183, Short.MAX_VALUE))))
-        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-    );
-    tabPengambilanLayout.setVerticalGroup(
-      tabPengambilanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addGroup(tabPengambilanLayout.createSequentialGroup()
-        .addGap(6, 6, 6)
-        .addGroup(tabPengambilanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-          .addComponent(txtNamaPengambilan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-          .addComponent(txtTglTerimaPengambilan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        .addGap(6, 6, 6)
-        .addGroup(tabPengambilanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-          .addComponent(txtTglJadiPengambilan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-          .addComponent(txtNoNotaPengambilan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-        .addGroup(tabPengambilanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-          .addGroup(tabPengambilanLayout.createSequentialGroup()
-            .addComponent(txtJumlahPengambilan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addComponent(txtBanyaknyaCuciPengambilan))
-          .addGroup(tabPengambilanLayout.createSequentialGroup()
-            .addComponent(cbPewangiPengambilan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addComponent(cdLayananPengambilan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-        .addGap(18, 18, 18)
-        .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 388, Short.MAX_VALUE)
-        .addContainerGap())
-    );
-
-    menuLaundry.addTab("Pengambilan", tabPengambilan);
-
-    javax.swing.GroupLayout panelMenuLaundryLayout = new javax.swing.GroupLayout(panelMenuLaundry);
-    panelMenuLaundry.setLayout(panelMenuLaundryLayout);
-    panelMenuLaundryLayout.setHorizontalGroup(
-      panelMenuLaundryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelMenuLaundryLayout.createSequentialGroup()
-        .addGap(0, 0, Short.MAX_VALUE)
-        .addComponent(menuLaundry, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-    );
-    panelMenuLaundryLayout.setVerticalGroup(
-      panelMenuLaundryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addComponent(menuLaundry, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 560, Short.MAX_VALUE)
-    );
-
-    bg.add(panelMenuLaundry, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 40, 730, 560));
-
-    tabPelanggan.setBackground(new java.awt.Color(142, 53, 239));
-
-    txtNoKtpPelanggan.setText("No. KTP");
-    txtNoKtpPelanggan.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        txtNoKtpPelangganActionPerformed(evt);
-      }
-    });
-
-    txtNamaPelanggan.setText("Nama");
-    txtNamaPelanggan.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        txtNamaPelangganActionPerformed(evt);
-      }
-    });
-
-    cbJenisKelaminPelanggan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-    txtNoHpPelanggan.setText("No. HP");
-    txtNoHpPelanggan.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        txtNoHpPelangganActionPerformed(evt);
-      }
-    });
-
-    cbJenisPelanggan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-    txtAlamatPelanggan.setColumns(20);
-    txtAlamatPelanggan.setRows(5);
-    jScrollPane5.setViewportView(txtAlamatPelanggan);
-
-    btnSavePelanggan.setText("Save");
-
-    btnDeletePelanggan.setText("Delete");
-
-    tabelPelanggan.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-    tabelPelanggan.setModel(new javax.swing.table.DefaultTableModel(
-      new Object [][] {
-        {null, null, null, null},
-        {null, null, null, null},
-        {null, null, null, null},
-        {null, null, null, null}
-      },
-      new String [] {
-        "Title 1", "Title 2", "Title 3", "Title 4"
-      }
-    ));
-    jScrollPane2.setViewportView(tabelPelanggan);
-
-    javax.swing.GroupLayout tabPelangganLayout = new javax.swing.GroupLayout(tabPelanggan);
-    tabPelanggan.setLayout(tabPelangganLayout);
-    tabPelangganLayout.setHorizontalGroup(
-      tabPelangganLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addGroup(tabPelangganLayout.createSequentialGroup()
-        .addContainerGap()
-        .addGroup(tabPelangganLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-          .addGroup(tabPelangganLayout.createSequentialGroup()
-            .addComponent(jScrollPane2)
-            .addContainerGap())
-          .addGroup(tabPelangganLayout.createSequentialGroup()
-            .addGroup(tabPelangganLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-              .addComponent(txtNamaPelanggan)
-              .addComponent(txtNoKtpPelanggan)
-              .addComponent(cbJenisKelaminPelanggan, 0, 209, Short.MAX_VALUE)
-              .addComponent(txtNoHpPelanggan))
-            .addGap(69, 69, 69)
-            .addGroup(tabPelangganLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-              .addGroup(tabPelangganLayout.createSequentialGroup()
-                .addComponent(cbJenisPelanggan, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-              .addGroup(tabPelangganLayout.createSequentialGroup()
-                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 111, Short.MAX_VALUE)
-                .addGroup(tabPelangganLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                  .addComponent(btnSavePelanggan, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                  .addComponent(btnDeletePelanggan, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(35, 35, 35))))))
-    );
-    tabPelangganLayout.setVerticalGroup(
-      tabPelangganLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addGroup(tabPelangganLayout.createSequentialGroup()
-        .addContainerGap()
-        .addGroup(tabPelangganLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-          .addComponent(txtNoKtpPelanggan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-          .addComponent(cbJenisPelanggan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        .addGap(6, 6, 6)
-        .addGroup(tabPelangganLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-          .addGroup(tabPelangganLayout.createSequentialGroup()
-            .addComponent(txtNamaPelanggan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addComponent(cbJenisKelaminPelanggan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addComponent(txtNoHpPelanggan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-          .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
-          .addGroup(tabPelangganLayout.createSequentialGroup()
-            .addComponent(btnSavePelanggan)
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-            .addComponent(btnDeletePelanggan)))
-        .addGap(18, 18, 18)
-        .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 386, Short.MAX_VALUE)
-        .addContainerGap())
-    );
-
-    menuMaster.addTab("Pelanggan", tabPelanggan);
-
-    tabPewangi.setBackground(new java.awt.Color(142, 53, 239));
-
-    txtIdPewangi.setText("idPewangi");
-    txtIdPewangi.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        txtIdPewangiActionPerformed(evt);
-      }
-    });
-
-    txtNamaPewangi.setText("Nama Pewangi");
-    txtNamaPewangi.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        txtNamaPewangiActionPerformed(evt);
-      }
-    });
-
-    txtHargaPewangi.setText("Harga");
-
-    btnSavePewangi.setText("Save");
-
-    btnDeletePewangi.setText("Delete");
-
-    tabelPewangi.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-    tabelPewangi.setModel(new javax.swing.table.DefaultTableModel(
-      new Object [][] {
-        {null, null, null, null},
-        {null, null, null, null},
-        {null, null, null, null},
-        {null, null, null, null}
-      },
-      new String [] {
-        "Title 1", "Title 2", "Title 3", "Title 4"
-      }
-    ));
-    jScrollPane7.setViewportView(tabelPewangi);
-
-    javax.swing.GroupLayout tabPewangiLayout = new javax.swing.GroupLayout(tabPewangi);
-    tabPewangi.setLayout(tabPewangiLayout);
-    tabPewangiLayout.setHorizontalGroup(
-      tabPewangiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addGroup(tabPewangiLayout.createSequentialGroup()
-        .addContainerGap()
-        .addGroup(tabPewangiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-          .addGroup(tabPewangiLayout.createSequentialGroup()
-            .addGroup(tabPewangiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-              .addComponent(txtNamaPewangi, javax.swing.GroupLayout.DEFAULT_SIZE, 209, Short.MAX_VALUE)
-              .addComponent(txtIdPewangi)
-              .addComponent(txtHargaPewangi))
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(tabPewangiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-              .addComponent(btnSavePewangi, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-              .addComponent(btnDeletePewangi, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)))
-          .addComponent(jScrollPane7, javax.swing.GroupLayout.DEFAULT_SIZE, 716, Short.MAX_VALUE))
-        .addContainerGap())
-    );
-    tabPewangiLayout.setVerticalGroup(
-      tabPewangiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addGroup(tabPewangiLayout.createSequentialGroup()
-        .addContainerGap()
-        .addGroup(tabPewangiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-          .addGroup(tabPewangiLayout.createSequentialGroup()
-            .addComponent(txtIdPewangi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addComponent(txtNamaPewangi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addComponent(txtHargaPewangi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-          .addGroup(tabPewangiLayout.createSequentialGroup()
-            .addComponent(btnSavePewangi)
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addComponent(btnDeletePewangi)))
-        .addGap(18, 18, 18)
-        .addComponent(jScrollPane7, javax.swing.GroupLayout.DEFAULT_SIZE, 420, Short.MAX_VALUE)
-        .addContainerGap())
-    );
-
-    menuMaster.addTab("Pewangi", tabPewangi);
-
-    tabPakaian.setBackground(new java.awt.Color(142, 53, 239));
-
-    txtIdPakaian.setText("idPakaian");
-    txtIdPakaian.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        txtIdPakaianActionPerformed(evt);
-      }
-    });
-
-    txtNamaPakaian.setText("Nama Pakaian");
-    txtNamaPakaian.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        txtNamaPakaianActionPerformed(evt);
-      }
-    });
-
-    txtHargaPakaian.setText("Harga");
-
-    btnSavePakaian.setText("Save");
-
-    btnDeletePakaian.setText("Delete");
-
-    tabelPakaian.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-    tabelPakaian.setModel(new javax.swing.table.DefaultTableModel(
-      new Object [][] {
-        {null, null, null, null},
-        {null, null, null, null},
-        {null, null, null, null},
-        {null, null, null, null}
-      },
-      new String [] {
-        "Title 1", "Title 2", "Title 3", "Title 4"
-      }
-    ));
-    jScrollPane8.setViewportView(tabelPakaian);
-
-    javax.swing.GroupLayout tabPakaianLayout = new javax.swing.GroupLayout(tabPakaian);
-    tabPakaian.setLayout(tabPakaianLayout);
-    tabPakaianLayout.setHorizontalGroup(
-      tabPakaianLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addGroup(tabPakaianLayout.createSequentialGroup()
-        .addContainerGap()
-        .addGroup(tabPakaianLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-          .addGroup(tabPakaianLayout.createSequentialGroup()
-            .addGroup(tabPakaianLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-              .addComponent(txtIdPakaian)
-              .addComponent(txtNamaPakaian, javax.swing.GroupLayout.DEFAULT_SIZE, 209, Short.MAX_VALUE)
-              .addComponent(txtHargaPakaian))
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(tabPakaianLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-              .addComponent(btnSavePakaian, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-              .addComponent(btnDeletePakaian, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)))
-          .addComponent(jScrollPane8, javax.swing.GroupLayout.DEFAULT_SIZE, 716, Short.MAX_VALUE))
-        .addContainerGap())
-    );
-    tabPakaianLayout.setVerticalGroup(
-      tabPakaianLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addGroup(tabPakaianLayout.createSequentialGroup()
-        .addContainerGap()
-        .addGroup(tabPakaianLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-          .addGroup(tabPakaianLayout.createSequentialGroup()
-            .addComponent(btnSavePakaian)
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addComponent(btnDeletePakaian))
-          .addGroup(tabPakaianLayout.createSequentialGroup()
-            .addComponent(txtIdPakaian, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addComponent(txtNamaPakaian, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addComponent(txtHargaPakaian, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-        .addGap(18, 18, 18)
-        .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-    );
-
-    menuMaster.addTab("Pakaian", tabPakaian);
-
-    tabLayanan.setBackground(new java.awt.Color(142, 53, 239));
-
-    txtIdLayanan.setText("idLayanan");
-    txtIdLayanan.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        txtIdLayananActionPerformed(evt);
-      }
-    });
-
-    txtNamaLayanan.setText("Nama Layanan");
-    txtNamaLayanan.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        txtNamaLayananActionPerformed(evt);
-      }
-    });
-
-    txtHargaLayanan.setText("Harga");
-
-    btnSaveLayanan.setText("Save");
-
-    btnSaveDelete.setText("Delete");
-
-    tabelLayanan.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-    tabelLayanan.setModel(new javax.swing.table.DefaultTableModel(
-      new Object [][] {
-        {null, null, null, null},
-        {null, null, null, null},
-        {null, null, null, null},
-        {null, null, null, null}
-      },
-      new String [] {
-        "Title 1", "Title 2", "Title 3", "Title 4"
-      }
-    ));
-    jScrollPane9.setViewportView(tabelLayanan);
-
-    javax.swing.GroupLayout tabLayananLayout = new javax.swing.GroupLayout(tabLayanan);
-    tabLayanan.setLayout(tabLayananLayout);
-    tabLayananLayout.setHorizontalGroup(
-      tabLayananLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addGroup(tabLayananLayout.createSequentialGroup()
-        .addContainerGap()
-        .addGroup(tabLayananLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-          .addComponent(jScrollPane9, javax.swing.GroupLayout.DEFAULT_SIZE, 716, Short.MAX_VALUE)
-          .addGroup(tabLayananLayout.createSequentialGroup()
-            .addGroup(tabLayananLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-              .addComponent(txtIdLayanan)
-              .addComponent(txtNamaLayanan, javax.swing.GroupLayout.DEFAULT_SIZE, 209, Short.MAX_VALUE)
-              .addComponent(txtHargaLayanan))
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(tabLayananLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-              .addComponent(btnSaveLayanan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-              .addComponent(btnSaveDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))))
-        .addContainerGap())
-    );
-    tabLayananLayout.setVerticalGroup(
-      tabLayananLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addGroup(tabLayananLayout.createSequentialGroup()
-        .addContainerGap()
-        .addGroup(tabLayananLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-          .addGroup(tabLayananLayout.createSequentialGroup()
-            .addComponent(btnSaveLayanan)
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addComponent(btnSaveDelete))
-          .addGroup(tabLayananLayout.createSequentialGroup()
-            .addComponent(txtIdLayanan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addComponent(txtNamaLayanan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addComponent(txtHargaLayanan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-        .addGap(18, 18, 18)
-        .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-    );
-
-    menuMaster.addTab("Layanan", tabLayanan);
-
-    javax.swing.GroupLayout panelMenuMasterLayout = new javax.swing.GroupLayout(panelMenuMaster);
-    panelMenuMaster.setLayout(panelMenuMasterLayout);
-    panelMenuMasterLayout.setHorizontalGroup(
-      panelMenuMasterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addComponent(menuMaster)
-    );
-    panelMenuMasterLayout.setVerticalGroup(
-      panelMenuMasterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addComponent(menuMaster, javax.swing.GroupLayout.Alignment.TRAILING)
-    );
-
-    bg.add(panelMenuMaster, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 40, 730, 560));
-
-    menuAset.setBackground(new java.awt.Color(142, 53, 239));
-    menuAset.setPreferredSize(new java.awt.Dimension(730, 130));
-
-    tabAset.setBackground(new java.awt.Color(142, 53, 239));
-    tabAset.setPreferredSize(new java.awt.Dimension(730, 130));
-
-    txtIdAset.setText("idAset");
-    txtIdAset.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        txtIdAsetActionPerformed(evt);
-      }
-    });
-
-    txtNamaAset.setText("Nama");
-    txtNamaAset.setToolTipText("");
-    txtNamaAset.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        txtNamaAsetActionPerformed(evt);
-      }
-    });
-
-    txtMerekAset.setText("Merek");
-    txtMerekAset.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        txtMerekAsetActionPerformed(evt);
-      }
-    });
-
-    txtTglTamhabAset.setText("Tgl. Tambah");
-    txtTglTamhabAset.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        txtTglTamhabAsetActionPerformed(evt);
-      }
-    });
-
-    txtHargaAset.setText("Harga");
-    txtHargaAset.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        txtHargaAsetActionPerformed(evt);
-      }
-    });
-
-    tabelAset.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-    tabelAset.setModel(new javax.swing.table.DefaultTableModel(
-      new Object [][] {
-        {null, null, null, null},
-        {null, null, null, null},
-        {null, null, null, null},
-        {null, null, null, null}
-      },
-      new String [] {
-        "Title 1", "Title 2", "Title 3", "Title 4"
-      }
-    ));
-    jScrollPane3.setViewportView(tabelAset);
-
-    javax.swing.GroupLayout tabAsetLayout = new javax.swing.GroupLayout(tabAset);
-    tabAset.setLayout(tabAsetLayout);
-    tabAsetLayout.setHorizontalGroup(
-      tabAsetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addGroup(tabAsetLayout.createSequentialGroup()
-        .addContainerGap()
-        .addGroup(tabAsetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-          .addGroup(tabAsetLayout.createSequentialGroup()
-            .addGroup(tabAsetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-              .addComponent(txtMerekAset, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-              .addGroup(tabAsetLayout.createSequentialGroup()
-                .addGroup(tabAsetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                  .addComponent(txtIdAset, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-                  .addComponent(txtNamaAset, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(133, 133, 133)
-                .addGroup(tabAsetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                  .addComponent(txtTglTamhabAset, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-                  .addComponent(txtHargaAset, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))))
-            .addGap(0, 217, Short.MAX_VALUE))
-          .addComponent(jScrollPane3))
-        .addContainerGap())
-    );
-    tabAsetLayout.setVerticalGroup(
-      tabAsetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addGroup(tabAsetLayout.createSequentialGroup()
-        .addGap(6, 6, 6)
-        .addGroup(tabAsetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-          .addComponent(txtTglTamhabAset, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-          .addComponent(txtIdAset, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-        .addGroup(tabAsetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-          .addComponent(txtNamaAset, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-          .addComponent(txtHargaAset, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-        .addComponent(txtMerekAset, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-        .addGap(18, 18, 18)
-        .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 410, Short.MAX_VALUE)
-        .addContainerGap())
-    );
-
-    menuAset.addTab("Tambah Aset", tabAset);
-
-    javax.swing.GroupLayout panelMenuAsetLayout = new javax.swing.GroupLayout(panelMenuAset);
-    panelMenuAset.setLayout(panelMenuAsetLayout);
-    panelMenuAsetLayout.setHorizontalGroup(
-      panelMenuAsetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addGap(0, 742, Short.MAX_VALUE)
-      .addGroup(panelMenuAsetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-        .addGroup(panelMenuAsetLayout.createSequentialGroup()
-          .addContainerGap()
-          .addComponent(menuAset, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-          .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-    );
-    panelMenuAsetLayout.setVerticalGroup(
-      panelMenuAsetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addGap(0, 560, Short.MAX_VALUE)
-      .addGroup(panelMenuAsetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-        .addGroup(panelMenuAsetLayout.createSequentialGroup()
-          .addContainerGap()
-          .addComponent(menuAset, javax.swing.GroupLayout.DEFAULT_SIZE, 548, Short.MAX_VALUE)
-          .addContainerGap()))
-    );
-
-    bg.add(panelMenuAset, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 40, 730, 560));
-
-    ribon4.setBackground(new java.awt.Color(142, 53, 239));
-
-    javax.swing.GroupLayout ribon4Layout = new javax.swing.GroupLayout(ribon4);
-    ribon4.setLayout(ribon4Layout);
-    ribon4Layout.setHorizontalGroup(
-      ribon4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+    baseContainer.setBackground(new java.awt.Color(255, 51, 255));
+
+    javax.swing.GroupLayout baseContainerLayout = new javax.swing.GroupLayout(baseContainer);
+    baseContainer.setLayout(baseContainerLayout);
+    baseContainerLayout.setHorizontalGroup(
+      baseContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
       .addGap(0, 730, Short.MAX_VALUE)
     );
-    ribon4Layout.setVerticalGroup(
-      ribon4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addGap(0, 140, Short.MAX_VALUE)
+    baseContainerLayout.setVerticalGroup(
+      baseContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+      .addGap(0, 560, Short.MAX_VALUE)
     );
 
-    tabelData3.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-    tabelData3.setModel(new javax.swing.table.DefaultTableModel(
-      new Object [][] {
-        {null, null, null, null},
-        {null, null, null, null},
-        {null, null, null, null},
-        {null, null, null, null}
-      },
-      new String [] {
-        "Title 1", "Title 2", "Title 3", "Title 4"
-      }
-    ));
-    jScrollPane4.setViewportView(tabelData3);
-
-    javax.swing.GroupLayout panelMenuLaporanLayout = new javax.swing.GroupLayout(panelMenuLaporan);
-    panelMenuLaporan.setLayout(panelMenuLaporanLayout);
-    panelMenuLaporanLayout.setHorizontalGroup(
-      panelMenuLaporanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelMenuLaporanLayout.createSequentialGroup()
-        .addComponent(ribon4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-        .addGap(0, 0, Short.MAX_VALUE))
-      .addGroup(panelMenuLaporanLayout.createSequentialGroup()
-        .addContainerGap()
-        .addComponent(jScrollPane4)
-        .addContainerGap())
-    );
-    panelMenuLaporanLayout.setVerticalGroup(
-      panelMenuLaporanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addGroup(panelMenuLaporanLayout.createSequentialGroup()
-        .addComponent(ribon4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-        .addGap(18, 18, 18)
-        .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 396, Short.MAX_VALUE)
-        .addContainerGap())
-    );
-
-    bg.add(panelMenuLaporan, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 40, 730, 560));
+    bg.add(baseContainer, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 40, 730, 560));
 
     btnExit.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
     btnExit.setForeground(new java.awt.Color(54, 33, 89));
@@ -1266,37 +379,19 @@ public class NikiLaundryView extends javax.swing.JFrame {
       controller.tutupAplikasi(this);
     }//GEN-LAST:event_btnExitMousePressed
 
-    private void txtNamaPenyerahanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNamaPenyerahanActionPerformed
-      // TODO add your handling code here:
-    }//GEN-LAST:event_txtNamaPenyerahanActionPerformed
-
-    private void txtNoNotaPenyerahanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNoNotaPenyerahanActionPerformed
-      // TODO add your handling code here:
-    }//GEN-LAST:event_txtNoNotaPenyerahanActionPerformed
-
-    private void txtTglTerimaPenyerahanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTglTerimaPenyerahanActionPerformed
-      // TODO add your handling code here:
-    }//GEN-LAST:event_txtTglTerimaPenyerahanActionPerformed
-
-    private void txtTglJadiPenyerahanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTglJadiPenyerahanActionPerformed
-      // TODO add your handling code here:
-    }//GEN-LAST:event_txtTglJadiPenyerahanActionPerformed
-
-    private void txtJumlahPenyerahanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtJumlahPenyerahanActionPerformed
-      // TODO add your handling code here:
-    }//GEN-LAST:event_txtJumlahPenyerahanActionPerformed
-
     private void btnLaundryMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLaundryMousePressed
       setColor(btnLaundry);
       resetColor(btnMaster);
       resetColor(btnAset);
       resetColor(btnLaporan);
 
+      /*
       panelWelcome.setVisible(false);
       panelMenuLaundry.setVisible(true);
       panelMenuMaster.setVisible(false);
       panelMenuAset.setVisible(false);
       panelMenuLaporan.setVisible(false);
+       */
     }//GEN-LAST:event_btnLaundryMousePressed
 
     private void btnMasterMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMasterMousePressed
@@ -1306,11 +401,13 @@ public class NikiLaundryView extends javax.swing.JFrame {
       resetColor(btnAset);
       resetColor(btnLaporan);
 
+      /*
       panelWelcome.hide();
       panelMenuLaundry.hide();
       panelMenuMaster.show();
       panelMenuAset.hide();
       panelMenuLaporan.hide();
+       */
     }//GEN-LAST:event_btnMasterMousePressed
 
     private void btnAsetMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAsetMousePressed
@@ -1320,11 +417,13 @@ public class NikiLaundryView extends javax.swing.JFrame {
       setColor(btnAset);
       resetColor(btnLaporan);
 
+      /*
       panelWelcome.hide();
       panelMenuLaundry.hide();
       panelMenuMaster.hide();
       panelMenuAset.show();
       panelMenuLaporan.hide();
+       */
     }//GEN-LAST:event_btnAsetMousePressed
 
     private void btnLaporanMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLaporanMousePressed
@@ -1334,11 +433,13 @@ public class NikiLaundryView extends javax.swing.JFrame {
       resetColor(btnAset);
       setColor(btnLaporan);
 
+      /*
       panelWelcome.hide();
       panelMenuLaundry.hide();
       panelMenuMaster.hide();
       panelMenuAset.hide();
       panelMenuLaporan.show();
+       */
     }//GEN-LAST:event_btnLaporanMousePressed
 
     private void txtPasswordFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtPasswordFocusGained
@@ -1347,7 +448,7 @@ public class NikiLaundryView extends javax.swing.JFrame {
     }//GEN-LAST:event_txtPasswordFocusGained
 
     private void txtPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPasswordActionPerformed
-      // TODO add your handling code here:
+      controller.loginButtonActionPerform();
     }//GEN-LAST:event_txtPasswordActionPerformed
 
     private void txtUserNameFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtUserNameFocusGained
@@ -1356,7 +457,7 @@ public class NikiLaundryView extends javax.swing.JFrame {
     }//GEN-LAST:event_txtUserNameFocusGained
 
     private void txtUserNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUserNameActionPerformed
-      // TODO add your handling code here:
+      txtPassword.requestFocus();
     }//GEN-LAST:event_txtUserNameActionPerformed
 
   private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
@@ -1364,19 +465,12 @@ public class NikiLaundryView extends javax.swing.JFrame {
   }//GEN-LAST:event_formWindowClosing
 
   private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
-    // TODO add your handling code here:
-    panelLogin.hide();
-    panelMenu.show();
+    panelLogin.setVisible(false);
+    panelMenu.setVisible(true);
     resetColor(btnLaundry);
     resetColor(btnMaster);
     resetColor(btnAset);
     resetColor(btnLaporan);
-
-    panelWelcome.show();
-    panelMenuLaundry.hide();
-    panelMenuMaster.hide();
-    panelMenuAset.hide();
-    panelMenuLaporan.hide();
   }//GEN-LAST:event_btnLoginActionPerformed
 
   private void panelMenuComponentHidden(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_panelMenuComponentHidden
@@ -1386,82 +480,6 @@ public class NikiLaundryView extends javax.swing.JFrame {
   private void formComponentHidden(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_formComponentHidden
     // TODO add your handling code here:
   }//GEN-LAST:event_formComponentHidden
-
-  private void txtNamaPelangganActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNamaPelangganActionPerformed
-    // TODO add your handling code here:
-  }//GEN-LAST:event_txtNamaPelangganActionPerformed
-
-  private void txtNoKtpPelangganActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNoKtpPelangganActionPerformed
-    // TODO add your handling code here:
-  }//GEN-LAST:event_txtNoKtpPelangganActionPerformed
-
-  private void txtIdPewangiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIdPewangiActionPerformed
-    // TODO add your handling code here:
-  }//GEN-LAST:event_txtIdPewangiActionPerformed
-
-  private void txtNamaPewangiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNamaPewangiActionPerformed
-    // TODO add your handling code here:
-  }//GEN-LAST:event_txtNamaPewangiActionPerformed
-
-  private void txtIdPakaianActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIdPakaianActionPerformed
-    // TODO add your handling code here:
-  }//GEN-LAST:event_txtIdPakaianActionPerformed
-
-  private void txtNamaPakaianActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNamaPakaianActionPerformed
-    // TODO add your handling code here:
-  }//GEN-LAST:event_txtNamaPakaianActionPerformed
-
-  private void txtNoHpPelangganActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNoHpPelangganActionPerformed
-    // TODO add your handling code here:
-  }//GEN-LAST:event_txtNoHpPelangganActionPerformed
-
-  private void txtNamaPengambilanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNamaPengambilanActionPerformed
-    // TODO add your handling code here:
-  }//GEN-LAST:event_txtNamaPengambilanActionPerformed
-
-  private void txtNoNotaPengambilanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNoNotaPengambilanActionPerformed
-    // TODO add your handling code here:
-  }//GEN-LAST:event_txtNoNotaPengambilanActionPerformed
-
-  private void txtTglTerimaPengambilanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTglTerimaPengambilanActionPerformed
-    // TODO add your handling code here:
-  }//GEN-LAST:event_txtTglTerimaPengambilanActionPerformed
-
-  private void txtTglJadiPengambilanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTglJadiPengambilanActionPerformed
-    // TODO add your handling code here:
-  }//GEN-LAST:event_txtTglJadiPengambilanActionPerformed
-
-  private void txtJumlahPengambilanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtJumlahPengambilanActionPerformed
-    // TODO add your handling code here:
-  }//GEN-LAST:event_txtJumlahPengambilanActionPerformed
-
-    private void txtIdLayananActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIdLayananActionPerformed
-      // TODO add your handling code here:
-    }//GEN-LAST:event_txtIdLayananActionPerformed
-
-  private void txtNamaLayananActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNamaLayananActionPerformed
-    // TODO add your handling code here:
-  }//GEN-LAST:event_txtNamaLayananActionPerformed
-
-  private void txtNamaAsetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNamaAsetActionPerformed
-    // TODO add your handling code here:
-  }//GEN-LAST:event_txtNamaAsetActionPerformed
-
-  private void txtIdAsetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIdAsetActionPerformed
-    // TODO add your handling code here:
-  }//GEN-LAST:event_txtIdAsetActionPerformed
-
-  private void txtTglTamhabAsetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTglTamhabAsetActionPerformed
-    // TODO add your handling code here:
-  }//GEN-LAST:event_txtTglTamhabAsetActionPerformed
-
-  private void txtHargaAsetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtHargaAsetActionPerformed
-    // TODO add your handling code here:
-  }//GEN-LAST:event_txtHargaAsetActionPerformed
-
-  private void txtMerekAsetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMerekAsetActionPerformed
-    // TODO add your handling code here:
-  }//GEN-LAST:event_txtMerekAsetActionPerformed
 
   private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
     controller.umpetnaPanelPasPertamaJalan(this);
@@ -1476,114 +494,33 @@ public class NikiLaundryView extends javax.swing.JFrame {
   }
 
   // Variables declaration - do not modify//GEN-BEGIN:variables
+  public static javax.swing.JDesktopPane baseContainer;
   private javax.swing.JPanel bg;
   private javax.swing.JPanel btnAset;
-  private javax.swing.JButton btnDeletePakaian;
-  private javax.swing.JButton btnDeletePelanggan;
-  private javax.swing.JButton btnDeletePewangi;
   private javax.swing.JLabel btnExit;
   private javax.swing.JPanel btnLaporan;
   private javax.swing.JPanel btnLaundry;
   private javax.swing.JButton btnLogin;
   private javax.swing.JPanel btnMaster;
-  private javax.swing.JButton btnSaveDelete;
-  private javax.swing.JButton btnSaveLayanan;
-  private javax.swing.JButton btnSavePakaian;
-  private javax.swing.JButton btnSavePelanggan;
-  private javax.swing.JButton btnSavePewangi;
-  private javax.swing.JComboBox<String> cbJenisKelaminPelanggan;
-  private javax.swing.JComboBox<String> cbJenisPelanggan;
-  private javax.swing.JComboBox<String> cbLayananPenyerahan;
-  private javax.swing.JComboBox<String> cbPewangiPengambilan;
-  private javax.swing.JComboBox<String> cbPewangiPenyerahan;
-  private javax.swing.JComboBox<String> cdLayananPengambilan;
   private javax.swing.JLabel iconBtnAset;
   private javax.swing.JLabel iconBtnLaporan;
   private javax.swing.JLabel iconBtnLaundry;
   private javax.swing.JLabel iconBtnMaster;
   private javax.swing.JLabel iconPassword;
   private javax.swing.JLabel iconUserName;
-  private javax.swing.JScrollPane jScrollPane1;
-  private javax.swing.JScrollPane jScrollPane2;
-  private javax.swing.JScrollPane jScrollPane3;
-  private javax.swing.JScrollPane jScrollPane4;
-  private javax.swing.JScrollPane jScrollPane5;
-  private javax.swing.JScrollPane jScrollPane6;
-  private javax.swing.JScrollPane jScrollPane7;
-  private javax.swing.JScrollPane jScrollPane8;
-  private javax.swing.JScrollPane jScrollPane9;
-  private javax.swing.JTabbedPane menuAset;
-  private javax.swing.JTabbedPane menuLaundry;
-  private javax.swing.JTabbedPane menuMaster;
-  private javax.swing.JPanel panelLogin;
+  public static javax.swing.JPanel panelLogin;
   public static javax.swing.JPanel panelMenu;
-  public static javax.swing.JPanel panelMenuAset;
-  public static javax.swing.JPanel panelMenuLaporan;
-  public static javax.swing.JPanel panelMenuLaundry;
-  public static javax.swing.JPanel panelMenuMaster;
-  public static javax.swing.JPanel panelWelcome;
-  private javax.swing.JPanel ribon4;
   private javax.swing.JSeparator sparatorNikiLaundryLogin;
   private javax.swing.JSeparator sparatorNikiLaundryMenu;
   private javax.swing.JSeparator sparatorUserName;
   private javax.swing.JSeparator sparatuorPassword;
-  private javax.swing.JPanel tabAset;
-  private javax.swing.JPanel tabLayanan;
-  private javax.swing.JPanel tabPakaian;
-  private javax.swing.JPanel tabPelanggan;
-  private javax.swing.JPanel tabPengambilan;
-  private javax.swing.JPanel tabPenyerahan;
-  private javax.swing.JPanel tabPewangi;
-  private javax.swing.JTable tabelAset;
-  private javax.swing.JTable tabelData3;
-  private javax.swing.JTable tabelLayanan;
-  private javax.swing.JTable tabelPakaian;
-  private javax.swing.JTable tabelPelanggan;
-  private javax.swing.JTable tabelPengambilan;
-  private javax.swing.JTable tabelPenyerahan;
-  private javax.swing.JTable tabelPewangi;
-  private javax.swing.JTextArea txtAlamatPelanggan;
-  private javax.swing.JLabel txtBanyakCuciPenyerahan;
-  private javax.swing.JLabel txtBanyaknyaCuciPengambilan;
-  private javax.swing.JLabel txtBersih;
   private javax.swing.JLabel txtBtnAset;
   private javax.swing.JLabel txtBtnLaporan;
   private javax.swing.JLabel txtBtnMaster;
-  private javax.swing.JTextField txtHargaAset;
-  private javax.swing.JTextField txtHargaLayanan;
-  private javax.swing.JTextField txtHargaPakaian;
-  private javax.swing.JTextField txtHargaPewangi;
-  private javax.swing.JTextField txtIdAset;
-  private javax.swing.JTextField txtIdLayanan;
-  private javax.swing.JTextField txtIdPakaian;
-  private javax.swing.JTextField txtIdPewangi;
-  private javax.swing.JTextField txtJumlahPengambilan;
-  private javax.swing.JTextField txtJumlahPenyerahan;
-  private javax.swing.JTextField txtMerekAset;
-  private javax.swing.JTextField txtNamaAset;
-  private javax.swing.JTextField txtNamaLayanan;
-  private javax.swing.JTextField txtNamaPakaian;
-  private javax.swing.JTextField txtNamaPelanggan;
-  private javax.swing.JTextField txtNamaPengambilan;
-  private javax.swing.JTextField txtNamaPenyerahan;
-  private javax.swing.JTextField txtNamaPewangi;
   private javax.swing.JLabel txtNikiLaundryLogin;
   private javax.swing.JLabel txtNikiLaundryMenu;
-  private javax.swing.JLabel txtNikiLaundryWelcome;
-  private javax.swing.JTextField txtNoHpPelanggan;
-  private javax.swing.JTextField txtNoKtpPelanggan;
-  private javax.swing.JTextField txtNoNotaPengambilan;
-  private javax.swing.JTextField txtNoNotaPenyerahan;
-  private javax.swing.JPasswordField txtPassword;
-  private javax.swing.JLabel txtProfesional;
-  private javax.swing.JLabel txtRapi;
-  private javax.swing.JTextField txtTglJadiPengambilan;
-  private javax.swing.JTextField txtTglJadiPenyerahan;
-  private javax.swing.JTextField txtTglTamhabAset;
-  private javax.swing.JTextField txtTglTerimaPengambilan;
-  private javax.swing.JTextField txtTglTerimaPenyerahan;
-  private javax.swing.JTextField txtUserName;
-  private javax.swing.JLabel txtWangi;
+  public static javax.swing.JPasswordField txtPassword;
+  public static javax.swing.JTextField txtUserName;
   private javax.swing.JLabel txtbtnLaundry;
   // End of variables declaration//GEN-END:variables
 }

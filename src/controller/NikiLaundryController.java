@@ -16,8 +16,13 @@
  */
 package controller;
 
+import java.beans.PropertyVetoException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import view.NikiLaundryView;
+import static view.NikiLaundryView.baseContainer;
+import view.internal.WelcomeInternalFrame;
 
 /**
  *
@@ -26,11 +31,17 @@ import view.NikiLaundryView;
 public class NikiLaundryController {
 
   public void umpetnaPanelPasPertamaJalan(NikiLaundryView view) {
-    NikiLaundryView.panelMenu.setVisible(false);
-    NikiLaundryView.panelMenuAset.setVisible(false);
-    NikiLaundryView.panelMenuLaporan.setVisible(false);
-    NikiLaundryView.panelMenuLaundry.setVisible(false);
-    NikiLaundryView.panelMenuMaster.setVisible(false);
+    try {
+      NikiLaundryView.panelMenu.setVisible(false);
+      baseContainer.removeAll();
+      WelcomeInternalFrame internalFrame = new WelcomeInternalFrame();
+      internalFrame.setVisible(true);
+      baseContainer.add(internalFrame);
+      internalFrame.setMaximum(true);
+      NikiLaundryView.txtUserName.requestFocus();
+    } catch (PropertyVetoException ex) {
+      Logger.getLogger(NikiLaundryController.class.getName()).log(Level.SEVERE, null, ex);
+    }
   }
 
   public void tutupAplikasi(NikiLaundryView view) {
@@ -40,6 +51,11 @@ public class NikiLaundryController {
             == JOptionPane.YES_OPTION) {
       System.exit(0);
     }
+  }
+  
+  public void loginButtonActionPerform() {
+    NikiLaundryView.panelLogin.setVisible(false);
+    NikiLaundryView.panelMenu.setVisible(true);
   }
 
 }
