@@ -85,21 +85,19 @@
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                                           <Component id="txtNamaPenyerahan" min="-2" pref="183" max="-2" attributes="0"/>
-                                          <EmptySpace min="133" pref="133" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="133" max="-2" attributes="0"/>
                                           <Component id="txtTglTerimaPenyerahan" min="-2" pref="183" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace max="-2" attributes="0"/>
                                           <Component id="txtNoNotaPenyerahan" min="-2" pref="183" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="133" max="-2" attributes="0"/>
                                           <Component id="txtTglJadiPenyerahan" min="-2" pref="183" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                               <Component id="cbPewangiPenyerahan" alignment="0" pref="183" max="32767" attributes="0"/>
                                               <Component id="cbLayananPenyerahan" alignment="0" max="32767" attributes="0"/>
@@ -123,9 +121,9 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="txtNamaPenyerahan" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtTglTerimaPenyerahan" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="txtTglTerimaPenyerahan" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtNamaPenyerahan" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">

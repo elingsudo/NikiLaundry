@@ -22,7 +22,10 @@ import java.beans.PropertyVetoException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JPanel;
-import view.internal.WelcomeInternalFrame;
+import view.internal.AsetInternalFrame;
+import view.internal.LaporanInternalFrame;
+import view.internal.LaundryInternalFrame;
+import view.internal.MasterInternalFrame;
 
 /**
  *
@@ -80,11 +83,6 @@ public class NikiLaundryView extends javax.swing.JFrame {
     setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
     setLocationByPlatform(true);
     setUndecorated(true);
-    addComponentListener(new java.awt.event.ComponentAdapter() {
-      public void componentHidden(java.awt.event.ComponentEvent evt) {
-        formComponentHidden(evt);
-      }
-    });
     addWindowListener(new java.awt.event.WindowAdapter() {
       public void windowClosing(java.awt.event.WindowEvent evt) {
         formWindowClosing(evt);
@@ -173,11 +171,6 @@ public class NikiLaundryView extends javax.swing.JFrame {
 
     panelMenu.setBackground(new java.awt.Color(54, 33, 89));
     panelMenu.setEnabled(false);
-    panelMenu.addComponentListener(new java.awt.event.ComponentAdapter() {
-      public void componentHidden(java.awt.event.ComponentEvent evt) {
-        panelMenuComponentHidden(evt);
-      }
-    });
     panelMenu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
     txtNikiLaundryMenu.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
@@ -380,79 +373,89 @@ public class NikiLaundryView extends javax.swing.JFrame {
     }//GEN-LAST:event_btnExitMousePressed
 
     private void btnLaundryMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLaundryMousePressed
-      setColor(btnLaundry);
-      resetColor(btnMaster);
-      resetColor(btnAset);
-      resetColor(btnLaporan);
+      try {
+        setColor(btnLaundry);
+        resetColor(btnMaster);
+        resetColor(btnAset);
+        resetColor(btnLaporan);
 
-      /*
-      panelWelcome.setVisible(false);
-      panelMenuLaundry.setVisible(true);
-      panelMenuMaster.setVisible(false);
-      panelMenuAset.setVisible(false);
-      panelMenuLaporan.setVisible(false);
-       */
+        baseContainer.removeAll();
+        LaundryInternalFrame internalFrame = new LaundryInternalFrame();
+        internalFrame.setVisible(true);
+        baseContainer.add(internalFrame);
+        internalFrame.setMaximum(true);
+      } catch (PropertyVetoException ex) {
+        Logger.getLogger(NikiLaundryView.class.getName()).log(Level.SEVERE, null, ex);
+      }
     }//GEN-LAST:event_btnLaundryMousePressed
 
     private void btnMasterMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMasterMousePressed
-      // TODO add your handling code here:
-      resetColor(btnLaundry);
-      setColor(btnMaster);
-      resetColor(btnAset);
-      resetColor(btnLaporan);
+      try {
+        // TODO add your handling code here:
+        resetColor(btnLaundry);
+        setColor(btnMaster);
+        resetColor(btnAset);
+        resetColor(btnLaporan);
 
-      /*
-      panelWelcome.hide();
-      panelMenuLaundry.hide();
-      panelMenuMaster.show();
-      panelMenuAset.hide();
-      panelMenuLaporan.hide();
-       */
+        baseContainer.removeAll();
+        MasterInternalFrame internalFrame = new MasterInternalFrame();
+        internalFrame.setVisible(true);
+        baseContainer.add(internalFrame);
+        internalFrame.setMaximum(true);
+      } catch (PropertyVetoException ex) {
+        Logger.getLogger(NikiLaundryView.class.getName()).log(Level.SEVERE, null, ex);
+      }
     }//GEN-LAST:event_btnMasterMousePressed
 
     private void btnAsetMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAsetMousePressed
-      // TODO add your handling code here:
-      resetColor(btnLaundry);
-      resetColor(btnMaster);
-      setColor(btnAset);
-      resetColor(btnLaporan);
+      try {
+        // TODO add your handling code here:
+        resetColor(btnLaundry);
+        resetColor(btnMaster);
+        setColor(btnAset);
+        resetColor(btnLaporan);
 
-      /*
-      panelWelcome.hide();
-      panelMenuLaundry.hide();
-      panelMenuMaster.hide();
-      panelMenuAset.show();
-      panelMenuLaporan.hide();
-       */
+        baseContainer.removeAll();
+        AsetInternalFrame internalFrame = new AsetInternalFrame();
+        internalFrame.setVisible(true);
+        baseContainer.add(internalFrame);
+        internalFrame.setMaximum(true);
+      } catch (PropertyVetoException ex) {
+        Logger.getLogger(NikiLaundryView.class.getName()).log(Level.SEVERE, null, ex);
+      }
     }//GEN-LAST:event_btnAsetMousePressed
 
     private void btnLaporanMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnLaporanMousePressed
-      // TODO add your handling code here:
-      resetColor(btnLaundry);
-      resetColor(btnMaster);
-      resetColor(btnAset);
-      setColor(btnLaporan);
+      try {
+        // TODO add your handling code here:
+        resetColor(btnLaundry);
+        resetColor(btnMaster);
+        resetColor(btnAset);
+        setColor(btnLaporan);
 
-      /*
-      panelWelcome.hide();
-      panelMenuLaundry.hide();
-      panelMenuMaster.hide();
-      panelMenuAset.hide();
-      panelMenuLaporan.show();
-       */
+        baseContainer.removeAll();
+        LaporanInternalFrame internalFrame = new LaporanInternalFrame();
+        internalFrame.setVisible(true);
+        baseContainer.add(internalFrame);
+        internalFrame.setMaximum(true);
+      } catch (PropertyVetoException ex) {
+        Logger.getLogger(NikiLaundryView.class.getName()).log(Level.SEVERE, null, ex);
+      }
     }//GEN-LAST:event_btnLaporanMousePressed
 
     private void txtPasswordFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtPasswordFocusGained
-      // TODO add your handling code here:
       txtPassword.setText("");
     }//GEN-LAST:event_txtPasswordFocusGained
 
     private void txtPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPasswordActionPerformed
       controller.loginButtonActionPerform();
+      resetColor(btnLaundry);
+      resetColor(btnMaster);
+      resetColor(btnAset);
+      resetColor(btnLaporan);
     }//GEN-LAST:event_txtPasswordActionPerformed
 
     private void txtUserNameFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txtUserNameFocusGained
-      // TODO add your handling code here:
       txtUserName.setText("");
     }//GEN-LAST:event_txtUserNameFocusGained
 
@@ -473,23 +476,15 @@ public class NikiLaundryView extends javax.swing.JFrame {
     resetColor(btnLaporan);
   }//GEN-LAST:event_btnLoginActionPerformed
 
-  private void panelMenuComponentHidden(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_panelMenuComponentHidden
-    // TODO add your handling code here:
-  }//GEN-LAST:event_panelMenuComponentHidden
-
-  private void formComponentHidden(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_formComponentHidden
-    // TODO add your handling code here:
-  }//GEN-LAST:event_formComponentHidden
-
   private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
     controller.umpetnaPanelPasPertamaJalan(this);
   }//GEN-LAST:event_formWindowOpened
 
-  void setColor(JPanel panel) {
+  private void setColor(JPanel panel) {
     panel.setBackground(new Color(85, 65, 118));
   }
 
-  void resetColor(JPanel panel) {
+  private void resetColor(JPanel panel) {
     panel.setBackground(new Color(54, 33, 89));
   }
 
