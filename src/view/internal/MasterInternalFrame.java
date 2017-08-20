@@ -17,6 +17,7 @@
 package view.internal;
 
 import javax.swing.plaf.basic.BasicInternalFrameUI;
+import org.jdesktop.swingx.prompt.PromptSupport;
 
 /**
  *
@@ -80,33 +81,41 @@ public class MasterInternalFrame extends javax.swing.JInternalFrame {
     tabelLayanan = new javax.swing.JTable();
 
     setBorder(null);
-
-    tabPelanggan.setBackground(new java.awt.Color(142, 53, 239));
-
-    txtNoKtpPelanggan.setText("No. KTP");
-    txtNoKtpPelanggan.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        txtNoKtpPelangganActionPerformed(evt);
+    addInternalFrameListener(new javax.swing.event.InternalFrameListener() {
+      public void internalFrameActivated(javax.swing.event.InternalFrameEvent evt) {
+      }
+      public void internalFrameClosed(javax.swing.event.InternalFrameEvent evt) {
+      }
+      public void internalFrameClosing(javax.swing.event.InternalFrameEvent evt) {
+      }
+      public void internalFrameDeactivated(javax.swing.event.InternalFrameEvent evt) {
+      }
+      public void internalFrameDeiconified(javax.swing.event.InternalFrameEvent evt) {
+      }
+      public void internalFrameIconified(javax.swing.event.InternalFrameEvent evt) {
+      }
+      public void internalFrameOpened(javax.swing.event.InternalFrameEvent evt) {
+        formInternalFrameOpened(evt);
       }
     });
 
-    txtNamaPelanggan.setText("Nama");
+    tabPelanggan.setBackground(new java.awt.Color(142, 53, 239));
+
     txtNamaPelanggan.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
         txtNamaPelangganActionPerformed(evt);
       }
     });
 
-    cbJenisKelaminPelanggan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+    cbJenisKelaminPelanggan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Laki-laki", "Perempuan" }));
 
-    txtNoHpPelanggan.setText("No. HP");
     txtNoHpPelanggan.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
         txtNoHpPelangganActionPerformed(evt);
       }
     });
 
-    cbJenisPelanggan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+    cbJenisPelanggan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Member", "Non-Member" }));
 
     txtAlamatPelanggan.setColumns(16);
     txtAlamatPelanggan.setRows(4);
@@ -148,16 +157,13 @@ public class MasterInternalFrame extends javax.swing.JInternalFrame {
               .addComponent(txtNoHpPelanggan))
             .addGap(69, 69, 69)
             .addGroup(tabPelangganLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-              .addGroup(tabPelangganLayout.createSequentialGroup()
-                .addComponent(cbJenisPelanggan, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-              .addGroup(tabPelangganLayout.createSequentialGroup()
-                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 112, Short.MAX_VALUE)
-                .addGroup(tabPelangganLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                  .addComponent(btnSavePelanggan, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                  .addComponent(btnDeletePelanggan, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(35, 35, 35))))))
+              .addComponent(cbJenisPelanggan, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
+              .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGap(112, 112, 112)
+            .addGroup(tabPelangganLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+              .addComponent(btnSavePelanggan, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+              .addComponent(btnDeletePelanggan, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGap(35, 35, 35))))
     );
     tabPelangganLayout.setVerticalGroup(
       tabPelangganLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -433,10 +439,6 @@ public class MasterInternalFrame extends javax.swing.JInternalFrame {
     pack();
   }// </editor-fold>//GEN-END:initComponents
 
-  private void txtNoKtpPelangganActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNoKtpPelangganActionPerformed
-    // TODO add your handling code here:
-  }//GEN-LAST:event_txtNoKtpPelangganActionPerformed
-
   private void txtNamaPelangganActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNamaPelangganActionPerformed
     // TODO add your handling code here:
   }//GEN-LAST:event_txtNamaPelangganActionPerformed
@@ -468,6 +470,13 @@ public class MasterInternalFrame extends javax.swing.JInternalFrame {
   private void txtNamaLayananActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNamaLayananActionPerformed
     // TODO add your handling code here:
   }//GEN-LAST:event_txtNamaLayananActionPerformed
+
+  private void formInternalFrameOpened(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_formInternalFrameOpened
+    PromptSupport.setPrompt("No. KTP", txtNoKtpPelanggan);
+    PromptSupport.setPrompt("Nama", txtNamaPelanggan);
+    PromptSupport.setPrompt("No. HP", txtNoHpPelanggan);
+    PromptSupport.setPrompt("Alamat", txtAlamatPelanggan);
+  }//GEN-LAST:event_formInternalFrameOpened
 
 
   // Variables declaration - do not modify//GEN-BEGIN:variables
