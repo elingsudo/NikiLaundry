@@ -68,6 +68,7 @@ Contributor(s):
     <mapping class="model.MasterPelangganModel"/>
     <mapping class="model.MasterPewangiModel"/>
     <mapping class="model.MasterPakaianModel"/>
+    <mapping class="model.MasterLayananModel"/>
 
   </session-factory>
 </hibernate-configuration>
