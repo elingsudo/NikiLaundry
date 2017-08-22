@@ -16,12 +16,22 @@
  */
 package controller;
 
+import java.awt.Color;
 import java.beans.PropertyVetoException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 import view.NikiLaundryView;
 import static view.NikiLaundryView.baseContainer;
+import static view.NikiLaundryView.btnAset;
+import static view.NikiLaundryView.btnLaporan;
+import static view.NikiLaundryView.btnLaundry;
+import static view.NikiLaundryView.btnMaster;
+import view.internal.AsetInternalFrame;
+import view.internal.LaporanInternalFrame;
+import view.internal.LaundryInternalFrame;
+import view.internal.MasterInternalFrame;
 import view.internal.WelcomeInternalFrame;
 
 /**
@@ -52,10 +62,87 @@ public class NikiLaundryController {
       System.exit(0);
     }
   }
-  
+
   public void loginButtonActionPerform() {
     NikiLaundryView.panelLogin.setVisible(false);
     NikiLaundryView.panelMenu.setVisible(true);
+  }
+
+  public void menuLaundryPressed(NikiLaundryView view) {
+    try {
+      setColor(NikiLaundryView.btnLaundry);
+      resetColor(NikiLaundryView.btnMaster);
+      resetColor(NikiLaundryView.btnAset);
+      resetColor(NikiLaundryView.btnLaporan);
+
+      baseContainer.removeAll();
+      LaundryInternalFrame internalFrame = new LaundryInternalFrame();
+      internalFrame.setVisible(true);
+      baseContainer.add(internalFrame);
+      internalFrame.setMaximum(true);
+    } catch (PropertyVetoException ex) {
+      Logger.getLogger(NikiLaundryView.class.getName()).log(Level.SEVERE, null, ex);
+    }
+  }
+
+  public void menuMasterPressed(NikiLaundryView view) {
+    try {
+      resetColor(NikiLaundryView.btnLaundry);
+      setColor(NikiLaundryView.btnMaster);
+      resetColor(NikiLaundryView.btnAset);
+      resetColor(NikiLaundryView.btnLaporan);
+
+      baseContainer.removeAll();
+      MasterInternalFrame internalFrame = new MasterInternalFrame();
+      internalFrame.setVisible(true);
+      baseContainer.add(internalFrame);
+      internalFrame.setMaximum(true);
+    } catch (PropertyVetoException ex) {
+      Logger.getLogger(NikiLaundryView.class.getName()).log(Level.SEVERE, null, ex);
+    }
+  }
+
+  public void menuAsetPressed(NikiLaundryView view) {
+    try {
+      resetColor(NikiLaundryView.btnLaundry);
+      resetColor(NikiLaundryView.btnMaster);
+      setColor(NikiLaundryView.btnAset);
+      resetColor(NikiLaundryView.btnLaporan);
+
+      baseContainer.removeAll();
+      AsetInternalFrame internalFrame = new AsetInternalFrame();
+      internalFrame.setVisible(true);
+      baseContainer.add(internalFrame);
+      internalFrame.setMaximum(true);
+    } catch (PropertyVetoException ex) {
+      Logger.getLogger(NikiLaundryView.class.getName()).log(Level.SEVERE, null, ex);
+    }
+  }
+
+  public void menuLaporanPressed(NikiLaundryView view) {
+    try {
+      resetColor(btnLaundry);
+      resetColor(btnMaster);
+      resetColor(btnAset);
+      setColor(btnLaporan);
+
+      baseContainer.removeAll();
+      LaporanInternalFrame internalFrame = new LaporanInternalFrame();
+      internalFrame.setVisible(true);
+      baseContainer.add(internalFrame);
+      internalFrame.setMaximum(true);
+    } catch (PropertyVetoException ex) {
+      Logger.getLogger(NikiLaundryView.class.getName()).log(Level.SEVERE, null, ex);
+    }
+  }
+
+  /* ================= NON API ====================== */
+  private void setColor(JPanel panel) {
+    panel.setBackground(new Color(85, 65, 118));
+  }
+
+  private void resetColor(JPanel panel) {
+    panel.setBackground(new Color(54, 33, 89));
   }
 
 }
