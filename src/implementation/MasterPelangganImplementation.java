@@ -17,7 +17,9 @@
 package implementation;
 
 import model.MasterPelangganModel;
+import org.hibernate.HibernateException;
 import org.hibernate.Session;
+import org.hibernate.criterion.Restrictions;
 import util.HibernateUtil;
 import service.MasterPelangganService;
 
@@ -39,12 +41,11 @@ public class MasterPelangganImplementation
     Session session = HibernateUtil.getSessionFactory().openSession();
     try {
       session.beginTransaction();
-      pengguna = (MasterPelangganModel) session
-              .createQuery("FROM MasterPelangganModel masterPelanggan "
-                      + "WHERE masterPelanggan.nama = :nama")
-              .setString("nama", nama).uniqueResult();
+      pengguna = (MasterPelangganModel) session.createCriteria(MasterPelangganModel.class)
+              .add(Restrictions.like("nama", "%" + nama + "%"))
+              .uniqueResult();
       session.getTransaction().commit();
-    } catch (Exception e) {
+    } catch (HibernateException e) {
       session.getTransaction().rollback();
       System.out.println(e.getMessage());
       throw e;

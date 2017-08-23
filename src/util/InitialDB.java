@@ -16,9 +16,20 @@
  */
 package util;
 
+import implementation.MasterLayananServiceImpl;
+import implementation.MasterPakaianImplementation;
 import implementation.MasterPelangganImplementation;
+import implementation.MasterPewangiImplementation;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import model.MasterLayananModel;
+import model.MasterPakaianModel;
 import model.MasterPelangganModel;
+import model.MasterPewangiModel;
+import service.MasterLayananService;
+import service.MasterPakaianService;
 import service.MasterPelangganService;
+import service.MasterPewangiService;
 
 /**
  *
@@ -26,26 +37,62 @@ import service.MasterPelangganService;
  */
 public class InitialDB {
 
-  private final MasterPelangganService service;
+  private final MasterPelangganService pelangganService;
+  private final MasterLayananService layananService;
+  private final MasterPakaianService pakaianService;
+  private final MasterPewangiService pewangiService;
 
   public InitialDB() {
-    service = new MasterPelangganImplementation(MasterPelangganModel.class);
+    pelangganService = new MasterPelangganImplementation(MasterPelangganModel.class);
+    layananService = new MasterLayananServiceImpl(MasterLayananModel.class);
+    pakaianService = new MasterPakaianImplementation(MasterPakaianModel.class);
+    pewangiService = new MasterPewangiImplementation(MasterPewangiModel.class);
   }
 
   public static void init() {
     InitialDB initialDB = new InitialDB();
     initialDB.insertPelanggan();
+    initialDB.insertMasterLayanan();
+    initialDB.insertMasterPakaian();
+    initialDB.insertMasterPewangi();
   }
 
   private void insertPelanggan() {
     MasterPelangganModel pelanggan = new MasterPelangganModel();
     pelanggan.setNoKtp("330400_990333_0001");
-    pelanggan.setJenisKelamin("L");
     pelanggan.setNama("Eling");
-    pelanggan.setAlamat("alamat");
+    pelanggan.setJenisKelamin("L");
     pelanggan.setNoHp("085444999333");
     pelanggan.setJenisPelanggan("MEMBER");
-    String message = service.save(pelanggan);
+    pelanggan.setAlamat("alamat");
+    String message = pelangganService.save(pelanggan);
+    System.out.println(message);
+  }
+
+  private void insertMasterLayanan() {
+    MasterLayananModel layanan = new MasterLayananModel();
+    layanan.setIdLayanan("0001");
+    layanan.setNamaLayanan("Standart");
+    layanan.setHarga(new BigDecimal("3500"));
+    String message = layananService.save(layanan);
+    System.out.println(message);
+  }
+
+  private void insertMasterPakaian() {
+    MasterPakaianModel pakaian = new MasterPakaianModel();
+    pakaian.setIdPakaian("0100");
+    pakaian.setNamaPakaian("Kaos");
+    pakaian.setHarga(new BigDecimal("1000"));
+    String message = pakaianService.save(pakaian);
+    System.out.println(message);
+  }
+
+  private void insertMasterPewangi() {
+    MasterPewangiModel pewangi = new MasterPewangiModel();
+    pewangi.setIdPewangi("0101");
+    pewangi.setNamaPewangi("Downy");
+    pewangi.setHarga(new BigInteger("5000"));
+    String message = pewangiService.save(pewangi);
     System.out.println(message);
   }
 }
