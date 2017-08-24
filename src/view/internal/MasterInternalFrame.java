@@ -16,6 +16,7 @@
  */
 package view.internal;
 
+import javax.swing.JTabbedPane;
 import javax.swing.plaf.basic.BasicInternalFrameUI;
 import org.jdesktop.swingx.prompt.PromptSupport;
 
@@ -25,12 +26,16 @@ import org.jdesktop.swingx.prompt.PromptSupport;
  */
 public class MasterInternalFrame extends javax.swing.JInternalFrame {
 
+  private final MasterPelangganController pelangganController;
+
   /**
    * Creates new form MasterInternalFrame
    */
   public MasterInternalFrame() {
     ((BasicInternalFrameUI) this.getUI()).setNorthPane(null);
     initComponents();
+
+    pelangganController = new MasterPelangganController();
   }
 
   /**
@@ -96,6 +101,12 @@ public class MasterInternalFrame extends javax.swing.JInternalFrame {
       }
       public void internalFrameOpened(javax.swing.event.InternalFrameEvent evt) {
         formInternalFrameOpened(evt);
+      }
+    });
+
+    menuMaster.addChangeListener(new javax.swing.event.ChangeListener() {
+      public void stateChanged(javax.swing.event.ChangeEvent evt) {
+        menuMasterStateChanged(evt);
       }
     });
 
@@ -478,6 +489,26 @@ public class MasterInternalFrame extends javax.swing.JInternalFrame {
     PromptSupport.setPrompt("Alamat", txtAlamatPelanggan);
   }//GEN-LAST:event_formInternalFrameOpened
 
+   private void menuMasterStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_menuMasterStateChanged
+     if (evt.getSource() instanceof JTabbedPane) {
+       JTabbedPane pane = (JTabbedPane) evt.getSource();
+       switch (pane.getSelectedIndex()) {
+         case 0:
+           System.out.println(0);
+           break;
+         case 1:
+           System.out.println(1);
+           break;
+         case 2:
+           System.out.println(2);
+           break;
+         case 3:
+           System.out.println(3);
+           break;
+       }
+     }
+   }//GEN-LAST:event_menuMasterStateChanged
+
 
   // Variables declaration - do not modify//GEN-BEGIN:variables
   private javax.swing.JButton btnDeletePakaian;
@@ -495,7 +526,7 @@ public class MasterInternalFrame extends javax.swing.JInternalFrame {
   private javax.swing.JScrollPane jScrollPane7;
   private javax.swing.JScrollPane jScrollPane8;
   private javax.swing.JScrollPane jScrollPane9;
-  private javax.swing.JTabbedPane menuMaster;
+  public static javax.swing.JTabbedPane menuMaster;
   public static javax.swing.JPanel panelMenuMaster;
   private javax.swing.JPanel tabLayanan;
   private javax.swing.JPanel tabPakaian;

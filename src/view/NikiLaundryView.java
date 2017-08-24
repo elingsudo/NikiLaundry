@@ -320,7 +320,7 @@ public class NikiLaundryView extends javax.swing.JFrame {
 
       bg.add(panelMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 270, 600));
 
-      baseContainer.setBackground(new java.awt.Color(255, 51, 255));
+      baseContainer.setBackground(new java.awt.Color(255, 0, 255));
 
       javax.swing.GroupLayout baseContainerLayout = new javax.swing.GroupLayout(baseContainer);
       baseContainer.setLayout(baseContainerLayout);
