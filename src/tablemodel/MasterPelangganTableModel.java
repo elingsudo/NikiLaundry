@@ -54,7 +54,6 @@ public class MasterPelangganTableModel extends AbstractTableModel {
     return HEADER.length;
   }
 
-  // "No", "Nama", "Jenis Pelanggan", "No Telepon"
   @Override
   public Object getValueAt(int rowIndex, int columnIndex) {
     switch (columnIndex) {

@@ -23,11 +23,6 @@ import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import view.NikiLaundryView;
-import static view.NikiLaundryView.baseContainer;
-import static view.NikiLaundryView.btnAset;
-import static view.NikiLaundryView.btnLaporan;
-import static view.NikiLaundryView.btnLaundry;
-import static view.NikiLaundryView.btnMaster;
 import view.internal.AsetInternalFrame;
 import view.internal.LaporanInternalFrame;
 import view.internal.LaundryInternalFrame;
@@ -42,13 +37,13 @@ public class NikiLaundryController {
 
   public void umpetnaPanelPasPertamaJalan(NikiLaundryView view) {
     try {
-      NikiLaundryView.panelMenu.setVisible(false);
-      baseContainer.removeAll();
+      view.getPanelMenu().setVisible(false);
+      view.getBaseContainer().removeAll();
       WelcomeInternalFrame internalFrame = new WelcomeInternalFrame();
       internalFrame.setVisible(true);
-      baseContainer.add(internalFrame);
+      view.getBaseContainer().add(internalFrame);
       internalFrame.setMaximum(true);
-      NikiLaundryView.txtUserName.requestFocus();
+      view.getTxtUserName().requestFocus();
     } catch (PropertyVetoException ex) {
       Logger.getLogger(NikiLaundryController.class.getName()).log(Level.SEVERE, null, ex);
     }
@@ -63,22 +58,22 @@ public class NikiLaundryController {
     }
   }
 
-  public void loginButtonActionPerform() {
-    NikiLaundryView.panelLogin.setVisible(false);
-    NikiLaundryView.panelMenu.setVisible(true);
+  public void loginButtonActionPerform(NikiLaundryView view) {
+    view.getPanelLogin().setVisible(false);
+    view.getPanelMenu().setVisible(true);
   }
 
   public void menuLaundryPressed(NikiLaundryView view) {
     try {
-      setColor(NikiLaundryView.btnLaundry);
-      resetColor(NikiLaundryView.btnMaster);
-      resetColor(NikiLaundryView.btnAset);
-      resetColor(NikiLaundryView.btnLaporan);
+      setColor(view.getBtnLaundry());
+      resetColor(view.getBtnMaster());
+      resetColor(view.getBtnAset());
+      resetColor(view.getBtnLaporan());
 
-      baseContainer.removeAll();
+      view.getBaseContainer().removeAll();
       LaundryInternalFrame internalFrame = new LaundryInternalFrame();
       internalFrame.setVisible(true);
-      baseContainer.add(internalFrame);
+      view.getBaseContainer().add(internalFrame);
       internalFrame.setMaximum(true);
     } catch (PropertyVetoException ex) {
       Logger.getLogger(NikiLaundryView.class.getName()).log(Level.SEVERE, null, ex);
@@ -87,15 +82,15 @@ public class NikiLaundryController {
 
   public void menuMasterPressed(NikiLaundryView view) {
     try {
-      resetColor(NikiLaundryView.btnLaundry);
-      setColor(NikiLaundryView.btnMaster);
-      resetColor(NikiLaundryView.btnAset);
-      resetColor(NikiLaundryView.btnLaporan);
+      resetColor(view.getBtnLaundry());
+      setColor(view.getBtnMaster());
+      resetColor(view.getBtnAset());
+      resetColor(view.getBtnLaporan());
 
-      baseContainer.removeAll();
+      view.getBaseContainer().removeAll();
       MasterInternalFrame internalFrame = new MasterInternalFrame();
       internalFrame.setVisible(true);
-      baseContainer.add(internalFrame);
+      view.getBaseContainer().add(internalFrame);
       internalFrame.setMaximum(true);
     } catch (PropertyVetoException ex) {
       Logger.getLogger(NikiLaundryView.class.getName()).log(Level.SEVERE, null, ex);
@@ -104,15 +99,15 @@ public class NikiLaundryController {
 
   public void menuAsetPressed(NikiLaundryView view) {
     try {
-      resetColor(NikiLaundryView.btnLaundry);
-      resetColor(NikiLaundryView.btnMaster);
-      setColor(NikiLaundryView.btnAset);
-      resetColor(NikiLaundryView.btnLaporan);
+      resetColor(view.getBtnLaundry());
+      resetColor(view.getBtnMaster());
+      setColor(view.getBtnAset());
+      resetColor(view.getBtnLaporan());
 
-      baseContainer.removeAll();
+      view.getBaseContainer().removeAll();
       AsetInternalFrame internalFrame = new AsetInternalFrame();
       internalFrame.setVisible(true);
-      baseContainer.add(internalFrame);
+      view.getBaseContainer().add(internalFrame);
       internalFrame.setMaximum(true);
     } catch (PropertyVetoException ex) {
       Logger.getLogger(NikiLaundryView.class.getName()).log(Level.SEVERE, null, ex);
@@ -121,15 +116,15 @@ public class NikiLaundryController {
 
   public void menuLaporanPressed(NikiLaundryView view) {
     try {
-      resetColor(btnLaundry);
-      resetColor(btnMaster);
-      resetColor(btnAset);
-      setColor(btnLaporan);
+      resetColor(view.getBtnLaundry());
+      resetColor(view.getBtnMaster());
+      resetColor(view.getBtnAset());
+      setColor(view.getBtnLaporan());
 
-      baseContainer.removeAll();
+      view.getBaseContainer().removeAll();
       LaporanInternalFrame internalFrame = new LaporanInternalFrame();
       internalFrame.setVisible(true);
-      baseContainer.add(internalFrame);
+      view.getBaseContainer().add(internalFrame);
       internalFrame.setMaximum(true);
     } catch (PropertyVetoException ex) {
       Logger.getLogger(NikiLaundryView.class.getName()).log(Level.SEVERE, null, ex);
