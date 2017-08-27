@@ -32,7 +32,7 @@ import view.internal.AsetInternalFrame;
 import view.internal.LaporanInternalFrame;
 import view.internal.LaundryInternalFrame;
 import view.internal.MasterInternalFrame;
-import controller.master.WelcomeInternalFrame;
+import view.internal.WelcomeInternalFrame;
 
 /**
  *

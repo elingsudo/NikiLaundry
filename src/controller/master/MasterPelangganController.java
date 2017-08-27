@@ -14,22 +14,16 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package view.internal;
+package controller.master;
 
-import implementation.MasterLayananServiceImpl;
-import implementation.MasterPakaianImplementation;
 import implementation.MasterPelangganImplementation;
-import implementation.MasterPewangiImplementation;
+import java.util.List;
 import javax.swing.JTabbedPane;
 import javax.swing.event.ChangeEvent;
-import model.MasterLayananModel;
-import model.MasterPakaianModel;
 import model.MasterPelangganModel;
-import model.MasterPewangiModel;
-import service.MasterLayananService;
-import service.MasterPakaianService;
 import service.MasterPelangganService;
-import service.MasterPewangiService;
+import tablemodel.MasterPelangganTableModel;
+import view.internal.MasterInternalFrame;
 
 /**
  *
@@ -38,15 +32,39 @@ import service.MasterPewangiService;
 public class MasterPelangganController {
 
   private final MasterPelangganService masterPelangganService;
-  private final MasterPewangiService masterPewangiService;
-  private final MasterLayananService masterLayananService;
-  private final MasterPakaianService masterPakaianService;
+  private final MasterPelangganTableModel tableModel;
 
   public MasterPelangganController() {
     masterPelangganService = new MasterPelangganImplementation(MasterPelangganModel.class);
-    masterPewangiService = new MasterPewangiImplementation(MasterPewangiModel.class);
-    masterLayananService = new MasterLayananServiceImpl(MasterLayananModel.class);
-    masterPakaianService = new MasterPakaianImplementation(MasterPakaianModel.class);
+    tableModel = new MasterPelangganTableModel();
+  }
+
+  public void tabMasterStateChange(MasterInternalFrame view, ChangeEvent evt) {
+    if (evt.getSource() instanceof JTabbedPane) {
+       JTabbedPane pane = (JTabbedPane) evt.getSource();
+       switch (pane.getSelectedIndex()) {
+         case 0:
+           this.loadMasterPelangganData(view);
+           break;
+         case 1:
+           System.out.println(1);
+           break;
+         case 2:
+           System.out.println(2);
+           break;
+         case 3:
+           System.out.println(3);
+           break;
+       }
+     }
+  }
+  
+  
+  // ====== NON API ==============
+  private void loadMasterPelangganData(MasterInternalFrame view) {
+    List<MasterPelangganModel> findAll = masterPelangganService.findAll();
+    tableModel.setList(findAll);
+    view.getTabelPelanggan().setModel(tableModel);
   }
 
 }

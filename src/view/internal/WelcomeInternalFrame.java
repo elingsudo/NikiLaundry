@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package controller.master;
+package view.internal;
 
 import javax.swing.plaf.basic.BasicInternalFrameUI;
 

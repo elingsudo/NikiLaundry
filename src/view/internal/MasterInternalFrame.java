@@ -16,7 +16,9 @@
  */
 package view.internal;
 
+import controller.master.MasterPelangganController;
 import javax.swing.JTabbedPane;
+import javax.swing.JTable;
 import javax.swing.plaf.basic.BasicInternalFrameUI;
 import org.jdesktop.swingx.prompt.PromptSupport;
 
@@ -32,11 +34,13 @@ public class MasterInternalFrame extends javax.swing.JInternalFrame {
    * Creates new form MasterInternalFrame
    */
   public MasterInternalFrame() {
-    ((BasicInternalFrameUI) this.getUI()).setNorthPane(null);
-    initComponents();
-
     pelangganController = new MasterPelangganController();
+    
+    ((BasicInternalFrameUI) this.getUI()).setNorthPane(null);
+    
+    initComponents();
   }
+
 
   /**
    * This method is called from within the constructor to initialize the form. WARNING: Do NOT
@@ -490,24 +494,16 @@ public class MasterInternalFrame extends javax.swing.JInternalFrame {
   }//GEN-LAST:event_formInternalFrameOpened
 
    private void menuMasterStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_menuMasterStateChanged
-     if (evt.getSource() instanceof JTabbedPane) {
-       JTabbedPane pane = (JTabbedPane) evt.getSource();
-       switch (pane.getSelectedIndex()) {
-         case 0:
-           System.out.println(0);
-           break;
-         case 1:
-           System.out.println(1);
-           break;
-         case 2:
-           System.out.println(2);
-           break;
-         case 3:
-           System.out.println(3);
-           break;
-       }
-     }
+     pelangganController.tabMasterStateChange(this, evt);
    }//GEN-LAST:event_menuMasterStateChanged
+
+  public JTable getTabelPelanggan() {
+    return tabelPelanggan;
+  }
+
+  public void setTabelPelanggan(JTable tabelPelanggan) {
+    this.tabelPelanggan = tabelPelanggan;
+  }
 
 
   // Variables declaration - do not modify//GEN-BEGIN:variables
