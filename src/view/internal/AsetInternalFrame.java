@@ -195,7 +195,7 @@ public class AsetInternalFrame extends javax.swing.JInternalFrame {
    // Variables declaration - do not modify//GEN-BEGIN:variables
    private javax.swing.JScrollPane jScrollPane3;
    private javax.swing.JTabbedPane menuAset;
-   public static javax.swing.JPanel panelMenuAset;
+   private javax.swing.JPanel panelMenuAset;
    private javax.swing.JPanel tabAset;
    private javax.swing.JTable tabelAset;
    private javax.swing.JTextField txtHargaAset;
