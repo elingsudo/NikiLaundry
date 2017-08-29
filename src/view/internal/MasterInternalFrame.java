@@ -16,8 +16,10 @@
  */
 package view.internal;
 
-import controller.master.MasterPelangganController;
+import controller.master.MasterController;
 import javax.swing.JTable;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
 import javax.swing.plaf.basic.BasicInternalFrameUI;
 import org.jdesktop.swingx.prompt.PromptSupport;
 
@@ -27,19 +29,18 @@ import org.jdesktop.swingx.prompt.PromptSupport;
  */
 public class MasterInternalFrame extends javax.swing.JInternalFrame {
 
-  private final MasterPelangganController pelangganController;
+  private final MasterController pelangganController;
 
   /**
    * Creates new form MasterInternalFrame
    */
   public MasterInternalFrame() {
-    pelangganController = new MasterPelangganController();
-    
+    pelangganController = new MasterController();
+
     ((BasicInternalFrameUI) this.getUI()).setNorthPane(null);
-    
+
     initComponents();
   }
-
 
   /**
    * This method is called from within the constructor to initialize the form. WARNING: Do NOT
@@ -208,21 +209,17 @@ public class MasterInternalFrame extends javax.swing.JInternalFrame {
 
       tabPewangi.setBackground(new java.awt.Color(142, 53, 239));
 
-      txtIdPewangi.setText("idPewangi");
       txtIdPewangi.addActionListener(new java.awt.event.ActionListener() {
          public void actionPerformed(java.awt.event.ActionEvent evt) {
             txtIdPewangiActionPerformed(evt);
          }
       });
 
-      txtNamaPewangi.setText("Nama Pewangi");
       txtNamaPewangi.addActionListener(new java.awt.event.ActionListener() {
          public void actionPerformed(java.awt.event.ActionEvent evt) {
             txtNamaPewangiActionPerformed(evt);
          }
       });
-
-      txtHargaPewangi.setText("Harga");
 
       btnSavePewangi.setText("Save");
 
@@ -486,10 +483,7 @@ public class MasterInternalFrame extends javax.swing.JInternalFrame {
   }//GEN-LAST:event_txtNamaLayananActionPerformed
 
   private void formInternalFrameOpened(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_formInternalFrameOpened
-    PromptSupport.setPrompt("No. KTP", txtNoKtpPelanggan);
-    PromptSupport.setPrompt("Nama", txtNamaPelanggan);
-    PromptSupport.setPrompt("No. HP", txtNoHpPelanggan);
-    PromptSupport.setPrompt("Alamat", txtAlamatPelanggan);
+
   }//GEN-LAST:event_formInternalFrameOpened
 
    private void menuMasterStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_menuMasterStateChanged
@@ -500,8 +494,36 @@ public class MasterInternalFrame extends javax.swing.JInternalFrame {
     return tabelPelanggan;
   }
 
-  public void setTabelPelanggan(JTable tabelPelanggan) {
-    this.tabelPelanggan = tabelPelanggan;
+  public JTable getTabelPewangi() {
+    return tabelPewangi;
+  }
+
+  public JTextArea getTxtAlamatPelanggan() {
+    return txtAlamatPelanggan;
+  }
+
+  public JTextField getTxtNamaPelanggan() {
+    return txtNamaPelanggan;
+  }
+
+  public JTextField getTxtNoKtpPelanggan() {
+    return txtNoKtpPelanggan;
+  }
+
+  public JTextField getTxtNoHpPelanggan() {
+    return txtNoHpPelanggan;
+  }
+
+  public JTextField getTxtHargaPewangi() {
+    return txtHargaPewangi;
+  }
+
+  public JTextField getTxtIdPewangi() {
+    return txtIdPewangi;
+  }
+
+  public JTextField getTxtNamaPewangi() {
+    return txtNamaPewangi;
   }
 
 
