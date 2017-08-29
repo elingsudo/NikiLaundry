@@ -21,7 +21,6 @@ import javax.swing.JTable;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.plaf.basic.BasicInternalFrameUI;
-import org.jdesktop.swingx.prompt.PromptSupport;
 
 /**
  *
@@ -282,21 +281,17 @@ public class MasterInternalFrame extends javax.swing.JInternalFrame {
 
       tabPakaian.setBackground(new java.awt.Color(142, 53, 239));
 
-      txtIdPakaian.setText("idPakaian");
       txtIdPakaian.addActionListener(new java.awt.event.ActionListener() {
          public void actionPerformed(java.awt.event.ActionEvent evt) {
             txtIdPakaianActionPerformed(evt);
          }
       });
 
-      txtNamaPakaian.setText("Nama Pakaian");
       txtNamaPakaian.addActionListener(new java.awt.event.ActionListener() {
          public void actionPerformed(java.awt.event.ActionEvent evt) {
             txtNamaPakaianActionPerformed(evt);
          }
       });
-
-      txtHargaPakaian.setText("Harga");
 
       btnSavePakaian.setText("Save");
 
@@ -526,6 +521,21 @@ public class MasterInternalFrame extends javax.swing.JInternalFrame {
     return txtNamaPewangi;
   }
 
+  public JTextField getTxtHargaPakaian() {
+    return txtHargaPakaian;
+  }
+
+  public JTextField getTxtIdPakaian() {
+    return txtIdPakaian;
+  }
+
+  public JTextField getTxtNamaPakaian() {
+    return txtNamaPakaian;
+  }
+
+  public JTable getTabelPakaian() {
+    return tabelPakaian;
+  }
 
    // Variables declaration - do not modify//GEN-BEGIN:variables
    private javax.swing.JButton btnDeletePakaian;

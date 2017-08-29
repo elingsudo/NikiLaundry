@@ -28,10 +28,12 @@ public class MasterController {
   
   private final MasterPelangganController masterPelangganController;
   private final MasterPewangiController masterPewangiController;
+  private final MasterPakaianController masterPakaianController;
 
   public MasterController() {
     masterPelangganController = new MasterPelangganController();
     masterPewangiController = new MasterPewangiController();
+    masterPakaianController = new MasterPakaianController();
   }
 
   public void tabMasterStateChange(MasterInternalFrame view, ChangeEvent evt) {
@@ -45,7 +47,7 @@ public class MasterController {
           masterPewangiController.loadMasterPewangiData(view);
           break;
         case 2:
-          System.out.println(2);
+          masterPakaianController.loadMasterPakaianData(view);
           break;
         case 3:
           System.out.println(3);

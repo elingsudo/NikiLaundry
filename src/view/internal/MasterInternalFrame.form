@@ -403,25 +403,16 @@
               </Layout>
               <SubComponents>
                 <Component class="javax.swing.JTextField" name="txtIdPakaian">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="idPakaian"/>
-                  </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtIdPakaianActionPerformed"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JTextField" name="txtNamaPakaian">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Nama Pakaian"/>
-                  </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtNamaPakaianActionPerformed"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JTextField" name="txtHargaPakaian">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Harga"/>
-                  </Properties>
                 </Component>
                 <Component class="javax.swing.JButton" name="btnSavePakaian">
                   <Properties>
