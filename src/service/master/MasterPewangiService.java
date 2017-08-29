@@ -14,21 +14,15 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package implementation;
+package service.master;
 
-import model.MasterPewangiModel;
-import service.MasterPewangiService;
+import model.master.MasterPewangiModel;
+import service.AbstractService;
 
 /**
  *
  * @author triastowo
  */
-public class MasterPewangiImplementation
-        extends AbstractImplementation<MasterPewangiModel>
-        implements MasterPewangiService {
-
-  public MasterPewangiImplementation(Class<MasterPewangiModel> model) {
-    super(model);
-  }
-
+public interface MasterPewangiService extends AbstractService<MasterPewangiModel> {
+  
 }

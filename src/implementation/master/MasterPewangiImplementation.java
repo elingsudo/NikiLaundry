@@ -14,19 +14,21 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package implementation;
+package implementation.master;
 
-import model.MasterPakaianModel;
-import service.MasterPakaianService;
+import implementation.AbstractImplementation;
+import model.master.MasterPewangiModel;
+import service.master.MasterPewangiService;
 
 /**
  *
  * @author triastowo
  */
-public class MasterPakaianImplementation
-        extends AbstractImplementation<MasterPakaianModel> implements MasterPakaianService {
+public class MasterPewangiImplementation
+        extends AbstractImplementation<MasterPewangiModel>
+        implements MasterPewangiService {
 
-  public MasterPakaianImplementation(Class<MasterPakaianModel> model) {
+  public MasterPewangiImplementation(Class<MasterPewangiModel> model) {
     super(model);
   }
 

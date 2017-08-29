@@ -16,9 +16,10 @@
  */
 package service;
 
-import implementation.MasterLayananServiceImpl;
+import service.master.MasterLayananService;
+import implementation.master.MasterLayananServiceImpl;
 import java.math.BigDecimal;
-import model.MasterLayananModel;
+import model.master.MasterLayananModel;
 import org.junit.Test;
 
 /**

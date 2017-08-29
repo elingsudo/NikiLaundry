@@ -1,9 +1,3 @@
-package tablemodel;
-
-import java.util.List;
-import javax.swing.table.AbstractTableModel;
-import model.MasterPelangganModel;
-
 /*
  * Copyright (C) 2017 triastowo
  *
@@ -20,16 +14,22 @@ import model.MasterPelangganModel;
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+package tablemodel.master;
+
+import java.util.List;
+import javax.swing.table.AbstractTableModel;
+import model.master.MasterLayananModel;
+
 /**
  *
  * @author triastowo
  */
-public class MasterPelangganTableModel extends AbstractTableModel {
+public class MasterLayananTableModel extends AbstractTableModel {
 
-  private List<MasterPelangganModel> list;
-  private final String HEADER[] = {"No", "Nama", "Jenis Pelanggan", "No Telepon", "Alamat"};
+  private List<MasterLayananModel> list;
+  private final String HEADER[] = {"No", "Id Layanan", "Nama Layanan", "Harga"};
 
-  public void setList(List<MasterPelangganModel> list) {
+  public void setList(List<MasterLayananModel> list) {
     this.list = list;
   }
 
@@ -40,7 +40,7 @@ public class MasterPelangganTableModel extends AbstractTableModel {
 
   @Override
   public int getRowCount() {
-    return this.list.size();
+    return list.size();
   }
 
   @Override
@@ -48,19 +48,18 @@ public class MasterPelangganTableModel extends AbstractTableModel {
     return HEADER.length;
   }
 
+  // "No", "Id Layanan", "Nama Layanan", "Harga"
   @Override
   public Object getValueAt(int rowIndex, int columnIndex) {
     switch (columnIndex) {
       case 0:
         return rowIndex + 1;
       case 1:
-        return list.get(rowIndex).getNama();
+        return list.get(rowIndex).getIdLayanan();
       case 2:
-        return list.get(rowIndex).getJenisKelamin();
+        return list.get(rowIndex).getNamaLayanan();
       case 3:
-        return list.get(rowIndex).getNoHp();
-      case 4:
-        return list.get(rowIndex).getAlamat();
+        return list.get(rowIndex).getHarga();
       default:
         return null;
     }

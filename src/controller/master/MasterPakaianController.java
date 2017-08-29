@@ -16,12 +16,12 @@
  */
 package controller.master;
 
-import implementation.MasterPakaianImplementation;
+import implementation.master.MasterPakaianImplementation;
 import java.util.List;
-import model.MasterPakaianModel;
+import model.master.MasterPakaianModel;
 import org.jdesktop.swingx.prompt.PromptSupport;
-import service.MasterPakaianService;
-import tablemodel.MasterPakaianTableModel;
+import service.master.MasterPakaianService;
+import tablemodel.master.MasterPakaianTableModel;
 import view.internal.MasterInternalFrame;
 
 /**

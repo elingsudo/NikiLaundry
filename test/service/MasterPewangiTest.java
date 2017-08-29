@@ -16,9 +16,10 @@
  */
 package service;
 
-import implementation.MasterPewangiImplementation;
+import service.master.MasterPewangiService;
+import implementation.master.MasterPewangiImplementation;
 import java.math.BigInteger;
-import model.MasterPewangiModel;
+import model.master.MasterPewangiModel;
 import org.junit.Assert;
 import org.junit.Test;
 

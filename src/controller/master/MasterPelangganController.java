@@ -16,12 +16,12 @@
  */
 package controller.master;
 
-import implementation.MasterPelangganImplementation;
+import implementation.master.MasterPelangganImplementation;
 import java.util.List;
-import model.MasterPelangganModel;
+import model.master.MasterPelangganModel;
 import org.jdesktop.swingx.prompt.PromptSupport;
-import service.MasterPelangganService;
-import tablemodel.MasterPelangganTableModel;
+import service.master.MasterPelangganService;
+import tablemodel.master.MasterPelangganTableModel;
 import view.internal.MasterInternalFrame;
 
 /**

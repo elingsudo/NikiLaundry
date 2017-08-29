@@ -16,8 +16,9 @@
  */
 package service;
 
-import implementation.MasterPelangganImplementation;
-import model.MasterPelangganModel;
+import service.master.MasterPelangganService;
+import implementation.master.MasterPelangganImplementation;
+import model.master.MasterPelangganModel;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;

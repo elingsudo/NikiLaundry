@@ -9,9 +9,6 @@
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
   </SyntheticProperties>
-  <Events>
-    <EventHandler event="internalFrameOpened" listener="javax.swing.event.InternalFrameListener" parameters="javax.swing.event.InternalFrameEvent" handler="formInternalFrameOpened"/>
-  </Events>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
@@ -517,25 +514,13 @@
               </Layout>
               <SubComponents>
                 <Component class="javax.swing.JTextField" name="txtIdLayanan">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="idLayanan"/>
-                  </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtIdLayananActionPerformed"/>
                   </Events>
                 </Component>
                 <Component class="javax.swing.JTextField" name="txtNamaLayanan">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Nama Layanan"/>
-                  </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtNamaLayananActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JTextField" name="txtHargaLayanan">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Harga"/>
-                  </Properties>
                 </Component>
                 <Component class="javax.swing.JButton" name="btnSaveLayanan">
                   <Properties>

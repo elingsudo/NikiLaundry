@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017 Me
+ * Copyright (C) 2017 triastowo
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -14,15 +14,15 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package service;
+package service.master;
 
-import model.MasterPelangganModel;
+import model.master.MasterPakaianModel;
+import service.AbstractService;
 
 /**
  *
- * @author Me
+ * @author triastowo
  */
-public interface MasterPelangganService extends AbstractService<MasterPelangganModel> {
-
-  MasterPelangganModel findOneByNama(String nama);
+public interface MasterPakaianService extends AbstractService<MasterPakaianModel> {
+  
 }

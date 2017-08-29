@@ -14,14 +14,17 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package service;
+package implementation.master;
 
-import model.MasterPakaianModel;
+import implementation.AbstractImplementation;
+import model.master.MasterLayananModel;
+import service.master.MasterLayananService;
 
-/**
- *
- * @author triastowo
- */
-public interface MasterPakaianService extends AbstractService<MasterPakaianModel> {
-  
+public class MasterLayananServiceImpl
+        extends AbstractImplementation<MasterLayananModel> implements MasterLayananService {
+
+  public MasterLayananServiceImpl(Class<MasterLayananModel> model) {
+    super(model);
+  }
+
 }

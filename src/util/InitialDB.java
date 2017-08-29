@@ -16,20 +16,20 @@
  */
 package util;
 
-import implementation.MasterLayananServiceImpl;
-import implementation.MasterPakaianImplementation;
-import implementation.MasterPelangganImplementation;
-import implementation.MasterPewangiImplementation;
+import implementation.master.MasterLayananServiceImpl;
+import implementation.master.MasterPakaianImplementation;
+import implementation.master.MasterPelangganImplementation;
+import implementation.master.MasterPewangiImplementation;
 import java.math.BigDecimal;
 import java.math.BigInteger;
-import model.MasterLayananModel;
-import model.MasterPakaianModel;
-import model.MasterPelangganModel;
-import model.MasterPewangiModel;
-import service.MasterLayananService;
-import service.MasterPakaianService;
-import service.MasterPelangganService;
-import service.MasterPewangiService;
+import model.master.MasterLayananModel;
+import model.master.MasterPakaianModel;
+import model.master.MasterPelangganModel;
+import model.master.MasterPewangiModel;
+import service.master.MasterLayananService;
+import service.master.MasterPakaianService;
+import service.master.MasterPelangganService;
+import service.master.MasterPewangiService;
 
 /**
  *

@@ -14,14 +14,15 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package implementation;
+package implementation.master;
 
-import model.MasterPelangganModel;
+import implementation.AbstractImplementation;
+import model.master.MasterPelangganModel;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.criterion.Restrictions;
 import util.HibernateUtil;
-import service.MasterPelangganService;
+import service.master.MasterPelangganService;
 
 /**
  *
