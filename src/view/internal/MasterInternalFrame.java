@@ -17,6 +17,7 @@
 package view.internal;
 
 import controller.master.MasterController;
+import controller.master.MasterLayananController;
 import javax.swing.JTable;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
@@ -28,13 +29,15 @@ import javax.swing.plaf.basic.BasicInternalFrameUI;
  */
 public class MasterInternalFrame extends javax.swing.JInternalFrame {
 
-  private final MasterController pelangganController;
+  private final MasterController masterController;
+  private final MasterLayananController masterLayananController;
 
   /**
    * Creates new form MasterInternalFrame
    */
   public MasterInternalFrame() {
-    pelangganController = new MasterController();
+    masterController = new MasterController();
+    masterLayananController = new MasterLayananController();
 
     ((BasicInternalFrameUI) this.getUI()).setNorthPane(null);
 
@@ -344,6 +347,11 @@ public class MasterInternalFrame extends javax.swing.JInternalFrame {
     });
 
     btnSaveLayanan.setText("Save");
+    btnSaveLayanan.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        btnSaveLayananActionPerformed(evt);
+      }
+    });
 
     btnSaveDelete.setText("Delete");
 
@@ -447,8 +455,12 @@ public class MasterInternalFrame extends javax.swing.JInternalFrame {
   }//GEN-LAST:event_txtIdLayananActionPerformed
 
    private void menuMasterStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_menuMasterStateChanged
-     pelangganController.tabMasterStateChange(this, evt);
+     masterController.tabMasterStateChange(this, evt);
    }//GEN-LAST:event_menuMasterStateChanged
+
+   private void btnSaveLayananActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveLayananActionPerformed
+     masterLayananController.save(this);
+   }//GEN-LAST:event_btnSaveLayananActionPerformed
 
   public JTable getTabelPelanggan() {
     return tabelPelanggan;

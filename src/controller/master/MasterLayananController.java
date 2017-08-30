@@ -17,6 +17,7 @@
 package controller.master;
 
 import implementation.master.MasterLayananServiceImpl;
+import java.math.BigDecimal;
 import java.util.List;
 import model.master.MasterLayananModel;
 import org.jdesktop.swingx.prompt.PromptSupport;
@@ -47,6 +48,20 @@ public class MasterLayananController {
     PromptSupport.setPrompt("ID Pewangi", view.getTxtIdLayanan());
     PromptSupport.setPrompt("Nama Pewangi", view.getTxtNamaLayanan());
     PromptSupport.setPrompt("Harga Pewangi", view.getTxtHargaLayanan());
+  }
+
+  public void save(MasterInternalFrame view) {
+    String id = view.getTxtIdLayanan().getText();
+    String nama = view.getTxtNamaLayanan().getText();
+    String harga = view.getTxtHargaLayanan().getText();
+    
+    MasterLayananModel model = new MasterLayananModel();
+    model.setIdLayanan(id);
+    model.setNamaLayanan(nama);
+    model.setHarga(new BigDecimal(harga));
+    masterLayananService.save(model);
+    
+    loadMasterLayananData(view);
   }
 
 }
