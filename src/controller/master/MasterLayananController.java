@@ -16,6 +16,7 @@
  */
 package controller.master;
 
+import helper.GeneralHelper;
 import implementation.master.MasterLayananServiceImpl;
 import java.math.BigDecimal;
 import java.util.List;
@@ -30,7 +31,7 @@ import view.internal.MasterInternalFrame;
  * @author triastowo
  */
 public class MasterLayananController {
-  
+
   private final MasterLayananService masterLayananService;
   private final MasterLayananTableModel masterLayananTableModel;
 
@@ -43,7 +44,7 @@ public class MasterLayananController {
     List<MasterLayananModel> findAll = masterLayananService.findAll();
     masterLayananTableModel.setList(findAll);
     view.getTabelLayanan().setModel(masterLayananTableModel);
-    
+
     // Pengganti Textfield Placeholder
     PromptSupport.setPrompt("ID Pewangi", view.getTxtIdLayanan());
     PromptSupport.setPrompt("Nama Pewangi", view.getTxtNamaLayanan());
@@ -51,16 +52,16 @@ public class MasterLayananController {
   }
 
   public void save(MasterInternalFrame view) {
-    String id = view.getTxtIdLayanan().getText();
-    String nama = view.getTxtNamaLayanan().getText();
-    String harga = view.getTxtHargaLayanan().getText();
-    
+    String id = GeneralHelper.validasiNull(view.getTxtIdLayanan().getText());
+    String nama = GeneralHelper.validasiNull(view.getTxtNamaLayanan().getText());
+    String harga = GeneralHelper.validasiNullBigDecimal(view.getTxtHargaLayanan().getText());
+
     MasterLayananModel model = new MasterLayananModel();
     model.setIdLayanan(id);
     model.setNamaLayanan(nama);
     model.setHarga(new BigDecimal(harga));
     masterLayananService.save(model);
-    
+
     loadMasterLayananData(view);
   }
 

@@ -31,6 +31,7 @@ public class MasterLayananTableModel extends AbstractTableModel {
 
   public void setList(List<MasterLayananModel> list) {
     this.list = list;
+    super.fireTableDataChanged();
   }
 
   @Override

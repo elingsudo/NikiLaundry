@@ -20,11 +20,21 @@ package helper;
  *
  * @author triastowo
  */
-public class GenericHelper {
-  
-  public static void validasiNull(Object value) {
-    if (value == null) {
-      
+public class GeneralHelper {
+
+  public static String validasiNull(String value) {
+    if (value == null || "".equals(value)) {
+      return "-";
+    } else {
+      return value;
+    }
+  }
+
+  public static String validasiNullBigDecimal(String value) {
+    if (value == null || "".equals(value)) {
+      return "0";
+    } else {
+      return value;
     }
   }
 }
