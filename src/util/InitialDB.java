@@ -21,7 +21,6 @@ import implementation.master.MasterPakaianImplementation;
 import implementation.master.MasterPelangganImplementation;
 import implementation.master.MasterPewangiImplementation;
 import java.math.BigDecimal;
-import java.math.BigInteger;
 import model.master.MasterLayananModel;
 import model.master.MasterPakaianModel;
 import model.master.MasterPelangganModel;
@@ -91,7 +90,7 @@ public class InitialDB {
     MasterPewangiModel pewangi = new MasterPewangiModel();
     pewangi.setIdPewangi("0101");
     pewangi.setNamaPewangi("Downy");
-    pewangi.setHarga(new BigInteger("5000"));
+    pewangi.setHarga(new BigDecimal("5000"));
     String message = pewangiService.save(pewangi);
     System.out.println(message);
   }

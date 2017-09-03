@@ -18,7 +18,7 @@ package service;
 
 import service.master.MasterPewangiService;
 import implementation.master.MasterPewangiImplementation;
-import java.math.BigInteger;
+import java.math.BigDecimal;
 import model.master.MasterPewangiModel;
 import org.junit.Assert;
 import org.junit.Test;
@@ -40,7 +40,7 @@ public class MasterPewangiTest {
     MasterPewangiModel model = new MasterPewangiModel();
     model.setIdPewangi("01111");
     model.setNamaPewangi("So Clean");
-    model.setHarga(new BigInteger("10000"));
+    model.setHarga(new BigDecimal("10000"));
     String message = service.save(model);
     Assert.assertEquals("MasterPewangiModel{idPewangi=01111, namaPewangi=So Clean, harga=10000}", 
             message);

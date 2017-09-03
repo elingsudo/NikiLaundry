@@ -19,6 +19,7 @@ package view.internal;
 import controller.master.MasterController;
 import controller.master.MasterLayananController;
 import controller.master.MasterPakaianController;
+import controller.master.MasterPewangiController;
 import javax.swing.JTable;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
@@ -33,6 +34,7 @@ public class MasterInternalFrame extends javax.swing.JInternalFrame {
   private final MasterController masterController;
   private final MasterLayananController masterLayananController;
   private final MasterPakaianController masterPakaianController;
+  private final MasterPewangiController masterPewangiController;
 
   /**
    * Creates new form MasterInternalFrame
@@ -41,6 +43,7 @@ public class MasterInternalFrame extends javax.swing.JInternalFrame {
     masterController = new MasterController();
     masterLayananController = new MasterLayananController();
     masterPakaianController = new MasterPakaianController();
+    masterPewangiController = new MasterPewangiController();
 
     ((BasicInternalFrameUI) this.getUI()).setNorthPane(null);
 
@@ -210,6 +213,11 @@ public class MasterInternalFrame extends javax.swing.JInternalFrame {
     });
 
     btnSavePewangi.setText("Save");
+    btnSavePewangi.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        btnSavePewangiActionPerformed(evt);
+      }
+    });
 
     btnDeletePewangi.setText("Delete");
 
@@ -471,9 +479,12 @@ public class MasterInternalFrame extends javax.swing.JInternalFrame {
    }//GEN-LAST:event_btnSaveLayananActionPerformed
 
    private void btnSavePakaianActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSavePakaianActionPerformed
-      // TODO add your handling code here:
       masterPakaianController.save(this);
    }//GEN-LAST:event_btnSavePakaianActionPerformed
+
+  private void btnSavePewangiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSavePewangiActionPerformed
+    masterPewangiController.save(this);
+  }//GEN-LAST:event_btnSavePewangiActionPerformed
 
   public JTable getTabelPelanggan() {
     return tabelPelanggan;

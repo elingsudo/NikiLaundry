@@ -16,7 +16,9 @@
  */
 package controller.master;
 
+import helper.GeneralHelper;
 import implementation.master.MasterPewangiImplementation;
+import java.math.BigDecimal;
 import java.util.List;
 import model.master.MasterPewangiModel;
 import org.jdesktop.swingx.prompt.PromptSupport;
@@ -29,7 +31,7 @@ import view.internal.MasterInternalFrame;
  * @author triastowo
  */
 public class MasterPewangiController {
-  
+
   private final MasterPewangiService masterPewangiService;
   private final MasterPewangiTableModel masterPewangiTableModel;
 
@@ -37,9 +39,7 @@ public class MasterPewangiController {
     masterPewangiService = new MasterPewangiImplementation(MasterPewangiModel.class);
     masterPewangiTableModel = new MasterPewangiTableModel();
   }
-  
-  
-  
+
   /**
    * load master data pewangi for lookup
    *
@@ -54,5 +54,18 @@ public class MasterPewangiController {
     PromptSupport.setPrompt("ID Pewangi", view.getTxtIdPewangi());
     PromptSupport.setPrompt("Nama Pewangi", view.getTxtNamaPewangi());
     PromptSupport.setPrompt("Harga Pewangi", view.getTxtHargaPewangi());
+  }
+
+  public void save(MasterInternalFrame view) {
+    String idPewangi = GeneralHelper.validasiNull(view.getTxtIdPewangi().getText());
+    String namaPewangi = GeneralHelper.validasiNull(view.getTxtNamaPewangi().getText());
+    String harga = GeneralHelper.validasiNullBigDecimal(view.getTxtHargaPewangi().getText());
+
+    MasterPewangiModel model = new MasterPewangiModel();
+    model.setIdPewangi(idPewangi);
+    model.setNamaPewangi(namaPewangi);
+    model.setHarga(new BigDecimal(harga));
+    masterPewangiService.save(model);
+    loadMasterPewangiData(view);
   }
 }

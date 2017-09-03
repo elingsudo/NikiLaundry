@@ -31,6 +31,7 @@ public class MasterPewangiTableModel extends AbstractTableModel {
 
   public void setList(List<MasterPewangiModel> list) {
     this.list = list;
+    super.fireTableDataChanged();
   }
 
   @Override

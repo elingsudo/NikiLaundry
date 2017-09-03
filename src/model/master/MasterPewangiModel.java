@@ -17,7 +17,7 @@
 package model.master;
 
 import java.io.Serializable;
-import java.math.BigInteger;
+import java.math.BigDecimal;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -37,7 +37,7 @@ public class MasterPewangiModel implements Serializable {
 
   private String namaPewangi;
 
-  private BigInteger harga;
+  private BigDecimal harga;
 
   public int getId() {
     return id;
@@ -63,11 +63,11 @@ public class MasterPewangiModel implements Serializable {
     this.namaPewangi = namaPewangi;
   }
 
-  public BigInteger getHarga() {
+  public BigDecimal getHarga() {
     return harga;
   }
 
-  public void setHarga(BigInteger harga) {
+  public void setHarga(BigDecimal harga) {
     this.harga = harga;
   }
 
