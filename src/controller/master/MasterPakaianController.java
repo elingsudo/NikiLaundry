@@ -16,8 +16,11 @@
  */
 package controller.master;
 
+import helper.GeneralHelper;
 import implementation.master.MasterPakaianImplementation;
+import java.math.BigDecimal;
 import java.util.List;
+import javax.swing.JTextField;
 import model.master.MasterPakaianModel;
 import org.jdesktop.swingx.prompt.PromptSupport;
 import service.master.MasterPakaianService;
@@ -47,6 +50,20 @@ public class MasterPakaianController {
     PromptSupport.setPrompt("ID Pewangi", view.getTxtIdPakaian());
     PromptSupport.setPrompt("Nama Pewangi", view.getTxtNamaPakaian());
     PromptSupport.setPrompt("Harga Pewangi", view.getTxtHargaPakaian());
+  }
+
+  public void save(MasterInternalFrame view) {
+    String idPakaian = GeneralHelper.validasiNull(view.getTxtIdPakaian().getText());
+    String namaPakaian = GeneralHelper.validasiNull(view.getTxtNamaPakaian().getText());
+    String hargaPakaian = GeneralHelper.validasiNullBigDecimal(view.getTxtHargaPakaian().getText());
+    
+    MasterPakaianModel model = new MasterPakaianModel();
+    model.setIdPakaian(idPakaian);
+    model.setNamaPakaian(namaPakaian);
+    model.setHarga(new BigDecimal(hargaPakaian));
+    masterPakaianService.save(model);
+    
+    loadMasterPakaianData(view);
   }
   
 }

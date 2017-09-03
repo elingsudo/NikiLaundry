@@ -31,6 +31,7 @@ public class MasterPakaianTableModel extends AbstractTableModel {
 
   public void setList(List<MasterPakaianModel> list) {
     this.list = list;
+    fireTableDataChanged();
   }
 
   @Override
