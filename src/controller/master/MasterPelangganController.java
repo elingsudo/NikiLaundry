@@ -16,6 +16,7 @@
  */
 package controller.master;
 
+import helper.GeneralHelper;
 import implementation.master.MasterPelangganImplementation;
 import java.util.List;
 import model.master.MasterPelangganModel;
@@ -32,7 +33,6 @@ public class MasterPelangganController {
 
   private final MasterPelangganService masterPelangganService;
   private final MasterPelangganTableModel masterPelangganTableModel;
-  
 
   public MasterPelangganController() {
     masterPelangganService = new MasterPelangganImplementation(MasterPelangganModel.class);
@@ -57,13 +57,13 @@ public class MasterPelangganController {
   }
 
   public void save(MasterInternalFrame view) {
-    String noKtp = view.getTxtNoKtpPelanggan().getText();
-    String nama = view.getTxtNamaPelanggan().getText();
+    String noKtp = GeneralHelper.validasiNull(view.getTxtNoKtpPelanggan().getText());
+    String nama = GeneralHelper.validasiNull(view.getTxtNamaPelanggan().getText());
     String jenisKelamin = view.getCbJenisKelaminPelanggan().getSelectedItem().toString();
-    String noHp = view.getTxtNoHpPelanggan().getText();
+    String noHp = GeneralHelper.validasiNull(view.getTxtNoHpPelanggan().getText());
     String jenisPelanggan = view.getCbJenisPelanggan().getSelectedItem().toString();
-    String alamat = view.getTxtAlamatPelanggan().getText();
-    
+    String alamat = GeneralHelper.validasiNull(view.getTxtAlamatPelanggan().getText());
+
     MasterPelangganModel model = new MasterPelangganModel();
     model.setNoKtp(noKtp);
     model.setNama(nama);
@@ -71,10 +71,9 @@ public class MasterPelangganController {
     model.setNoHp(noHp);
     model.setJenisPelanggan(jenisPelanggan);
     model.setAlamat(alamat);
-    
+
     masterPelangganService.save(model);
     loadMasterPelangganData(view);
   }
-
 
 }
