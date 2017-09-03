@@ -56,5 +56,25 @@ public class MasterPelangganController {
     PromptSupport.setPrompt("Alamat", view.getTxtAlamatPelanggan());
   }
 
+  public void save(MasterInternalFrame view) {
+    String noKtp = view.getTxtNoKtpPelanggan().getText();
+    String nama = view.getTxtNamaPelanggan().getText();
+    String jenisKelamin = view.getCbJenisKelaminPelanggan().getSelectedItem().toString();
+    String noHp = view.getTxtNoHpPelanggan().getText();
+    String jenisPelanggan = view.getCbJenisPelanggan().getSelectedItem().toString();
+    String alamat = view.getTxtAlamatPelanggan().getText();
+    
+    MasterPelangganModel model = new MasterPelangganModel();
+    model.setNoKtp(noKtp);
+    model.setNama(nama);
+    model.setJenisKelamin(jenisKelamin);
+    model.setNoHp(noHp);
+    model.setJenisPelanggan(jenisPelanggan);
+    model.setAlamat(alamat);
+    
+    masterPelangganService.save(model);
+    loadMasterPelangganData(view);
+  }
+
 
 }

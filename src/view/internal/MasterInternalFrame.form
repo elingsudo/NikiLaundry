@@ -141,8 +141,8 @@
                   <Properties>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                       <StringArray count="2">
-                        <StringItem index="0" value="Laki-laki"/>
-                        <StringItem index="1" value="Perempuan"/>
+                        <StringItem index="0" value="L"/>
+                        <StringItem index="1" value="P"/>
                       </StringArray>
                     </Property>
                   </Properties>
@@ -159,8 +159,8 @@
                   <Properties>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                       <StringArray count="2">
-                        <StringItem index="0" value="Member"/>
-                        <StringItem index="1" value="Non-Member"/>
+                        <StringItem index="0" value="MEMBER"/>
+                        <StringItem index="1" value="NONMEMBER"/>
                       </StringArray>
                     </Property>
                   </Properties>
@@ -187,6 +187,9 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Save"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSavePelangganActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JButton" name="btnDeletePelanggan">
                   <Properties>

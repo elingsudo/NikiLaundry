@@ -19,7 +19,9 @@ package view.internal;
 import controller.master.MasterController;
 import controller.master.MasterLayananController;
 import controller.master.MasterPakaianController;
+import controller.master.MasterPelangganController;
 import controller.master.MasterPewangiController;
+import javax.swing.JComboBox;
 import javax.swing.JTable;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
@@ -35,6 +37,7 @@ public class MasterInternalFrame extends javax.swing.JInternalFrame {
   private final MasterLayananController masterLayananController;
   private final MasterPakaianController masterPakaianController;
   private final MasterPewangiController masterPewangiController;
+  private final MasterPelangganController masterPelangganController;
 
   /**
    * Creates new form MasterInternalFrame
@@ -44,6 +47,7 @@ public class MasterInternalFrame extends javax.swing.JInternalFrame {
     masterLayananController = new MasterLayananController();
     masterPakaianController = new MasterPakaianController();
     masterPewangiController = new MasterPewangiController();
+    masterPelangganController = new MasterPelangganController();
 
     ((BasicInternalFrameUI) this.getUI()).setNorthPane(null);
 
@@ -113,7 +117,7 @@ public class MasterInternalFrame extends javax.swing.JInternalFrame {
       }
     });
 
-    cbJenisKelaminPelanggan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Laki-laki", "Perempuan" }));
+    cbJenisKelaminPelanggan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "L", "P" }));
 
     txtNoHpPelanggan.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -121,13 +125,18 @@ public class MasterInternalFrame extends javax.swing.JInternalFrame {
       }
     });
 
-    cbJenisPelanggan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Member", "Non-Member" }));
+    cbJenisPelanggan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "MEMBER", "NONMEMBER" }));
 
     txtAlamatPelanggan.setColumns(16);
     txtAlamatPelanggan.setRows(4);
     jScrollPane5.setViewportView(txtAlamatPelanggan);
 
     btnSavePelanggan.setText("Save");
+    btnSavePelanggan.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        btnSavePelangganActionPerformed(evt);
+      }
+    });
 
     btnDeletePelanggan.setText("Delete");
 
@@ -486,6 +495,10 @@ public class MasterInternalFrame extends javax.swing.JInternalFrame {
     masterPewangiController.save(this);
   }//GEN-LAST:event_btnSavePewangiActionPerformed
 
+  private void btnSavePelangganActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSavePelangganActionPerformed
+    masterPelangganController.save(this);
+  }//GEN-LAST:event_btnSavePelangganActionPerformed
+
   public JTable getTabelPelanggan() {
     return tabelPelanggan;
   }
@@ -508,6 +521,14 @@ public class MasterInternalFrame extends javax.swing.JInternalFrame {
 
   public JTextField getTxtNoHpPelanggan() {
     return txtNoHpPelanggan;
+  }
+
+  public JComboBox<String> getCbJenisKelaminPelanggan() {
+    return cbJenisKelaminPelanggan;
+  }
+
+  public JComboBox<String> getCbJenisPelanggan() {
+    return cbJenisPelanggan;
   }
 
   public JTextField getTxtHargaPewangi() {
