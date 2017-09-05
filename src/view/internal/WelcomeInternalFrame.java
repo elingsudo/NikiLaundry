@@ -49,7 +49,7 @@ public class WelcomeInternalFrame extends javax.swing.JInternalFrame {
 
       setBorder(null);
 
-      panelWelcome.setBackground(new java.awt.Color(255, 0, 255));
+      panelWelcome.setBackground(new java.awt.Color(224, 0, 255));
 
       txtNikiLaundryWelcome.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
       txtNikiLaundryWelcome.setForeground(new java.awt.Color(54, 33, 89));
