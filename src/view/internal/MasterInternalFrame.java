@@ -62,7 +62,6 @@ public class MasterInternalFrame extends javax.swing.JInternalFrame {
   // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
   private void initComponents() {
 
-    panelMenuMaster = new javax.swing.JPanel();
     menuMaster = new javax.swing.JTabbedPane();
     tabPelanggan = new javax.swing.JPanel();
     txtNoKtpPelanggan = new javax.swing.JTextField();
@@ -160,25 +159,21 @@ public class MasterInternalFrame extends javax.swing.JInternalFrame {
       tabPelangganLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
       .addGroup(tabPelangganLayout.createSequentialGroup()
         .addContainerGap()
+        .addGroup(tabPelangganLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+          .addComponent(txtNamaPelanggan)
+          .addComponent(txtNoKtpPelanggan)
+          .addComponent(cbJenisKelaminPelanggan, 0, 209, Short.MAX_VALUE)
+          .addComponent(txtNoHpPelanggan))
+        .addGap(69, 69, 69)
         .addGroup(tabPelangganLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-          .addGroup(tabPelangganLayout.createSequentialGroup()
-            .addComponent(jScrollPane2)
-            .addContainerGap())
-          .addGroup(tabPelangganLayout.createSequentialGroup()
-            .addGroup(tabPelangganLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-              .addComponent(txtNamaPelanggan)
-              .addComponent(txtNoKtpPelanggan)
-              .addComponent(cbJenisKelaminPelanggan, 0, 209, Short.MAX_VALUE)
-              .addComponent(txtNoHpPelanggan))
-            .addGap(69, 69, 69)
-            .addGroup(tabPelangganLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-              .addComponent(cbJenisPelanggan, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
-              .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGap(112, 112, 112)
-            .addGroup(tabPelangganLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-              .addComponent(btnSavePelanggan, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-              .addComponent(btnDeletePelanggan, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGap(35, 35, 35))))
+          .addComponent(cbJenisPelanggan, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
+          .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE))
+        .addGap(112, 112, 112)
+        .addGroup(tabPelangganLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+          .addComponent(btnSavePelanggan, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+          .addComponent(btnDeletePelanggan, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
+        .addContainerGap(34, Short.MAX_VALUE))
+      .addComponent(jScrollPane2)
     );
     tabPelangganLayout.setVerticalGroup(
       tabPelangganLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -201,8 +196,7 @@ public class MasterInternalFrame extends javax.swing.JInternalFrame {
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
             .addComponent(btnDeletePelanggan)))
         .addGap(18, 18, 18)
-        .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 389, Short.MAX_VALUE)
-        .addContainerGap())
+        .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 372, Short.MAX_VALUE))
     );
 
     menuMaster.addTab("Pelanggan", tabPelanggan);
@@ -248,20 +242,18 @@ public class MasterInternalFrame extends javax.swing.JInternalFrame {
     tabPewangi.setLayout(tabPewangiLayout);
     tabPewangiLayout.setHorizontalGroup(
       tabPewangiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addGroup(tabPewangiLayout.createSequentialGroup()
+      .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tabPewangiLayout.createSequentialGroup()
         .addContainerGap()
-        .addGroup(tabPewangiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-          .addGroup(tabPewangiLayout.createSequentialGroup()
-            .addGroup(tabPewangiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-              .addComponent(txtNamaPewangi, javax.swing.GroupLayout.DEFAULT_SIZE, 209, Short.MAX_VALUE)
-              .addComponent(txtIdPewangi)
-              .addComponent(txtHargaPewangi))
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(tabPewangiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-              .addComponent(btnSavePewangi, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-              .addComponent(btnDeletePewangi, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)))
-          .addComponent(jScrollPane7, javax.swing.GroupLayout.DEFAULT_SIZE, 717, Short.MAX_VALUE))
+        .addGroup(tabPewangiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+          .addComponent(txtNamaPewangi, javax.swing.GroupLayout.DEFAULT_SIZE, 209, Short.MAX_VALUE)
+          .addComponent(txtIdPewangi)
+          .addComponent(txtHargaPewangi))
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 418, Short.MAX_VALUE)
+        .addGroup(tabPewangiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+          .addComponent(btnSavePewangi, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+          .addComponent(btnDeletePewangi, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
         .addContainerGap())
+      .addComponent(jScrollPane7)
     );
     tabPewangiLayout.setVerticalGroup(
       tabPewangiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -279,8 +271,7 @@ public class MasterInternalFrame extends javax.swing.JInternalFrame {
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
             .addComponent(btnDeletePewangi)))
         .addGap(18, 18, 18)
-        .addComponent(jScrollPane7)
-        .addContainerGap())
+        .addComponent(jScrollPane7, javax.swing.GroupLayout.DEFAULT_SIZE, 406, Short.MAX_VALUE))
     );
 
     menuMaster.addTab("Pewangi", tabPewangi);
@@ -326,20 +317,18 @@ public class MasterInternalFrame extends javax.swing.JInternalFrame {
     tabPakaian.setLayout(tabPakaianLayout);
     tabPakaianLayout.setHorizontalGroup(
       tabPakaianLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addGroup(tabPakaianLayout.createSequentialGroup()
+      .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tabPakaianLayout.createSequentialGroup()
         .addContainerGap()
-        .addGroup(tabPakaianLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-          .addGroup(tabPakaianLayout.createSequentialGroup()
-            .addGroup(tabPakaianLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-              .addComponent(txtIdPakaian)
-              .addComponent(txtNamaPakaian, javax.swing.GroupLayout.DEFAULT_SIZE, 209, Short.MAX_VALUE)
-              .addComponent(txtHargaPakaian))
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(tabPakaianLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-              .addComponent(btnSavePakaian, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-              .addComponent(btnDeletePakaian, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)))
-          .addComponent(jScrollPane8, javax.swing.GroupLayout.DEFAULT_SIZE, 717, Short.MAX_VALUE))
+        .addGroup(tabPakaianLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+          .addComponent(txtIdPakaian)
+          .addComponent(txtNamaPakaian, javax.swing.GroupLayout.DEFAULT_SIZE, 209, Short.MAX_VALUE)
+          .addComponent(txtHargaPakaian))
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 418, Short.MAX_VALUE)
+        .addGroup(tabPakaianLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+          .addComponent(btnSavePakaian, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+          .addComponent(btnDeletePakaian, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
         .addContainerGap())
+      .addComponent(jScrollPane8)
     );
     tabPakaianLayout.setVerticalGroup(
       tabPakaianLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -357,8 +346,7 @@ public class MasterInternalFrame extends javax.swing.JInternalFrame {
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
             .addComponent(txtHargaPakaian, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
         .addGap(18, 18, 18)
-        .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        .addComponent(jScrollPane8, javax.swing.GroupLayout.DEFAULT_SIZE, 406, Short.MAX_VALUE))
     );
 
     menuMaster.addTab("Pakaian", tabPakaian);
@@ -398,20 +386,18 @@ public class MasterInternalFrame extends javax.swing.JInternalFrame {
     tabLayanan.setLayout(tabLayananLayout);
     tabLayananLayout.setHorizontalGroup(
       tabLayananLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addGroup(tabLayananLayout.createSequentialGroup()
+      .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tabLayananLayout.createSequentialGroup()
         .addContainerGap()
-        .addGroup(tabLayananLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-          .addComponent(jScrollPane9, javax.swing.GroupLayout.DEFAULT_SIZE, 717, Short.MAX_VALUE)
-          .addGroup(tabLayananLayout.createSequentialGroup()
-            .addGroup(tabLayananLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-              .addComponent(txtIdLayanan)
-              .addComponent(txtNamaLayanan, javax.swing.GroupLayout.DEFAULT_SIZE, 209, Short.MAX_VALUE)
-              .addComponent(txtHargaLayanan))
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(tabLayananLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-              .addComponent(btnSaveLayanan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-              .addComponent(btnSaveDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))))
+        .addGroup(tabLayananLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+          .addComponent(txtIdLayanan)
+          .addComponent(txtNamaLayanan, javax.swing.GroupLayout.DEFAULT_SIZE, 209, Short.MAX_VALUE)
+          .addComponent(txtHargaLayanan))
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 418, Short.MAX_VALUE)
+        .addGroup(tabLayananLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+          .addComponent(btnSaveLayanan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+          .addComponent(btnSaveDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
         .addContainerGap())
+      .addComponent(jScrollPane9)
     );
     tabLayananLayout.setVerticalGroup(
       tabLayananLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -429,24 +415,21 @@ public class MasterInternalFrame extends javax.swing.JInternalFrame {
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
             .addComponent(txtHargaLayanan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
         .addGap(18, 18, 18)
-        .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        .addComponent(jScrollPane9, javax.swing.GroupLayout.DEFAULT_SIZE, 406, Short.MAX_VALUE))
     );
 
     menuMaster.addTab("Layanan", tabLayanan);
 
-    javax.swing.GroupLayout panelMenuMasterLayout = new javax.swing.GroupLayout(panelMenuMaster);
-    panelMenuMaster.setLayout(panelMenuMasterLayout);
-    panelMenuMasterLayout.setHorizontalGroup(
-      panelMenuMasterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-      .addComponent(menuMaster)
-    );
-    panelMenuMasterLayout.setVerticalGroup(
-      panelMenuMasterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+    javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+    getContentPane().setLayout(layout);
+    layout.setHorizontalGroup(
+      layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
       .addComponent(menuMaster, javax.swing.GroupLayout.Alignment.TRAILING)
     );
-
-    getContentPane().add(panelMenuMaster, java.awt.BorderLayout.CENTER);
+    layout.setVerticalGroup(
+      layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+      .addComponent(menuMaster)
+    );
 
     pack();
   }// </editor-fold>//GEN-END:initComponents
@@ -592,7 +575,6 @@ public class MasterInternalFrame extends javax.swing.JInternalFrame {
   private javax.swing.JScrollPane jScrollPane8;
   private javax.swing.JScrollPane jScrollPane9;
   private javax.swing.JTabbedPane menuMaster;
-  private javax.swing.JPanel panelMenuMaster;
   private javax.swing.JPanel tabLayanan;
   private javax.swing.JPanel tabPakaian;
   private javax.swing.JPanel tabPelanggan;
