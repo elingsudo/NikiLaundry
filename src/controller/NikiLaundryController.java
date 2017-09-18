@@ -59,6 +59,7 @@ public class NikiLaundryController {
   }
 
   public void loginButtonActionPerform(NikiLaundryView view) {
+    menuLaundryPressed(view);
     view.getPanelLogin().setVisible(false);
     view.getPanelMenu().setVisible(true);
   }

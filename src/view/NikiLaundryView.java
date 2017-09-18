@@ -405,8 +405,7 @@ public class NikiLaundryView extends javax.swing.JFrame {
   }//GEN-LAST:event_formWindowClosing
 
   private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
-    panelLogin.setVisible(false);
-    panelMenu.setVisible(true);
+    controller.loginButtonActionPerform(this);
   }//GEN-LAST:event_btnLoginActionPerformed
 
   private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
