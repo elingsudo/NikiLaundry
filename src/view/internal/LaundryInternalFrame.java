@@ -16,6 +16,8 @@
  */
 package view.internal;
 
+import controller.LaundryController;
+import javax.swing.JComboBox;
 import javax.swing.plaf.basic.BasicInternalFrameUI;
 
 /**
@@ -24,10 +26,14 @@ import javax.swing.plaf.basic.BasicInternalFrameUI;
  */
 public class LaundryInternalFrame extends javax.swing.JInternalFrame {
 
+  private final LaundryController controller;
+
   /**
    * Creates new form LaundryInternalFrame
    */
   public LaundryInternalFrame() {
+    controller = new LaundryController();
+
     ((BasicInternalFrameUI) this.getUI()).setNorthPane(null);
     initComponents();
   }
@@ -68,6 +74,11 @@ public class LaundryInternalFrame extends javax.swing.JInternalFrame {
 
     menuLaundry.setBackground(new java.awt.Color(142, 53, 239));
     menuLaundry.setPreferredSize(new java.awt.Dimension(730, 130));
+    menuLaundry.addChangeListener(new javax.swing.event.ChangeListener() {
+      public void stateChanged(javax.swing.event.ChangeEvent evt) {
+        menuLaundryStateChanged(evt);
+      }
+    });
 
     tabPenyerahan.setBackground(new java.awt.Color(142, 53, 239));
     tabPenyerahan.setPreferredSize(new java.awt.Dimension(730, 130));
@@ -346,6 +357,17 @@ public class LaundryInternalFrame extends javax.swing.JInternalFrame {
     // TODO add your handling code here:
   }//GEN-LAST:event_txtJumlahPengambilanActionPerformed
 
+   private void menuLaundryStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_menuLaundryStateChanged
+     controller.tabItemChangeState(this, evt);
+   }//GEN-LAST:event_menuLaundryStateChanged
+
+  public JComboBox<String> getCbLayananPenyerahan() {
+    return cbLayananPenyerahan;
+  }
+
+  public JComboBox<String> getCbPewangiPenyerahan() {
+    return cbPewangiPenyerahan;
+  }
 
   // Variables declaration - do not modify//GEN-BEGIN:variables
   private javax.swing.JComboBox<String> cbLayananPenyerahan;
