@@ -30,7 +30,7 @@ import view.internal.LaundryInternalFrame;
  * @author triastowo
  */
 public class LaundryPenyerahanController {
-  
+
   private final MasterPewangiService pewangiService;
   private final MasterLayananService layananService;
 
@@ -39,12 +39,20 @@ public class LaundryPenyerahanController {
     layananService = new MasterLayananServiceImpl(MasterLayananModel.class);
   }
 
-  public void loadPenyerehanData(LaundryInternalFrame view) {
+  public void loadPenyerahanData(LaundryInternalFrame view) {
     view.getCbPewangiPenyerahan().removeAllItems();
+    view.getCbLayananPenyerahan().removeAllItems();
+
     List<MasterPewangiModel> listPewangi = pewangiService.findAll();
     for (MasterPewangiModel masterPewangiModel : listPewangi) {
       view.getCbPewangiPenyerahan().addItem(masterPewangiModel.getNamaPewangi());
     }
+
+    List<MasterLayananModel> listLayanan = layananService.findAll();
+    for (MasterLayananModel masterLayananModel : listLayanan) {
+      view.getCbLayananPenyerahan().addItem(masterLayananModel.getNamaLayanan());
+    }
+
   }
-  
+
 }

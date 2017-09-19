@@ -75,6 +75,13 @@ public class InitialDB {
     layanan.setHarga(new BigDecimal("3500"));
     String message = layananService.save(layanan);
     System.out.println(message);
+    
+    MasterLayananModel layananKilat = new MasterLayananModel();
+    layananKilat.setIdLayanan("0002");
+    layananKilat.setNamaLayanan("Kilat");
+    layananKilat.setHarga(new BigDecimal("5000"));
+    String messageKilat = layananService.save(layananKilat);
+    System.out.println(messageKilat);
   }
 
   private void insertMasterPakaian() {
@@ -93,5 +100,12 @@ public class InitialDB {
     pewangi.setHarga(new BigDecimal("5000"));
     String message = pewangiService.save(pewangi);
     System.out.println(message);
+    
+    MasterPewangiModel pewangiMolto = new MasterPewangiModel();
+    pewangiMolto.setIdPewangi("0102");
+    pewangiMolto.setNamaPewangi("Molto");
+    pewangiMolto.setHarga(new BigDecimal("3000"));
+    String messageMolto = pewangiService.save(pewangiMolto);
+    System.out.println(messageMolto);
   }
 }
