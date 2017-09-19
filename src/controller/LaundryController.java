@@ -16,6 +16,7 @@
  */
 package controller;
 
+import controller.laundry.LaundryPengambilanController;
 import controller.laundry.LaundryPenyerahanController;
 import javax.swing.JTabbedPane;
 import javax.swing.event.ChangeEvent;
@@ -28,9 +29,11 @@ import view.internal.LaundryInternalFrame;
 public class LaundryController {
   
   private final LaundryPenyerahanController laundryPenyerahanController;
+  private final LaundryPengambilanController laundryPengambilanController;
 
   public LaundryController() {
     this.laundryPenyerahanController = new LaundryPenyerahanController();
+    this.laundryPengambilanController = new LaundryPengambilanController();
   }
   
 
@@ -40,6 +43,9 @@ public class LaundryController {
       switch (pane.getSelectedIndex()) {
         case 0:
           laundryPenyerahanController.loadPenyerahanData(view);
+          break;
+        case 1:
+          laundryPengambilanController.loadPengambilanData(view);
           break;
       }
     }
