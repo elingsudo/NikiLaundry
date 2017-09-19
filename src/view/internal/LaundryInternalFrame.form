@@ -131,7 +131,6 @@
           <SubComponents>
             <Component class="javax.swing.JTextField" name="txtNamaPenyerahan">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Nama"/>
                 <Property name="toolTipText" type="java.lang.String" value=""/>
               </Properties>
               <Events>
@@ -139,33 +138,21 @@
               </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="txtNoNotaPenyerahan">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="No. Nota"/>
-              </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtNoNotaPenyerahanActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="txtTglTerimaPenyerahan">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Tgl. Terima"/>
-              </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtTglTerimaPenyerahanActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="txtTglJadiPenyerahan">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Tgl. Jadi"/>
-              </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtTglJadiPenyerahanActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="txtJumlahPenyerahan">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Jumlah (Kg)"/>
-              </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtJumlahPenyerahanActionPerformed"/>
               </Events>
@@ -204,12 +191,7 @@
             <Component class="javax.swing.JComboBox" name="cbPewangiPenyerahan">
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="4">
-                    <StringItem index="0" value="Item 1"/>
-                    <StringItem index="1" value="Item 2"/>
-                    <StringItem index="2" value="Item 3"/>
-                    <StringItem index="3" value="Item 4"/>
-                  </StringArray>
+                  <StringArray count="0"/>
                 </Property>
               </Properties>
               <AuxValues>
@@ -219,12 +201,7 @@
             <Component class="javax.swing.JComboBox" name="cbLayananPenyerahan">
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="4">
-                    <StringItem index="0" value="Item 1"/>
-                    <StringItem index="1" value="Item 2"/>
-                    <StringItem index="2" value="Item 3"/>
-                    <StringItem index="3" value="Item 4"/>
-                  </StringArray>
+                  <StringArray count="0"/>
                 </Property>
               </Properties>
               <AuxValues>

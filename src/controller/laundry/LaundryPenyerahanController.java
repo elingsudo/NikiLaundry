@@ -16,11 +16,13 @@
  */
 package controller.laundry;
 
+import helper.GeneralHelper;
 import implementation.master.MasterLayananServiceImpl;
 import implementation.master.MasterPewangiImplementation;
 import java.util.List;
 import model.master.MasterLayananModel;
 import model.master.MasterPewangiModel;
+import org.jdesktop.swingx.prompt.PromptSupport;
 import service.master.MasterLayananService;
 import service.master.MasterPewangiService;
 import view.internal.LaundryInternalFrame;
@@ -52,6 +54,12 @@ public class LaundryPenyerahanController {
     for (MasterLayananModel masterLayananModel : listLayanan) {
       view.getCbLayananPenyerahan().addItem(masterLayananModel.getNamaLayanan());
     }
+    
+    PromptSupport.setPrompt("Nama", view.getTxtNamaPenyerahan());
+    PromptSupport.setPrompt("No Nota", view.getTxtNoNotaPenyerahan());
+    PromptSupport.setPrompt("Tgl Jadi", view.getTxtTglJadiPenyerahan());
+    PromptSupport.setPrompt("Tgl Terima", view.getTxtTglTerimaPenyerahan());
+    PromptSupport.setPrompt("Jumlah", view.getTxtJumlahPenyerahan());
 
   }
 
