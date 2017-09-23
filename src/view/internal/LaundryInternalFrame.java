@@ -21,6 +21,7 @@ import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.plaf.basic.BasicInternalFrameUI;
+import org.jdesktop.swingx.JXDatePicker;
 
 /**
  *
@@ -52,14 +53,14 @@ public class LaundryInternalFrame extends javax.swing.JInternalFrame {
     tabPenyerahan = new javax.swing.JPanel();
     txtNamaPenyerahan = new javax.swing.JTextField();
     txtNoNotaPenyerahan = new javax.swing.JTextField();
-    txtTglTerimaPenyerahan = new javax.swing.JTextField();
-    txtTglJadiPenyerahan = new javax.swing.JTextField();
     txtJumlahPenyerahan = new javax.swing.JTextField();
     txtBanyakCuciPenyerahan = new javax.swing.JLabel();
     jScrollPane1 = new javax.swing.JScrollPane();
     tabelPenyerahan = new javax.swing.JTable();
     cbPewangiPenyerahan = new javax.swing.JComboBox<>();
     cbLayananPenyerahan = new javax.swing.JComboBox<>();
+    txtTglTerimaPenyerahan = new org.jdesktop.swingx.JXDatePicker();
+    txtTglJadiPenyerahan = new org.jdesktop.swingx.JXDatePicker();
     tabPengambilan = new javax.swing.JPanel();
     txtNamaPengambilan = new javax.swing.JTextField();
     txtNoNotaPengambilan = new javax.swing.JTextField();
@@ -98,18 +99,6 @@ public class LaundryInternalFrame extends javax.swing.JInternalFrame {
       }
     });
 
-    txtTglTerimaPenyerahan.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        txtTglTerimaPenyerahanActionPerformed(evt);
-      }
-    });
-
-    txtTglJadiPenyerahan.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        txtTglJadiPenyerahanActionPerformed(evt);
-      }
-    });
-
     txtJumlahPenyerahan.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
         txtJumlahPenyerahanActionPerformed(evt);
@@ -140,35 +129,35 @@ public class LaundryInternalFrame extends javax.swing.JInternalFrame {
         .addContainerGap()
         .addGroup(tabPenyerahanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
           .addGroup(tabPenyerahanLayout.createSequentialGroup()
-            .addComponent(txtNamaPenyerahan, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGap(133, 133, 133)
-            .addComponent(txtTglTerimaPenyerahan, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
-          .addGroup(tabPenyerahanLayout.createSequentialGroup()
-            .addComponent(txtNoNotaPenyerahan, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGap(133, 133, 133)
-            .addComponent(txtTglJadiPenyerahan, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
-          .addGroup(tabPenyerahanLayout.createSequentialGroup()
             .addGroup(tabPenyerahanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
               .addComponent(cbPewangiPenyerahan, 0, 183, Short.MAX_VALUE)
               .addComponent(cbLayananPenyerahan, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGap(133, 133, 133)
             .addGroup(tabPenyerahanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
               .addComponent(txtJumlahPenyerahan)
-              .addComponent(txtBanyakCuciPenyerahan, javax.swing.GroupLayout.DEFAULT_SIZE, 183, Short.MAX_VALUE))))
+              .addComponent(txtBanyakCuciPenyerahan, javax.swing.GroupLayout.DEFAULT_SIZE, 183, Short.MAX_VALUE)))
+          .addGroup(tabPenyerahanLayout.createSequentialGroup()
+            .addGroup(tabPenyerahanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+              .addComponent(txtNoNotaPenyerahan, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+              .addComponent(txtNamaPenyerahan, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGap(133, 133, 133)
+            .addGroup(tabPenyerahanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+              .addComponent(txtTglTerimaPenyerahan, javax.swing.GroupLayout.DEFAULT_SIZE, 183, Short.MAX_VALUE)
+              .addComponent(txtTglJadiPenyerahan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         .addContainerGap(223, Short.MAX_VALUE))
-      .addComponent(jScrollPane1)
+      .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 728, Short.MAX_VALUE)
     );
     tabPenyerahanLayout.setVerticalGroup(
       tabPenyerahanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
       .addGroup(tabPenyerahanLayout.createSequentialGroup()
         .addGap(6, 6, 6)
         .addGroup(tabPenyerahanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-          .addComponent(txtTglTerimaPenyerahan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-          .addComponent(txtNamaPenyerahan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+          .addComponent(txtNamaPenyerahan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+          .addComponent(txtTglTerimaPenyerahan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         .addGap(6, 6, 6)
-        .addGroup(tabPenyerahanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-          .addComponent(txtTglJadiPenyerahan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-          .addComponent(txtNoNotaPenyerahan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        .addGroup(tabPenyerahanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+          .addComponent(txtNoNotaPenyerahan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+          .addComponent(txtTglJadiPenyerahan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
         .addGroup(tabPenyerahanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
           .addComponent(cbPewangiPenyerahan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -311,14 +300,6 @@ public class LaundryInternalFrame extends javax.swing.JInternalFrame {
     // TODO add your handling code here:
   }//GEN-LAST:event_txtNoNotaPenyerahanActionPerformed
 
-  private void txtTglTerimaPenyerahanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTglTerimaPenyerahanActionPerformed
-    // TODO add your handling code here:
-  }//GEN-LAST:event_txtTglTerimaPenyerahanActionPerformed
-
-  private void txtTglJadiPenyerahanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTglJadiPenyerahanActionPerformed
-    // TODO add your handling code here:
-  }//GEN-LAST:event_txtTglJadiPenyerahanActionPerformed
-
   private void txtJumlahPenyerahanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtJumlahPenyerahanActionPerformed
     // TODO add your handling code here:
   }//GEN-LAST:event_txtJumlahPenyerahanActionPerformed
@@ -383,7 +364,7 @@ public class LaundryInternalFrame extends javax.swing.JInternalFrame {
     return txtTglJadiPengambilan;
   }
 
-  public JTextField getTxtTglJadiPenyerahan() {
+  public JXDatePicker getTxtTglJadiPenyerahan() {
     return txtTglJadiPenyerahan;
   }
 
@@ -391,7 +372,7 @@ public class LaundryInternalFrame extends javax.swing.JInternalFrame {
     return txtTglTerimaPengambilan;
   }
 
-  public JTextField getTxtTglTerimaPenyerahan() {
+  public JXDatePicker getTxtTglTerimaPenyerahan() {
     return txtTglTerimaPenyerahan;
   }
 
@@ -432,8 +413,8 @@ public class LaundryInternalFrame extends javax.swing.JInternalFrame {
   private javax.swing.JTextField txtNoNotaPengambilan;
   private javax.swing.JTextField txtNoNotaPenyerahan;
   private javax.swing.JTextField txtTglJadiPengambilan;
-  private javax.swing.JTextField txtTglJadiPenyerahan;
+  private org.jdesktop.swingx.JXDatePicker txtTglJadiPenyerahan;
   private javax.swing.JTextField txtTglTerimaPengambilan;
-  private javax.swing.JTextField txtTglTerimaPenyerahan;
+  private org.jdesktop.swingx.JXDatePicker txtTglTerimaPenyerahan;
   // End of variables declaration//GEN-END:variables
 }

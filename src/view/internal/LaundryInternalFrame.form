@@ -73,16 +73,6 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="txtNamaPenyerahan" min="-2" pref="183" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="133" max="-2" attributes="0"/>
-                              <Component id="txtTglTerimaPenyerahan" min="-2" pref="183" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="txtNoNotaPenyerahan" min="-2" pref="183" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="133" max="-2" attributes="0"/>
-                              <Component id="txtTglJadiPenyerahan" min="-2" pref="183" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                   <Component id="cbPewangiPenyerahan" alignment="0" pref="183" max="32767" attributes="0"/>
                                   <Component id="cbLayananPenyerahan" alignment="0" max="32767" attributes="0"/>
@@ -93,10 +83,21 @@
                                   <Component id="txtBanyakCuciPenyerahan" alignment="0" pref="183" max="32767" attributes="0"/>
                               </Group>
                           </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="txtNoNotaPenyerahan" alignment="0" min="-2" pref="183" max="-2" attributes="0"/>
+                                  <Component id="txtNamaPenyerahan" alignment="0" min="-2" pref="183" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="133" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="txtTglTerimaPenyerahan" pref="183" max="32767" attributes="0"/>
+                                  <Component id="txtTglJadiPenyerahan" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
                       </Group>
                       <EmptySpace pref="223" max="32767" attributes="0"/>
                   </Group>
-                  <Component id="jScrollPane1" alignment="0" max="32767" attributes="0"/>
+                  <Component id="jScrollPane1" alignment="0" pref="728" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
@@ -104,13 +105,13 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="txtTglTerimaPenyerahan" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="txtNamaPenyerahan" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtTglTerimaPenyerahan" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="txtTglJadiPenyerahan" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtNoNotaPenyerahan" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="txtNoNotaPenyerahan" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtTglJadiPenyerahan" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -140,16 +141,6 @@
             <Component class="javax.swing.JTextField" name="txtNoNotaPenyerahan">
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtNoNotaPenyerahanActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JTextField" name="txtTglTerimaPenyerahan">
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtTglTerimaPenyerahanActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JTextField" name="txtTglJadiPenyerahan">
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtTglJadiPenyerahanActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="txtJumlahPenyerahan">
@@ -207,6 +198,10 @@
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
               </AuxValues>
+            </Component>
+            <Component class="org.jdesktop.swingx.JXDatePicker" name="txtTglTerimaPenyerahan">
+            </Component>
+            <Component class="org.jdesktop.swingx.JXDatePicker" name="txtTglJadiPenyerahan">
             </Component>
           </SubComponents>
         </Container>

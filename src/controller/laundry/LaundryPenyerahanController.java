@@ -16,9 +16,9 @@
  */
 package controller.laundry;
 
-import helper.GeneralHelper;
 import implementation.master.MasterLayananServiceImpl;
 import implementation.master.MasterPewangiImplementation;
+import java.util.Date;
 import java.util.List;
 import model.master.MasterLayananModel;
 import model.master.MasterPewangiModel;
@@ -57,10 +57,13 @@ public class LaundryPenyerahanController {
     
     PromptSupport.setPrompt("Nama", view.getTxtNamaPenyerahan());
     PromptSupport.setPrompt("No Nota", view.getTxtNoNotaPenyerahan());
-    PromptSupport.setPrompt("Tgl Jadi", view.getTxtTglJadiPenyerahan());
-    PromptSupport.setPrompt("Tgl Terima", view.getTxtTglTerimaPenyerahan());
+    PromptSupport.setPrompt("Tgl Jadi", view.getTxtTglJadiPenyerahan().getEditor());
+    PromptSupport.setPrompt("Tgl Terima", view.getTxtTglTerimaPenyerahan().getEditor());
     PromptSupport.setPrompt("Jumlah", view.getTxtJumlahPenyerahan());
 
+    view.getTxtTglJadiPenyerahan().setDate(new Date());
+    view.getTxtTglTerimaPenyerahan().setDate(new Date());
+    
   }
 
 }
