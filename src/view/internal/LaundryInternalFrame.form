@@ -72,18 +72,7 @@
                   <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="cbPewangiPenyerahan" alignment="0" pref="183" max="32767" attributes="0"/>
-                                  <Component id="cbLayananPenyerahan" alignment="0" max="32767" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="133" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="txtJumlahPenyerahan" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="txtBanyakCuciPenyerahan" alignment="0" pref="183" max="32767" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
+                          <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="txtNoNotaPenyerahan" alignment="0" min="-2" pref="183" max="-2" attributes="0"/>
                                   <Component id="txtNamaPenyerahan" alignment="0" min="-2" pref="183" max="-2" attributes="0"/>
@@ -93,11 +82,24 @@
                                   <Component id="txtTglTerimaPenyerahan" pref="183" max="32767" attributes="0"/>
                                   <Component id="txtTglJadiPenyerahan" max="32767" attributes="0"/>
                               </Group>
+                              <EmptySpace pref="223" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="cbPewangiPenyerahan" alignment="0" pref="183" max="32767" attributes="0"/>
+                                  <Component id="cbLayananPenyerahan" alignment="0" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="133" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="txtJumlahPenyerahan" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="txtBanyakCuciPenyerahan" alignment="0" pref="183" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="jXButton1" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="223" max="32767" attributes="0"/>
                   </Group>
-                  <Component id="jScrollPane1" alignment="0" pref="728" max="32767" attributes="0"/>
+                  <Component id="jScrollPane1" pref="728" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
@@ -119,9 +121,10 @@
                           <Component id="txtJumlahPenyerahan" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="txtBanyakCuciPenyerahan" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="cbLayananPenyerahan" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="cbLayananPenyerahan" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jXButton1" alignment="0" pref="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jScrollPane1" pref="372" max="32767" attributes="0"/>
@@ -202,6 +205,14 @@
             <Component class="org.jdesktop.swingx.JXDatePicker" name="txtTglTerimaPenyerahan">
             </Component>
             <Component class="org.jdesktop.swingx.JXDatePicker" name="txtTglJadiPenyerahan">
+            </Component>
+            <Component class="org.jdesktop.swingx.JXButton" name="jXButton1">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Simpan"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jXButton1ActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>

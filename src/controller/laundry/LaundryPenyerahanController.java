@@ -16,13 +16,16 @@
  */
 package controller.laundry;
 
+import implementation.laundry.LaundryPenyerahanServiceImplementation;
 import implementation.master.MasterLayananServiceImpl;
 import implementation.master.MasterPewangiImplementation;
 import java.util.Date;
 import java.util.List;
+import model.laundry.PenyerahanModel;
 import model.master.MasterLayananModel;
 import model.master.MasterPewangiModel;
 import org.jdesktop.swingx.prompt.PromptSupport;
+import service.laundry.LaundryPenyerahanService;
 import service.master.MasterLayananService;
 import service.master.MasterPewangiService;
 import view.internal.LaundryInternalFrame;
@@ -35,10 +38,12 @@ public class LaundryPenyerahanController {
 
   private final MasterPewangiService pewangiService;
   private final MasterLayananService layananService;
+  private final LaundryPenyerahanService penyerahanService;
 
   public LaundryPenyerahanController() {
     pewangiService = new MasterPewangiImplementation(MasterPewangiModel.class);
     layananService = new MasterLayananServiceImpl(MasterLayananModel.class);
+    penyerahanService = new LaundryPenyerahanServiceImplementation(PenyerahanModel.class);
   }
 
   public void loadPenyerahanData(LaundryInternalFrame view) {
@@ -64,6 +69,10 @@ public class LaundryPenyerahanController {
     view.getTxtTglJadiPenyerahan().setDate(new Date());
     view.getTxtTglTerimaPenyerahan().setDate(new Date());
     
+  }
+
+  public void saveNewPenyerahan(PenyerahanModel model) {
+    penyerahanService.save(model);
   }
 
 }

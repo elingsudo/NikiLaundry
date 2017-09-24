@@ -70,5 +70,6 @@ Contributor(s):
     <mapping class="model.master.MasterPakaianModel"/>
     <mapping class="model.master.MasterLayananModel"/>
 
+    <mapping class="model.laundry.PenyerahanModel"/>
   </session-factory>
 </hibernate-configuration>
