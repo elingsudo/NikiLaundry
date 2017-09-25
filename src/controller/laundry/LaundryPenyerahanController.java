@@ -65,6 +65,7 @@ public class LaundryPenyerahanController {
     PromptSupport.setPrompt("Tgl. Jadi", view.getTxtTglJadiPenyerahan().getEditor());
     PromptSupport.setPrompt("Tgl. Terima", view.getTxtTglTerimaPenyerahan().getEditor());
     PromptSupport.setPrompt("Jumlah (Kg)", view.getTxtJumlahPenyerahan());
+    PromptSupport.setPrompt("Cari di sini", view.getTxtCariPenyerahan());
 
     view.getTxtTglJadiPenyerahan().setDate(new Date());
     view.getTxtTglTerimaPenyerahan().setDate(new Date());

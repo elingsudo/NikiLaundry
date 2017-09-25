@@ -60,8 +60,11 @@ public class LaundryInternalFrame extends javax.swing.JInternalFrame {
     cbLayananPenyerahan = new javax.swing.JComboBox<>();
     txtTglTerimaPenyerahan = new org.jdesktop.swingx.JXDatePicker();
     txtTglJadiPenyerahan = new org.jdesktop.swingx.JXDatePicker();
-    jXButton1 = new org.jdesktop.swingx.JXButton();
     txtBanyakCuci = new javax.swing.JTextField();
+    jLayeredPane1 = new javax.swing.JLayeredPane();
+    txtCariPenyerahan = new javax.swing.JTextField();
+    jLabel1 = new javax.swing.JLabel();
+    jXButton1 = new org.jdesktop.swingx.JXButton();
     btnHapus = new org.jdesktop.swingx.JXButton();
     tabPengambilan = new javax.swing.JPanel();
     txtNamaPengambilan = new javax.swing.JTextField();
@@ -121,6 +124,14 @@ public class LaundryInternalFrame extends javax.swing.JInternalFrame {
     ));
     jScrollPane1.setViewportView(tabelPenyerahan);
 
+    txtBanyakCuci.setText("Banyaknya Cuci");
+
+    jLayeredPane1.setBackground(new java.awt.Color(54, 33, 89));
+
+    txtCariPenyerahan.setToolTipText("");
+
+    jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/search.png"))); // NOI18N
+
     jXButton1.setText("Simpan");
     jXButton1.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -128,72 +139,98 @@ public class LaundryInternalFrame extends javax.swing.JInternalFrame {
       }
     });
 
-    txtBanyakCuci.setText("Banyaknya Cuci");
-
     btnHapus.setText("Hapus");
-    btnHapus.setPreferredSize(new java.awt.Dimension(73, 32));
     btnHapus.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
         btnHapusActionPerformed(evt);
       }
     });
 
+    jLayeredPane1.setLayer(txtCariPenyerahan, javax.swing.JLayeredPane.DEFAULT_LAYER);
+    jLayeredPane1.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+    jLayeredPane1.setLayer(jXButton1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+    jLayeredPane1.setLayer(btnHapus, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+    javax.swing.GroupLayout jLayeredPane1Layout = new javax.swing.GroupLayout(jLayeredPane1);
+    jLayeredPane1.setLayout(jLayeredPane1Layout);
+    jLayeredPane1Layout.setHorizontalGroup(
+      jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+      .addGroup(jLayeredPane1Layout.createSequentialGroup()
+        .addContainerGap()
+        .addComponent(txtCariPenyerahan, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+        .addComponent(jLabel1)
+        .addGap(29, 29, 29)
+        .addComponent(jXButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+        .addComponent(btnHapus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+    );
+    jLayeredPane1Layout.setVerticalGroup(
+      jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+      .addGroup(jLayeredPane1Layout.createSequentialGroup()
+        .addContainerGap()
+        .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+          .addGroup(jLayeredPane1Layout.createSequentialGroup()
+            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+              .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING)
+              .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addComponent(jXButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnHapus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+          .addComponent(txtCariPenyerahan)))
+    );
+
     javax.swing.GroupLayout tabPenyerahanLayout = new javax.swing.GroupLayout(tabPenyerahan);
     tabPenyerahan.setLayout(tabPenyerahanLayout);
     tabPenyerahanLayout.setHorizontalGroup(
       tabPenyerahanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+      .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 728, Short.MAX_VALUE)
       .addGroup(tabPenyerahanLayout.createSequentialGroup()
         .addContainerGap()
         .addGroup(tabPenyerahanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-          .addGroup(tabPenyerahanLayout.createSequentialGroup()
-            .addGroup(tabPenyerahanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-              .addComponent(txtNoNotaPenyerahan, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-              .addComponent(txtNamaPenyerahan, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGap(133, 133, 133)
-            .addGroup(tabPenyerahanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-              .addComponent(txtTglTerimaPenyerahan, javax.swing.GroupLayout.DEFAULT_SIZE, 183, Short.MAX_VALUE)
-              .addComponent(txtTglJadiPenyerahan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-          .addGroup(tabPenyerahanLayout.createSequentialGroup()
-            .addGroup(tabPenyerahanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-              .addComponent(cbPewangiPenyerahan, 0, 183, Short.MAX_VALUE)
-              .addComponent(cbLayananPenyerahan, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGap(133, 133, 133)
-            .addGroup(tabPenyerahanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-              .addComponent(txtJumlahPenyerahan, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-              .addComponent(txtBanyakCuci, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))))
-        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+          .addComponent(txtNoNotaPenyerahan, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+          .addComponent(txtNamaPenyerahan, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
         .addGroup(tabPenyerahanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-          .addComponent(jXButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-          .addComponent(btnHapus, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        .addContainerGap())
-      .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 728, Short.MAX_VALUE)
+          .addComponent(cbPewangiPenyerahan, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+          .addComponent(cbLayananPenyerahan, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+        .addGroup(tabPenyerahanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+          .addComponent(txtTglTerimaPenyerahan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+          .addComponent(txtTglJadiPenyerahan, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+        .addGroup(tabPenyerahanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+          .addComponent(txtBanyakCuci)
+          .addComponent(txtJumlahPenyerahan, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
+        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+      .addComponent(jLayeredPane1, javax.swing.GroupLayout.Alignment.TRAILING)
     );
     tabPenyerahanLayout.setVerticalGroup(
       tabPenyerahanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
       .addGroup(tabPenyerahanLayout.createSequentialGroup()
         .addGap(5, 5, 5)
-        .addGroup(tabPenyerahanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-          .addComponent(txtNamaPenyerahan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-          .addComponent(txtTglTerimaPenyerahan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-          .addComponent(jXButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-        .addGap(5, 5, 5)
-        .addGroup(tabPenyerahanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-          .addComponent(txtNoNotaPenyerahan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-          .addComponent(txtTglJadiPenyerahan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-          .addComponent(btnHapus, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-        .addGroup(tabPenyerahanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-          .addComponent(cbPewangiPenyerahan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-          .addComponent(txtJumlahPenyerahan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         .addGroup(tabPenyerahanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
           .addGroup(tabPenyerahanLayout.createSequentialGroup()
-            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
+            .addComponent(txtNamaPenyerahan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addComponent(txtNoNotaPenyerahan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+          .addGroup(tabPenyerahanLayout.createSequentialGroup()
+            .addComponent(cbPewangiPenyerahan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
             .addComponent(cbLayananPenyerahan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
           .addGroup(tabPenyerahanLayout.createSequentialGroup()
+            .addComponent(txtTglTerimaPenyerahan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addComponent(txtTglJadiPenyerahan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+          .addGroup(tabPenyerahanLayout.createSequentialGroup()
+            .addComponent(txtJumlahPenyerahan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
             .addComponent(txtBanyakCuci, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-        .addGap(18, 18, 18)
-        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 372, Short.MAX_VALUE))
+        .addGap(48, 48, 48)
+        .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 359, Short.MAX_VALUE))
     );
 
     menuLaundry.addTab("Penyerahan", tabPenyerahan);
@@ -422,12 +459,19 @@ public class LaundryInternalFrame extends javax.swing.JInternalFrame {
     return txtBanyaknyaCuciPengambilan;
   }
 
+  public JTextField getTxtCariPenyerahan() {
+    return txtCariPenyerahan;
+  }
+  
+
   // Variables declaration - do not modify//GEN-BEGIN:variables
   private org.jdesktop.swingx.JXButton btnHapus;
   private javax.swing.JComboBox<String> cbLayananPenyerahan;
   private javax.swing.JComboBox<String> cbPewangiPengambilan;
   private javax.swing.JComboBox<String> cbPewangiPenyerahan;
   private javax.swing.JComboBox<String> cdLayananPengambilan;
+  private javax.swing.JLabel jLabel1;
+  private javax.swing.JLayeredPane jLayeredPane1;
   private javax.swing.JScrollPane jScrollPane1;
   private javax.swing.JScrollPane jScrollPane6;
   private org.jdesktop.swingx.JXButton jXButton1;
@@ -438,6 +482,7 @@ public class LaundryInternalFrame extends javax.swing.JInternalFrame {
   private javax.swing.JTable tabelPenyerahan;
   private javax.swing.JTextField txtBanyakCuci;
   private javax.swing.JLabel txtBanyaknyaCuciPengambilan;
+  private javax.swing.JTextField txtCariPenyerahan;
   private javax.swing.JTextField txtJumlahPengambilan;
   private javax.swing.JTextField txtJumlahPenyerahan;
   private javax.swing.JTextField txtNamaPengambilan;
