@@ -200,9 +200,6 @@
             <Component class="org.jdesktop.swingx.JXDatePicker" name="txtTglJadiPenyerahan">
             </Component>
             <Component class="javax.swing.JTextField" name="txtBanyakCuci">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="Banyaknya Cuci"/>
-              </Properties>
             </Component>
             <Container class="javax.swing.JLayeredPane" name="jLayeredPane1">
               <Properties>
