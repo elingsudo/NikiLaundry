@@ -21,6 +21,7 @@ import implementation.master.MasterLayananServiceImpl;
 import implementation.master.MasterPewangiImplementation;
 import java.util.Date;
 import java.util.List;
+import javax.swing.text.JTextComponent;
 import model.laundry.PenyerahanModel;
 import model.master.MasterLayananModel;
 import model.master.MasterPewangiModel;
@@ -67,8 +68,8 @@ public class LaundryPenyerahanController {
     PromptSupport.setPrompt("Jumlah (Kg)", view.getTxtJumlahPenyerahan());
     PromptSupport.setPrompt("Cari di sini", view.getTxtCariPenyerahan());
 
-    view.getTxtTglJadiPenyerahan().setDate(new Date());
-    view.getTxtTglTerimaPenyerahan().setDate(new Date());
+    //view.getTxtTglJadiPenyerahan().setDate(new Date());
+    //view.getTxtTglTerimaPenyerahan().setDate(new Date());
     
   }
 
