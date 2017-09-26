@@ -57,8 +57,8 @@ public class MasterPewangiController {
   }
 
   public void save(MasterInternalFrame view) {
-    String idPewangi = GeneralHelper.validasiNull(view.getTxtIdPewangi().getText());
-    String namaPewangi = GeneralHelper.validasiNull(view.getTxtNamaPewangi().getText());
+    String idPewangi = GeneralHelper.validasiNullString(view.getTxtIdPewangi().getText());
+    String namaPewangi = GeneralHelper.validasiNullString(view.getTxtNamaPewangi().getText());
     String harga = GeneralHelper.validasiNullBigDecimal(view.getTxtHargaPewangi().getText());
 
     MasterPewangiModel model = new MasterPewangiModel();

@@ -57,12 +57,12 @@ public class MasterPelangganController {
   }
 
   public void save(MasterInternalFrame view) {
-    String noKtp = GeneralHelper.validasiNull(view.getTxtNoKtpPelanggan().getText());
-    String nama = GeneralHelper.validasiNull(view.getTxtNamaPelanggan().getText());
+    String noKtp = GeneralHelper.validasiNullString(view.getTxtNoKtpPelanggan().getText());
+    String nama = GeneralHelper.validasiNullString(view.getTxtNamaPelanggan().getText());
     String jenisKelamin = view.getCbJenisKelaminPelanggan().getSelectedItem().toString();
-    String noHp = GeneralHelper.validasiNull(view.getTxtNoHpPelanggan().getText());
+    String noHp = GeneralHelper.validasiNullString(view.getTxtNoHpPelanggan().getText());
     String jenisPelanggan = view.getCbJenisPelanggan().getSelectedItem().toString();
-    String alamat = GeneralHelper.validasiNull(view.getTxtAlamatPelanggan().getText());
+    String alamat = GeneralHelper.validasiNullString(view.getTxtAlamatPelanggan().getText());
 
     MasterPelangganModel model = new MasterPelangganModel();
     model.setNoKtp(noKtp);

@@ -53,8 +53,8 @@ public class MasterPakaianController {
   }
 
   public void save(MasterInternalFrame view) {
-    String idPakaian = GeneralHelper.validasiNull(view.getTxtIdPakaian().getText());
-    String namaPakaian = GeneralHelper.validasiNull(view.getTxtNamaPakaian().getText());
+    String idPakaian = GeneralHelper.validasiNullString(view.getTxtIdPakaian().getText());
+    String namaPakaian = GeneralHelper.validasiNullString(view.getTxtNamaPakaian().getText());
     String hargaPakaian = GeneralHelper.validasiNullBigDecimal(view.getTxtHargaPakaian().getText());
     
     MasterPakaianModel model = new MasterPakaianModel();

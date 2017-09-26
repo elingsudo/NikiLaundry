@@ -20,6 +20,7 @@ import helper.GeneralHelper;
 import implementation.laundry.LaundryPenyerahanServiceImplementation;
 import implementation.master.MasterLayananServiceImpl;
 import implementation.master.MasterPewangiImplementation;
+import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 import model.laundry.PenyerahanModel;
@@ -60,21 +61,33 @@ public class LaundryPenyerahanController {
     for (MasterLayananModel masterLayananModel : listLayanan) {
       view.getCbLayananPenyerahan().addItem(masterLayananModel.getNamaLayanan());
     }
-    
+
     PromptSupport.setPrompt("Nama", view.getTxtNamaPenyerahan());
     PromptSupport.setPrompt("No. Nota", view.getTxtNoNotaPenyerahan());
     PromptSupport.setPrompt("Tgl. Jadi", view.getTxtTglJadiPenyerahan().getEditor());
     PromptSupport.setPrompt("Tgl. Terima", view.getTxtTglTerimaPenyerahan().getEditor());
     PromptSupport.setPrompt("Jumlah (Kg)", view.getTxtJumlahPenyerahan());
+    PromptSupport.setPrompt("Banyaknya Cuci", view.getTxtBanyakCuciPenyerahan());
     PromptSupport.setPrompt("Cari di sini", view.getTxtCariPenyerahan());
 
     view.getTxtTglTerimaPenyerahan().setDate(new Date());
     view.getTxtTglJadiPenyerahan().setDate(GeneralHelper.addDays(new Date(), 3));
-    
+
   }
 
-  public void saveNewPenyerahan(PenyerahanModel model) {
+  public void saveNewPenyerahan(LaundryInternalFrame view) {
+
+    PenyerahanModel model = new PenyerahanModel();
+    model.setNama(GeneralHelper.validasiNullString(view.getTxtNamaPenyerahan().getText()));
+    model.setNoNota(GeneralHelper.validasiNullString(view.getTxtNoNotaPenyerahan().getText()));
+    model.setPewangi(GeneralHelper.validasiNullString(view.getCbPewangiPenyerahan().getSelectedItem().toString()));
+    model.setLayanan(GeneralHelper.validasiNullString(view.getCbLayananPenyerahan().getSelectedItem().toString()));
+    model.setTanggalTerima(GeneralHelper.validasiNullDate(view.getTxtTglTerimaPenyerahan().getDate()));
+    model.setTanggalJadi(GeneralHelper.validasiNullDate(view.getTxtTglJadiPenyerahan().getDate()));
+    model.setJumlah(new BigDecimal(GeneralHelper.validasiNullBigDecimal(view.getTxtJumlahPenyerahan().getText())));
+    model.setBanyakCuci(Integer.parseInt(GeneralHelper.validasiNullInteger(view.getTxtBanyakCuciPenyerahan().getText())));
     penyerahanService.save(model);
+
   }
 
 }

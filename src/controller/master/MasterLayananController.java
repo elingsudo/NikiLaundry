@@ -52,8 +52,8 @@ public class MasterLayananController {
   }
 
   public void save(MasterInternalFrame view) {
-    String id = GeneralHelper.validasiNull(view.getTxtIdLayanan().getText());
-    String nama = GeneralHelper.validasiNull(view.getTxtNamaLayanan().getText());
+    String id = GeneralHelper.validasiNullString(view.getTxtIdLayanan().getText());
+    String nama = GeneralHelper.validasiNullString(view.getTxtNamaLayanan().getText());
     String harga = GeneralHelper.validasiNullBigDecimal(view.getTxtHargaLayanan().getText());
 
     MasterLayananModel model = new MasterLayananModel();

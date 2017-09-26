@@ -18,10 +18,8 @@ package controller;
 
 import controller.laundry.LaundryPengambilanController;
 import controller.laundry.LaundryPenyerahanController;
-import java.util.Date;
 import javax.swing.JTabbedPane;
 import javax.swing.event.ChangeEvent;
-import model.laundry.PenyerahanModel;
 import view.internal.LaundryInternalFrame;
 
 /**
@@ -54,22 +52,6 @@ public class LaundryController {
   }
 
   public void simpanPenyerahan(LaundryInternalFrame view) {
-    String nama = view.getTxtNamaPenyerahan().getText();
-    String noNota = view.getTxtNoNotaPenyerahan().getText();
-    String pewangi = view.getCbPewangiPenyerahan().getSelectedItem().toString();
-    String layanan = view.getCbLayananPenyerahan().getSelectedItem().toString();
-    Date tanggalTerima = view.getTxtTglTerimaPenyerahan().getDate();
-    Date tanggalJadi = view.getTxtTglJadiPenyerahan().getDate();
-    String jumlah = view.getTxtJumlahPenyerahan().getText();
-    
-    PenyerahanModel model = new PenyerahanModel();
-    model.setNama(nama);
-    model.setNoNota(noNota);
-    model.setPewangi(pewangi);
-    model.setLayanan(layanan);
-    model.setTanggalTerima(tanggalTerima);
-    model.setTanggalJadi(tanggalJadi);
-    model.setJumlah(jumlah);
-    laundryPenyerahanController.saveNewPenyerahan(model);
+    laundryPenyerahanController.saveNewPenyerahan(view);
   }
 }

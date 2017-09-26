@@ -26,7 +26,7 @@ import java.util.GregorianCalendar;
  */
 public class GeneralHelper {
 
-  public static String validasiNull(String value) {
+  public static String validasiNullString(String value) {
     if (value == null || "".equals(value)) {
       return "-";
     } else {
@@ -37,6 +37,22 @@ public class GeneralHelper {
   public static String validasiNullBigDecimal(String value) {
     if (value == null || "".equals(value)) {
       return "0";
+    } else {
+      return value;
+    }
+  }
+
+  public static String validasiNullInteger(String value) {
+    if (value == null || "".equals(value)) {
+      return "0";
+    } else {
+      return value;
+    }
+  }
+
+  public static Date validasiNullDate(Date value) {
+    if (value == null || "".equals(value.getTime()) || value.getTime() == 0) {
+      return new Date();
     } else {
       return value;
     }

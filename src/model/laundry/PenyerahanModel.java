@@ -17,6 +17,7 @@
 package model.laundry;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -46,7 +47,9 @@ public class PenyerahanModel implements Serializable {
   @Temporal(TemporalType.DATE)
   private Date tanggalJadi;
 
-  private String jumlah;
+  private BigDecimal jumlah;
+
+  private Integer banyakCuci;
 
   public String getNama() {
     return nama;
@@ -96,11 +99,11 @@ public class PenyerahanModel implements Serializable {
     this.tanggalJadi = tanggalJadi;
   }
 
-  public String getJumlah() {
+  public BigDecimal getJumlah() {
     return jumlah;
   }
 
-  public void setJumlah(String jumlah) {
+  public void setJumlah(BigDecimal jumlah) {
     this.jumlah = jumlah;
   }
 
@@ -110,6 +113,22 @@ public class PenyerahanModel implements Serializable {
 
   public void setId(int id) {
     this.id = id;
+  }
+
+  public Integer getBanyakCuci() {
+    return banyakCuci;
+  }
+
+  public void setBanyakCuci(Integer banyakCuci) {
+    this.banyakCuci = banyakCuci;
+  }
+
+  @Override
+  public String toString() {
+    return "PenyerahanModel{" + "id=" + id + ", nama=" + nama + ", "
+            + "noNota=" + noNota + ", pewangi=" + pewangi + ", layanan=" + layanan + ", "
+            + "tanggalTerima=" + tanggalTerima + ", tanggalJadi=" + tanggalJadi + ", "
+            + "jumlah=" + jumlah + ", banyakCuci=" + banyakCuci + '}';
   }
 
 }
