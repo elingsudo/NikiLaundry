@@ -42,7 +42,7 @@ public class LaundryController {
       JTabbedPane pane = (JTabbedPane) evt.getSource();
       switch (pane.getSelectedIndex()) {
         case 0:
-          laundryPenyerahanController.loadPenyerahanData(view);
+          laundryPenyerahanController.onLoadPenyerahanData(view);
           break;
         case 1:
           laundryPengambilanController.loadPengambilanData(view);

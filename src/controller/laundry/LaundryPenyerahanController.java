@@ -31,6 +31,7 @@ import org.jdesktop.swingx.prompt.PromptSupport;
 import service.laundry.LaundryPenyerahanService;
 import service.master.MasterLayananService;
 import service.master.MasterPewangiService;
+import tablemodel.laundry.LaundryPenyerahanTableModel;
 import view.internal.LaundryInternalFrame;
 
 /**
@@ -42,14 +43,16 @@ public class LaundryPenyerahanController {
   private final MasterPewangiService pewangiService;
   private final MasterLayananService layananService;
   private final LaundryPenyerahanService penyerahanService;
+  private final LaundryPenyerahanTableModel tableModel;
 
   public LaundryPenyerahanController() {
     pewangiService = new MasterPewangiImplementation(MasterPewangiModel.class);
     layananService = new MasterLayananServiceImpl(MasterLayananModel.class);
     penyerahanService = new LaundryPenyerahanServiceImplementation(PenyerahanModel.class);
+    tableModel = new LaundryPenyerahanTableModel();
   }
 
-  public void loadPenyerahanData(LaundryInternalFrame view) {
+  public void onLoadPenyerahanData(LaundryInternalFrame view) {
     view.getCbPewangiPenyerahan().removeAllItems();
     view.getCbLayananPenyerahan().removeAllItems();
 
@@ -74,10 +77,11 @@ public class LaundryPenyerahanController {
     view.getTxtTglTerimaPenyerahan().setDate(new Date());
     view.getTxtTglJadiPenyerahan().setDate(GeneralHelper.addDays(new Date(), 3));
 
+    fetchPenyerahanData(view);
   }
 
   public void saveNewPenyerahan(LaundryInternalFrame view) {
-
+    
     PenyerahanModel model = new PenyerahanModel();
     model.setNama(GeneralHelper.validasiNullString(view.getTxtNamaPenyerahan().getText()));
     model.setNoNota(GeneralHelper.validasiNullString(view.getTxtNoNotaPenyerahan().getText()));
@@ -88,7 +92,14 @@ public class LaundryPenyerahanController {
     model.setJumlah(new BigDecimal(GeneralHelper.validasiNullBigDecimal(view.getTxtJumlahPenyerahan().getText())));
     model.setBanyakCuci(Integer.parseInt(GeneralHelper.validasiNullInteger(view.getTxtBanyakCuciPenyerahan().getText())));
     penyerahanService.save(model);
-
+    
+    fetchPenyerahanData(view);
+  }
+  
+  public void fetchPenyerahanData(LaundryInternalFrame view) {
+    List<PenyerahanModel> findAll = penyerahanService.findAll();
+    tableModel.setList(findAll);
+    view.getTabelPenyerahan().setModel(tableModel);
   }
 
 }
