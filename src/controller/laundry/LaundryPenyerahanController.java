@@ -100,6 +100,7 @@ public class LaundryPenyerahanController {
     List<PenyerahanModel> findAll = penyerahanService.findAll();
     tableModel.setList(findAll);
     view.getTabelPenyerahan().setModel(tableModel);
+    view.getTabelPenyerahan().packAll();
   }
 
 }
