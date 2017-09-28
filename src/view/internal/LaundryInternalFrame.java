@@ -106,7 +106,6 @@ public class LaundryInternalFrame extends javax.swing.JInternalFrame {
       }
     });
 
-    txtJumlahPenyerahan.setEditable(false);
     txtJumlahPenyerahan.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
         txtJumlahPenyerahanActionPerformed(evt);
@@ -181,6 +180,9 @@ public class LaundryInternalFrame extends javax.swing.JInternalFrame {
         "Title 1", "Title 2", "Title 3", "Title 4"
       }
     ));
+    tabelPenyerahan.setEditable(false);
+    tabelPenyerahan.setRowHeight(20);
+    tabelPenyerahan.setShowGrid(true);
     jScrollPane2.setViewportView(tabelPenyerahan);
 
     javax.swing.GroupLayout tabPenyerahanLayout = new javax.swing.GroupLayout(tabPenyerahan);

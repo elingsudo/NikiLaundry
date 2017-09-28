@@ -16,15 +16,20 @@
  */
 package util;
 
+import helper.GeneralHelper;
+import implementation.laundry.LaundryPenyerahanServiceImplementation;
 import implementation.master.MasterLayananServiceImpl;
 import implementation.master.MasterPakaianImplementation;
 import implementation.master.MasterPelangganImplementation;
 import implementation.master.MasterPewangiImplementation;
 import java.math.BigDecimal;
+import java.util.Date;
+import model.laundry.PenyerahanModel;
 import model.master.MasterLayananModel;
 import model.master.MasterPakaianModel;
 import model.master.MasterPelangganModel;
 import model.master.MasterPewangiModel;
+import service.laundry.LaundryPenyerahanService;
 import service.master.MasterLayananService;
 import service.master.MasterPakaianService;
 import service.master.MasterPelangganService;
@@ -40,12 +45,16 @@ public class InitialDB {
   private final MasterLayananService layananService;
   private final MasterPakaianService pakaianService;
   private final MasterPewangiService pewangiService;
+  
+  private final LaundryPenyerahanService penyerahanService;
 
   public InitialDB() {
     pelangganService = new MasterPelangganImplementation(MasterPelangganModel.class);
     layananService = new MasterLayananServiceImpl(MasterLayananModel.class);
     pakaianService = new MasterPakaianImplementation(MasterPakaianModel.class);
     pewangiService = new MasterPewangiImplementation(MasterPewangiModel.class);
+    
+    penyerahanService = new LaundryPenyerahanServiceImplementation(PenyerahanModel.class);
   }
 
   public static void init() {
@@ -54,6 +63,21 @@ public class InitialDB {
     initialDB.insertMasterLayanan();
     initialDB.insertMasterPakaian();
     initialDB.insertMasterPewangi();
+    
+    initialDB.insertPenyerahan();
+  }
+  
+  private void insertPenyerahan() {
+    PenyerahanModel model = new PenyerahanModel();
+    model.setBanyakCuci(2);
+    model.setJumlah(5);       // kg
+    model.setLayanan("Kilat");
+    model.setNama("Eling");
+    model.setNoNota("083999");
+    model.setPewangi("Molto");
+    model.setTanggalTerima(new Date());
+    model.setTanggalJadi(GeneralHelper.addDays(new Date(), 3));
+    penyerahanService.save(model);
   }
 
   private void insertPelanggan() {

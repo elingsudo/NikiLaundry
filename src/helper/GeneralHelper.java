@@ -42,11 +42,11 @@ public class GeneralHelper {
     }
   }
 
-  public static String validasiNullInteger(String value) {
-    if (value == null || "".equals(value)) {
-      return "0";
+  public static Integer validasiNullInteger(String value) {
+    if (value == null || value.equals("")) {
+      return 0;
     } else {
-      return value;
+      return Integer.valueOf(value);
     }
   }
 

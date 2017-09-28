@@ -20,10 +20,8 @@ import helper.GeneralHelper;
 import implementation.laundry.LaundryPenyerahanServiceImplementation;
 import implementation.master.MasterLayananServiceImpl;
 import implementation.master.MasterPewangiImplementation;
-import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
-import javax.swing.text.JTextComponent;
 import model.laundry.PenyerahanModel;
 import model.master.MasterLayananModel;
 import model.master.MasterPewangiModel;
@@ -89,8 +87,8 @@ public class LaundryPenyerahanController {
     model.setLayanan(GeneralHelper.validasiNullString(view.getCbLayananPenyerahan().getSelectedItem().toString()));
     model.setTanggalTerima(GeneralHelper.validasiNullDate(view.getTxtTglTerimaPenyerahan().getDate()));
     model.setTanggalJadi(GeneralHelper.validasiNullDate(view.getTxtTglJadiPenyerahan().getDate()));
-    model.setJumlah(new BigDecimal(GeneralHelper.validasiNullBigDecimal(view.getTxtJumlahPenyerahan().getText())));
-    model.setBanyakCuci(Integer.parseInt(GeneralHelper.validasiNullInteger(view.getTxtBanyakCuciPenyerahan().getText())));
+    model.setJumlah(GeneralHelper.validasiNullInteger(view.getTxtJumlahPenyerahan().getText()));
+    model.setBanyakCuci(GeneralHelper.validasiNullInteger(view.getTxtBanyakCuciPenyerahan().getText()));
     penyerahanService.save(model);
     
     fetchPenyerahanData(view);

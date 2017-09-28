@@ -17,7 +17,6 @@
 package model.laundry;
 
 import java.io.Serializable;
-import java.math.BigDecimal;
 import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -47,7 +46,7 @@ public class PenyerahanModel implements Serializable {
   @Temporal(TemporalType.DATE)
   private Date tanggalJadi;
 
-  private BigDecimal jumlah;
+  private Integer jumlah;
 
   private Integer banyakCuci;
 
@@ -99,11 +98,11 @@ public class PenyerahanModel implements Serializable {
     this.tanggalJadi = tanggalJadi;
   }
 
-  public BigDecimal getJumlah() {
+  public Integer getJumlah() {
     return jumlah;
   }
 
-  public void setJumlah(BigDecimal jumlah) {
+  public void setJumlah(Integer jumlah) {
     this.jumlah = jumlah;
   }
 
