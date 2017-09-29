@@ -19,7 +19,6 @@ package view.internal;
 import controller.LaundryController;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
-import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.plaf.basic.BasicInternalFrameUI;
 import org.jdesktop.swingx.JXDatePicker;
@@ -78,9 +77,26 @@ public class LaundryInternalFrame extends javax.swing.JInternalFrame {
     jScrollPane6 = new javax.swing.JScrollPane();
     tabelPengambilan = new javax.swing.JTable();
     cbPewangiPengambilan = new javax.swing.JComboBox<>();
-    cdLayananPengambilan = new javax.swing.JComboBox<>();
+    cbLayananPengambilan = new javax.swing.JComboBox<>();
 
     setBorder(null);
+    addInternalFrameListener(new javax.swing.event.InternalFrameListener() {
+      public void internalFrameActivated(javax.swing.event.InternalFrameEvent evt) {
+      }
+      public void internalFrameClosed(javax.swing.event.InternalFrameEvent evt) {
+      }
+      public void internalFrameClosing(javax.swing.event.InternalFrameEvent evt) {
+      }
+      public void internalFrameDeactivated(javax.swing.event.InternalFrameEvent evt) {
+      }
+      public void internalFrameDeiconified(javax.swing.event.InternalFrameEvent evt) {
+      }
+      public void internalFrameIconified(javax.swing.event.InternalFrameEvent evt) {
+      }
+      public void internalFrameOpened(javax.swing.event.InternalFrameEvent evt) {
+        formInternalFrameOpened(evt);
+      }
+    });
 
     menuLaundry.setBackground(new java.awt.Color(142, 53, 239));
     menuLaundry.setPreferredSize(new java.awt.Dimension(730, 130));
@@ -109,6 +125,30 @@ public class LaundryInternalFrame extends javax.swing.JInternalFrame {
     txtJumlahPenyerahan.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
         txtJumlahPenyerahanActionPerformed(evt);
+      }
+    });
+
+    cbPewangiPenyerahan.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        cbPewangiPenyerahanActionPerformed(evt);
+      }
+    });
+
+    cbLayananPenyerahan.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        cbLayananPenyerahanActionPerformed(evt);
+      }
+    });
+
+    txtTglTerimaPenyerahan.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        txtTglTerimaPenyerahanActionPerformed(evt);
+      }
+    });
+
+    txtTglJadiPenyerahan.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        txtTglJadiPenyerahanActionPerformed(evt);
       }
     });
 
@@ -294,7 +334,7 @@ public class LaundryInternalFrame extends javax.swing.JInternalFrame {
 
     cbPewangiPengambilan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-    cdLayananPengambilan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+    cbLayananPengambilan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
     javax.swing.GroupLayout tabPengambilanLayout = new javax.swing.GroupLayout(tabPengambilan);
     tabPengambilan.setLayout(tabPengambilanLayout);
@@ -305,7 +345,7 @@ public class LaundryInternalFrame extends javax.swing.JInternalFrame {
         .addGroup(tabPengambilanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
           .addGroup(tabPengambilanLayout.createSequentialGroup()
             .addGroup(tabPengambilanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-              .addComponent(cdLayananPengambilan, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+              .addComponent(cbLayananPengambilan, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
               .addComponent(cbPewangiPengambilan, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGap(133, 133, 133)
             .addGroup(tabPengambilanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -342,7 +382,7 @@ public class LaundryInternalFrame extends javax.swing.JInternalFrame {
           .addGroup(tabPengambilanLayout.createSequentialGroup()
             .addComponent(cbPewangiPengambilan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-            .addComponent(cdLayananPengambilan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+            .addComponent(cbLayananPengambilan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
         .addGap(18, 18, 18)
         .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 349, Short.MAX_VALUE))
     );
@@ -364,15 +404,15 @@ public class LaundryInternalFrame extends javax.swing.JInternalFrame {
   }// </editor-fold>//GEN-END:initComponents
 
   private void txtNamaPenyerahanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNamaPenyerahanActionPerformed
-    // TODO add your handling code here:
+    txtNoNotaPenyerahan.requestFocus();
   }//GEN-LAST:event_txtNamaPenyerahanActionPerformed
 
   private void txtNoNotaPenyerahanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNoNotaPenyerahanActionPerformed
-    // TODO add your handling code here:
+    cbPewangiPenyerahan.requestFocus();
   }//GEN-LAST:event_txtNoNotaPenyerahanActionPerformed
 
   private void txtJumlahPenyerahanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtJumlahPenyerahanActionPerformed
-    // TODO add your handling code here:
+    controller.simpanPenyerahan(this);
   }//GEN-LAST:event_txtJumlahPenyerahanActionPerformed
 
   private void txtNamaPengambilanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNamaPengambilanActionPerformed
@@ -406,6 +446,26 @@ public class LaundryInternalFrame extends javax.swing.JInternalFrame {
   private void btnHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHapusActionPerformed
     // TODO add your handling code here:
   }//GEN-LAST:event_btnHapusActionPerformed
+
+  private void cbPewangiPenyerahanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbPewangiPenyerahanActionPerformed
+    cbLayananPenyerahan.requestFocus();
+  }//GEN-LAST:event_cbPewangiPenyerahanActionPerformed
+
+  private void cbLayananPenyerahanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbLayananPenyerahanActionPerformed
+    txtTglTerimaPenyerahan.requestFocus();
+  }//GEN-LAST:event_cbLayananPenyerahanActionPerformed
+
+  private void txtTglJadiPenyerahanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTglJadiPenyerahanActionPerformed
+    txtJumlahPenyerahan.requestFocus();
+  }//GEN-LAST:event_txtTglJadiPenyerahanActionPerformed
+
+  private void txtTglTerimaPenyerahanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTglTerimaPenyerahanActionPerformed
+    txtTglJadiPenyerahan.requestFocus();
+  }//GEN-LAST:event_txtTglTerimaPenyerahanActionPerformed
+
+  private void formInternalFrameOpened(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_formInternalFrameOpened
+    txtNamaPenyerahan.requestFocus();
+  }//GEN-LAST:event_formInternalFrameOpened
 
   public JComboBox<String> getCbLayananPenyerahan() {
     return cbLayananPenyerahan;
@@ -460,7 +520,7 @@ public class LaundryInternalFrame extends javax.swing.JInternalFrame {
   }
 
   public JComboBox<String> getCdLayananPengambilan() {
-    return cdLayananPengambilan;
+    return cbLayananPengambilan;
   }
 
   public JLabel getTxtBanyaknyaCuciPengambilan() {
@@ -482,10 +542,10 @@ public class LaundryInternalFrame extends javax.swing.JInternalFrame {
 
   // Variables declaration - do not modify//GEN-BEGIN:variables
   private org.jdesktop.swingx.JXButton btnHapus;
+  private javax.swing.JComboBox<String> cbLayananPengambilan;
   private javax.swing.JComboBox<String> cbLayananPenyerahan;
   private javax.swing.JComboBox<String> cbPewangiPengambilan;
   private javax.swing.JComboBox<String> cbPewangiPenyerahan;
-  private javax.swing.JComboBox<String> cdLayananPengambilan;
   private javax.swing.JLabel jLabel1;
   private javax.swing.JLayeredPane jLayeredPane1;
   private javax.swing.JScrollPane jScrollPane2;

@@ -109,8 +109,7 @@ public class PenyerahanLaundry extends javax.swing.JFrame {
     /* Create and display the form */
     java.awt.EventQueue.invokeLater(() -> {
       try {
-        InitialDB initialDB = new InitialDB();
-        initialDB.init();
+        InitialDB.init();
         
         PenyerahanLaundry penyerahanLaundry = new PenyerahanLaundry();
         LaundryInternalFrame laundryInternalFrame = new LaundryInternalFrame();

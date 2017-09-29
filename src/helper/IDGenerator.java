@@ -18,20 +18,27 @@ package helper;
 import java.util.concurrent.ThreadLocalRandom;
 
 /**
- * <p> Class yang digunakan untuk meng-generate angka acak
- * sebagai tambahan nama file pada upload gambar produk
- * </p>
+ * <p> Class yang digunakan untuk meng-generate angka acak </p>
  *
  * @author triastowo
  */
 public class IDGenerator {
 
    /**
-    * generate ID Pemesanan
+    * generate ID User untuk penyerahan
     *
     * @return random bilangan integer
     */
    public static Integer generateUserID() {
+      return ThreadLocalRandom.current().nextInt(100_000, 999_999 + 1);
+   }
+
+   /**
+    * generate No Nota untuk penyerahan
+    *
+    * @return random bilangan integer
+    */
+   public static Integer generateNoNota() {
       return ThreadLocalRandom.current().nextInt(100_000, 999_999 + 1);
    }
 

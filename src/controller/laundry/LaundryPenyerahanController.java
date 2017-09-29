@@ -75,6 +75,7 @@ public class LaundryPenyerahanController {
 
     view.getTxtTglTerimaPenyerahan().setDate(new Date());
     view.getTxtTglJadiPenyerahan().setDate(GeneralHelper.addDays(new Date(), 3));
+    view.getTxtNoNotaPenyerahan().setText(IDGenerator.generateNoNota().toString());
 
     fetchPenyerahanData(view);
   }
