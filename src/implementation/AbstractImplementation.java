@@ -20,6 +20,8 @@ import java.util.ArrayList;
 import java.util.List;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
+import org.hibernate.annotations.Cache;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
 import service.AbstractService;
 import util.HibernateUtil;
 
@@ -36,6 +38,11 @@ public class AbstractImplementation<T> extends HibernateUtil implements Abstract
     this.model = model;
   }
 
+  /**
+   *
+   * @param t
+   * @return
+   */
   @Override
   public String save(T t) {
     Session session = HibernateUtil.getSessionFactory().openSession();
@@ -53,6 +60,11 @@ public class AbstractImplementation<T> extends HibernateUtil implements Abstract
     return t.toString();
   }
 
+  /**
+   *
+   * @param t
+   * @return
+   */
   @Override
   public String update(T t) {
     Session session = HibernateUtil.getSessionFactory().openSession();
@@ -70,6 +82,11 @@ public class AbstractImplementation<T> extends HibernateUtil implements Abstract
     return t.toString();
   }
 
+  /**
+   *
+   * @param t
+   * @return
+   */
   @Override
   public String delete(T t) {
     Session session = HibernateUtil.getSessionFactory().openSession();
@@ -87,6 +104,11 @@ public class AbstractImplementation<T> extends HibernateUtil implements Abstract
     return t.toString();
   }
 
+  /**
+   *
+   * @param id
+   * @return
+   */
   @Override
   public T findOneById(int id) {
     T t = null;
@@ -105,7 +127,12 @@ public class AbstractImplementation<T> extends HibernateUtil implements Abstract
     return t;
   }
 
+  /**
+   *
+   * @return list
+   */
   @Override
+  @Cache(usage = CacheConcurrencyStrategy.READ_ONLY)
   public List<T> findAll() {
     List<T> list = new ArrayList<>();
     Session session = HibernateUtil.getSessionFactory().openSession();

@@ -447,10 +447,6 @@ public class LaundryInternalFrame extends javax.swing.JInternalFrame {
     // TODO add your handling code here:
   }//GEN-LAST:event_btnHapusActionPerformed
 
-  private void cbPewangiPenyerahanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbPewangiPenyerahanActionPerformed
-    cbLayananPenyerahan.requestFocus();
-  }//GEN-LAST:event_cbPewangiPenyerahanActionPerformed
-
   private void cbLayananPenyerahanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbLayananPenyerahanActionPerformed
     txtTglTerimaPenyerahan.requestFocus();
   }//GEN-LAST:event_cbLayananPenyerahanActionPerformed
@@ -466,6 +462,10 @@ public class LaundryInternalFrame extends javax.swing.JInternalFrame {
   private void formInternalFrameOpened(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_formInternalFrameOpened
     txtNamaPenyerahan.requestFocus();
   }//GEN-LAST:event_formInternalFrameOpened
+
+  private void cbPewangiPenyerahanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbPewangiPenyerahanActionPerformed
+    cbLayananPenyerahan.requestFocus();
+  }//GEN-LAST:event_cbPewangiPenyerahanActionPerformed
 
   public JComboBox<String> getCbLayananPenyerahan() {
     return cbLayananPenyerahan;

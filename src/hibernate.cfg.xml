@@ -63,6 +63,10 @@ Contributor(s):
     <property name="hibernate.show_sql">true</property>
     <property name="hibernate.hbm2ddl.auto">create</property>
     <property name="hibernate.default_batch_fetch_size">20</property>
+    <property name="hibernate.cache.use_second_level_cache">true</property>
+    <property name="hibernate.cache.region.factory_class" >
+      org.hibernate.cache.ehcache.EhCacheRegionFactory
+    </property>
 
     <!-- Mapping Class -->
     <mapping class="model.master.MasterPelangganModel"/>
