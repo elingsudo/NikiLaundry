@@ -35,6 +35,8 @@ public class PenyerahanModel implements Serializable {
   @GeneratedValue
   private int id;
 
+  private Integer userID;
+
   private String nama;
   private String noNota;
   private String pewangi;
@@ -49,6 +51,14 @@ public class PenyerahanModel implements Serializable {
   private Integer jumlah;
 
   private Integer banyakCuci;
+
+  public Integer getUserID() {
+    return userID;
+  }
+
+  public void setUserID(Integer userID) {
+    this.userID = userID;
+  }
 
   public String getNama() {
     return nama;

@@ -28,7 +28,7 @@ public class LaundryPenyerahanTableModel extends AbstractTableModel {
 
   private List<PenyerahanModel> list;
   private final String HEADER[] = {
-    "No", "Nama", "No Nota", "Pewangi", "Tanggal Terima", "Tanggal Jadi", "Jumlah"
+    "No", "UserID", "Nama", "No Nota", "Pewangi", "Tanggal Terima", "Tanggal Jadi", "Jumlah"
   };
 
   public void setList(List<PenyerahanModel> list) {
@@ -51,23 +51,25 @@ public class LaundryPenyerahanTableModel extends AbstractTableModel {
     return HEADER.length;
   }
 
-  // "No", "Nama", "No Nota", "Pewangi", "Tanggal Terima", "Tanggal Jadi", "Jumlah"
+  // "No", "UserID", "Nama", "No Nota", "Pewangi", "Tanggal Terima", "Tanggal Jadi", "Jumlah"
   @Override
   public Object getValueAt(int rowIndex, int columnIndex) {
     switch (columnIndex) {
       case 0:
         return rowIndex + 1;
       case 1:
-        return list.get(rowIndex).getNama();
+        return list.get(rowIndex).getUserID();
       case 2:
-        return list.get(rowIndex).getNoNota();
+        return list.get(rowIndex).getNama();
       case 3:
-        return list.get(rowIndex).getPewangi();
+        return list.get(rowIndex).getNoNota();
       case 4:
-        return list.get(rowIndex).getTanggalTerima();
+        return list.get(rowIndex).getPewangi();
       case 5:
-        return list.get(rowIndex).getTanggalJadi();
+        return list.get(rowIndex).getTanggalTerima();
       case 6:
+        return list.get(rowIndex).getTanggalJadi();
+      case 7:
         return list.get(rowIndex).getJumlah();
       default:
         return null;

@@ -17,6 +17,7 @@
 package util;
 
 import helper.GeneralHelper;
+import helper.IDGenerator;
 import implementation.laundry.LaundryPenyerahanServiceImplementation;
 import implementation.master.MasterLayananServiceImpl;
 import implementation.master.MasterPakaianImplementation;
@@ -69,6 +70,7 @@ public class InitialDB {
   
   private void insertPenyerahan() {
     PenyerahanModel model = new PenyerahanModel();
+    model.setUserID(IDGenerator.generateUserID());
     model.setBanyakCuci(2);
     model.setJumlah(5);       // kg
     model.setLayanan("Kilat");

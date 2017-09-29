@@ -17,6 +17,7 @@
 package controller.laundry;
 
 import helper.GeneralHelper;
+import helper.IDGenerator;
 import implementation.laundry.LaundryPenyerahanServiceImplementation;
 import implementation.master.MasterLayananServiceImpl;
 import implementation.master.MasterPewangiImplementation;
@@ -81,6 +82,7 @@ public class LaundryPenyerahanController {
   public void saveNewPenyerahan(LaundryInternalFrame view) {
     
     PenyerahanModel model = new PenyerahanModel();
+    model.setUserID(IDGenerator.generateUserID());
     model.setNama(GeneralHelper.validasiNullString(view.getTxtNamaPenyerahan().getText()));
     model.setNoNota(GeneralHelper.validasiNullString(view.getTxtNoNotaPenyerahan().getText()));
     model.setPewangi(GeneralHelper.validasiNullString(view.getCbPewangiPenyerahan().getSelectedItem().toString()));
@@ -91,6 +93,7 @@ public class LaundryPenyerahanController {
     model.setBanyakCuci(GeneralHelper.validasiNullInteger(view.getTxtBanyakCuciPenyerahan().getText()));
     penyerahanService.save(model);
     
+    // Simpan lalu reload table model
     fetchPenyerahanData(view);
   }
   
