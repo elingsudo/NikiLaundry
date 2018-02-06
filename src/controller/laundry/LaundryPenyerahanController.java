@@ -71,7 +71,8 @@ public class LaundryPenyerahanController {
     PromptSupport.setPrompt("Tgl. Terima", view.getTxtTglTerimaPenyerahan().getEditor());
     PromptSupport.setPrompt("Jumlah (Kg)", view.getTxtJumlahPenyerahan());
     PromptSupport.setPrompt("Banyaknya Cuci", view.getTxtBanyakCuciPenyerahan());
-    PromptSupport.setPrompt("Cari di sini", view.getTxtCariPenyerahan());
+    PromptSupport.setPrompt("Tambah pakaian", view.getTxtTambahPakaianPenyerahan());
+    PromptSupport.setPrompt("Jml", view.getTxtJumlahPakaianPenyerahan());
 
     view.getTxtTglTerimaPenyerahan().setDate(new Date());
     view.getTxtTglJadiPenyerahan().setDate(GeneralHelper.addDays(new Date(), 3));
