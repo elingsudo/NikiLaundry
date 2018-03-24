@@ -346,6 +346,7 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jScrollPane6" alignment="0" max="32767" attributes="0"/>
+                  <Component id="jLayeredPane2" alignment="0" max="32767" attributes="0"/>
                   <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -363,17 +364,14 @@
                                   </Group>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="txtTglAmbilPengambilan" pref="181" max="32767" attributes="0"/>
+                                  <Component id="txtTglJadiPengambilan" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="8" pref="8" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <Component id="txtTglTerimaPengambilan" min="-2" pref="183" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="txtJumlahPengambilan" min="-2" pref="99" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" attributes="0">
-                                      <Component id="txtTglJadiPengambilan" min="-2" pref="183" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="txtBanyaknyaCuciPengambilan" min="-2" pref="99" max="-2" attributes="0"/>
-                                  </Group>
+                                  <Component id="txtJumlahPengambilan" alignment="0" min="-2" pref="99" max="-2" attributes="0"/>
+                                  <Component id="txtBanyaknyaCuciPengambilan" alignment="1" min="-2" pref="99" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
@@ -383,12 +381,11 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="txtDiskonPengambilan" min="-2" pref="183" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="txtKembaliPengambilan" max="32767" attributes="0"/>
+                              <Component id="txtKembaliPengambilan" pref="99" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
-                  <Component id="jLayeredPane2" alignment="0" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
@@ -396,17 +393,17 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="txtTglTerimaPengambilan" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="txtNamaPengambilan" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="cbPewangiPengambilan" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="txtJumlahPengambilan" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtTglJadiPengambilan" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="txtNoNotaPengambilan" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtTglJadiPengambilan" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="cbLayananPengambilan" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="txtBanyaknyaCuciPengambilan" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtTglAmbilPengambilan" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -418,7 +415,7 @@
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jLayeredPane2" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jScrollPane6" pref="318" max="32767" attributes="0"/>
+                      <Component id="jScrollPane6" pref="305" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -435,16 +432,6 @@
             <Component class="javax.swing.JTextField" name="txtNoNotaPengambilan">
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtNoNotaPengambilanActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JTextField" name="txtTglTerimaPengambilan">
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtTglTerimaPengambilanActionPerformed"/>
-              </Events>
-            </Component>
-            <Component class="javax.swing.JTextField" name="txtTglJadiPengambilan">
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtTglJadiPengambilanActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JTextField" name="txtJumlahPengambilan">
@@ -559,7 +546,7 @@
                           <Component id="btnDetailPakaianPenyerahan1" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="btnCetakPenyerahan1" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="92" max="32767" attributes="0"/>
+                          <EmptySpace pref="83" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -642,6 +629,10 @@
                 </Component>
               </SubComponents>
             </Container>
+            <Component class="org.jdesktop.swingx.JXDatePicker" name="txtTglJadiPengambilan">
+            </Component>
+            <Component class="org.jdesktop.swingx.JXDatePicker" name="txtTglAmbilPengambilan">
+            </Component>
           </SubComponents>
         </Container>
       </SubComponents>
