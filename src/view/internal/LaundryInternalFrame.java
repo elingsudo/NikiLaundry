@@ -65,9 +65,8 @@ public class LaundryInternalFrame extends javax.swing.JInternalFrame {
     jXButton1 = new org.jdesktop.swingx.JXButton();
     btnHapus = new org.jdesktop.swingx.JXButton();
     txtJumlahPakaianPenyerahan = new javax.swing.JTextField();
-    btnDetailPakaianPenyerahan = new org.jdesktop.swingx.JXButton();
     btnCetakPenyerahan = new org.jdesktop.swingx.JXButton();
-    btnTambahPakaianPenyerahan = new org.jdesktop.swingx.JXButton();
+    btnTambahKurangPakaianPenyerahan = new org.jdesktop.swingx.JXButton();
     jScrollPane2 = new javax.swing.JScrollPane();
     tabelPenyerahan = new org.jdesktop.swingx.JXTable();
     tabPengambilan = new javax.swing.JPanel();
@@ -87,10 +86,9 @@ public class LaundryInternalFrame extends javax.swing.JInternalFrame {
     txtTambahPakaianPenyerahan1 = new javax.swing.JTextField();
     jXButton2 = new org.jdesktop.swingx.JXButton();
     btnHapus1 = new org.jdesktop.swingx.JXButton();
-    txtJumlahPakaianPenyerahan1 = new javax.swing.JTextField();
     btnDetailPakaianPenyerahan1 = new org.jdesktop.swingx.JXButton();
     btnCetakPenyerahan1 = new org.jdesktop.swingx.JXButton();
-    btnTambahPakaianPenyerahan1 = new org.jdesktop.swingx.JXButton();
+    btnCariPenyerahan = new org.jdesktop.swingx.JXButton();
     txtTglJadiPengambilan = new org.jdesktop.swingx.JXDatePicker();
     txtTglAmbilPengambilan = new org.jdesktop.swingx.JXDatePicker();
 
@@ -191,13 +189,6 @@ public class LaundryInternalFrame extends javax.swing.JInternalFrame {
     txtJumlahPakaianPenyerahan.setHorizontalAlignment(javax.swing.JTextField.CENTER);
     txtJumlahPakaianPenyerahan.setToolTipText("");
 
-    btnDetailPakaianPenyerahan.setText("Detail");
-    btnDetailPakaianPenyerahan.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        btnDetailPakaianPenyerahanActionPerformed(evt);
-      }
-    });
-
     btnCetakPenyerahan.setText("Cetak");
     btnCetakPenyerahan.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
     btnCetakPenyerahan.addActionListener(new java.awt.event.ActionListener() {
@@ -206,20 +197,14 @@ public class LaundryInternalFrame extends javax.swing.JInternalFrame {
       }
     });
 
-    btnTambahPakaianPenyerahan.setText("+");
-    btnTambahPakaianPenyerahan.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        btnTambahPakaianPenyerahanActionPerformed(evt);
-      }
-    });
+    btnTambahKurangPakaianPenyerahan.setText("±");
 
     jLayeredPane1.setLayer(txtTambahPakaianPenyerahan, javax.swing.JLayeredPane.DEFAULT_LAYER);
     jLayeredPane1.setLayer(jXButton1, javax.swing.JLayeredPane.DEFAULT_LAYER);
     jLayeredPane1.setLayer(btnHapus, javax.swing.JLayeredPane.DEFAULT_LAYER);
     jLayeredPane1.setLayer(txtJumlahPakaianPenyerahan, javax.swing.JLayeredPane.MODAL_LAYER);
-    jLayeredPane1.setLayer(btnDetailPakaianPenyerahan, javax.swing.JLayeredPane.DEFAULT_LAYER);
     jLayeredPane1.setLayer(btnCetakPenyerahan, javax.swing.JLayeredPane.MODAL_LAYER);
-    jLayeredPane1.setLayer(btnTambahPakaianPenyerahan, javax.swing.JLayeredPane.DEFAULT_LAYER);
+    jLayeredPane1.setLayer(btnTambahKurangPakaianPenyerahan, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
     javax.swing.GroupLayout jLayeredPane1Layout = new javax.swing.GroupLayout(jLayeredPane1);
     jLayeredPane1.setLayout(jLayeredPane1Layout);
@@ -231,16 +216,14 @@ public class LaundryInternalFrame extends javax.swing.JInternalFrame {
         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
         .addComponent(txtJumlahPakaianPenyerahan, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
         .addGap(18, 18, 18)
-        .addComponent(btnTambahPakaianPenyerahan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        .addComponent(btnTambahKurangPakaianPenyerahan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         .addGap(65, 65, 65)
         .addComponent(jXButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
         .addComponent(btnHapus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-        .addComponent(btnDetailPakaianPenyerahan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
         .addComponent(btnCetakPenyerahan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-        .addContainerGap(83, Short.MAX_VALUE))
+        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
     );
     jLayeredPane1Layout.setVerticalGroup(
       jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -248,10 +231,9 @@ public class LaundryInternalFrame extends javax.swing.JInternalFrame {
         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
           .addComponent(btnCetakPenyerahan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-          .addComponent(btnDetailPakaianPenyerahan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
           .addComponent(btnHapus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
           .addComponent(jXButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-          .addComponent(btnTambahPakaianPenyerahan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+          .addComponent(btnTambahKurangPakaianPenyerahan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
           .addComponent(txtJumlahPakaianPenyerahan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
           .addComponent(txtTambahPakaianPenyerahan))
         .addContainerGap())
@@ -295,7 +277,7 @@ public class LaundryInternalFrame extends javax.swing.JInternalFrame {
         .addGroup(tabPenyerahanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
           .addComponent(txtBanyakCuciPenyerahan)
           .addComponent(txtJumlahPenyerahan, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
-        .addContainerGap(38, Short.MAX_VALUE))
+        .addContainerGap(45, Short.MAX_VALUE))
       .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING)
     );
     tabPenyerahanLayout.setVerticalGroup(
@@ -415,9 +397,6 @@ public class LaundryInternalFrame extends javax.swing.JInternalFrame {
       }
     });
 
-    txtJumlahPakaianPenyerahan1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-    txtJumlahPakaianPenyerahan1.setToolTipText("");
-
     btnDetailPakaianPenyerahan1.setText("Detail");
     btnDetailPakaianPenyerahan1.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -433,20 +412,14 @@ public class LaundryInternalFrame extends javax.swing.JInternalFrame {
       }
     });
 
-    btnTambahPakaianPenyerahan1.setText("+");
-    btnTambahPakaianPenyerahan1.addActionListener(new java.awt.event.ActionListener() {
-      public void actionPerformed(java.awt.event.ActionEvent evt) {
-        btnTambahPakaianPenyerahan1ActionPerformed(evt);
-      }
-    });
+    btnCariPenyerahan.setText("Cari");
 
     jLayeredPane2.setLayer(txtTambahPakaianPenyerahan1, javax.swing.JLayeredPane.DEFAULT_LAYER);
     jLayeredPane2.setLayer(jXButton2, javax.swing.JLayeredPane.DEFAULT_LAYER);
     jLayeredPane2.setLayer(btnHapus1, javax.swing.JLayeredPane.DEFAULT_LAYER);
-    jLayeredPane2.setLayer(txtJumlahPakaianPenyerahan1, javax.swing.JLayeredPane.MODAL_LAYER);
     jLayeredPane2.setLayer(btnDetailPakaianPenyerahan1, javax.swing.JLayeredPane.DEFAULT_LAYER);
     jLayeredPane2.setLayer(btnCetakPenyerahan1, javax.swing.JLayeredPane.MODAL_LAYER);
-    jLayeredPane2.setLayer(btnTambahPakaianPenyerahan1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+    jLayeredPane2.setLayer(btnCariPenyerahan, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
     javax.swing.GroupLayout jLayeredPane2Layout = new javax.swing.GroupLayout(jLayeredPane2);
     jLayeredPane2.setLayout(jLayeredPane2Layout);
@@ -455,11 +428,9 @@ public class LaundryInternalFrame extends javax.swing.JInternalFrame {
       .addGroup(jLayeredPane2Layout.createSequentialGroup()
         .addContainerGap()
         .addComponent(txtTambahPakaianPenyerahan1, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
-        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-        .addComponent(txtJumlahPakaianPenyerahan1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
         .addGap(18, 18, 18)
-        .addComponent(btnTambahPakaianPenyerahan1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-        .addGap(65, 65, 65)
+        .addComponent(btnCariPenyerahan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        .addGap(93, 93, 93)
         .addComponent(jXButton2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
         .addComponent(btnHapus1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -467,7 +438,7 @@ public class LaundryInternalFrame extends javax.swing.JInternalFrame {
         .addComponent(btnDetailPakaianPenyerahan1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
         .addComponent(btnCetakPenyerahan1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-        .addContainerGap(83, Short.MAX_VALUE))
+        .addContainerGap(67, Short.MAX_VALUE))
     );
     jLayeredPane2Layout.setVerticalGroup(
       jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -478,8 +449,7 @@ public class LaundryInternalFrame extends javax.swing.JInternalFrame {
           .addComponent(btnDetailPakaianPenyerahan1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
           .addComponent(btnHapus1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
           .addComponent(jXButton2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-          .addComponent(btnTambahPakaianPenyerahan1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-          .addComponent(txtJumlahPakaianPenyerahan1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+          .addComponent(btnCariPenyerahan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
           .addComponent(txtTambahPakaianPenyerahan1))
         .addContainerGap())
     );
@@ -620,17 +590,9 @@ public class LaundryInternalFrame extends javax.swing.JInternalFrame {
     cbLayananPenyerahan.requestFocus();
   }//GEN-LAST:event_cbPewangiPenyerahanActionPerformed
 
-  private void btnDetailPakaianPenyerahanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDetailPakaianPenyerahanActionPerformed
-    // TODO add your handling code here:
-  }//GEN-LAST:event_btnDetailPakaianPenyerahanActionPerformed
-
   private void btnCetakPenyerahanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCetakPenyerahanActionPerformed
     // TODO add your handling code here:
   }//GEN-LAST:event_btnCetakPenyerahanActionPerformed
-
-  private void btnTambahPakaianPenyerahanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTambahPakaianPenyerahanActionPerformed
-    // TODO add your handling code here:
-  }//GEN-LAST:event_btnTambahPakaianPenyerahanActionPerformed
 
   private void txtBanyaknyaCuciPengambilanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBanyaknyaCuciPengambilanActionPerformed
     // TODO add your handling code here:
@@ -667,10 +629,6 @@ public class LaundryInternalFrame extends javax.swing.JInternalFrame {
   private void btnCetakPenyerahan1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCetakPenyerahan1ActionPerformed
     // TODO add your handling code here:
   }//GEN-LAST:event_btnCetakPenyerahan1ActionPerformed
-
-  private void btnTambahPakaianPenyerahan1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTambahPakaianPenyerahan1ActionPerformed
-    // TODO add your handling code here:
-  }//GEN-LAST:event_btnTambahPakaianPenyerahan1ActionPerformed
 
   public JComboBox<String> getCbLayananPenyerahan() {
     return cbLayananPenyerahan;
@@ -766,14 +724,13 @@ public class LaundryInternalFrame extends javax.swing.JInternalFrame {
   
 
   // Variables declaration - do not modify//GEN-BEGIN:variables
+  private org.jdesktop.swingx.JXButton btnCariPenyerahan;
   private org.jdesktop.swingx.JXButton btnCetakPenyerahan;
   private org.jdesktop.swingx.JXButton btnCetakPenyerahan1;
-  private org.jdesktop.swingx.JXButton btnDetailPakaianPenyerahan;
   private org.jdesktop.swingx.JXButton btnDetailPakaianPenyerahan1;
   private org.jdesktop.swingx.JXButton btnHapus;
   private org.jdesktop.swingx.JXButton btnHapus1;
-  private org.jdesktop.swingx.JXButton btnTambahPakaianPenyerahan;
-  private org.jdesktop.swingx.JXButton btnTambahPakaianPenyerahan1;
+  private org.jdesktop.swingx.JXButton btnTambahKurangPakaianPenyerahan;
   private javax.swing.JComboBox<String> cbLayananPengambilan;
   private javax.swing.JComboBox<String> cbLayananPenyerahan;
   private javax.swing.JComboBox<String> cbPewangiPengambilan;
@@ -795,7 +752,6 @@ public class LaundryInternalFrame extends javax.swing.JInternalFrame {
   private javax.swing.JTextField txtDiskonPengambilan;
   private javax.swing.JTextField txtJumlahBayarPengambilan;
   private javax.swing.JTextField txtJumlahPakaianPenyerahan;
-  private javax.swing.JTextField txtJumlahPakaianPenyerahan1;
   private javax.swing.JTextField txtJumlahPengambilan;
   private javax.swing.JTextField txtJumlahPenyerahan;
   private javax.swing.JTextField txtKembaliPengambilan;

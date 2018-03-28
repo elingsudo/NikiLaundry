@@ -94,7 +94,7 @@
                           <Component id="txtBanyakCuciPenyerahan" max="32767" attributes="0"/>
                           <Component id="txtJumlahPenyerahan" min="-2" pref="101" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="38" max="32767" attributes="0"/>
+                      <EmptySpace pref="45" max="32767" attributes="0"/>
                   </Group>
                   <Component id="jScrollPane2" alignment="1" max="32767" attributes="0"/>
               </Group>
@@ -210,16 +210,14 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="txtJumlahPakaianPenyerahan" min="-2" pref="22" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="btnTambahPakaianPenyerahan" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnTambahKurangPakaianPenyerahan" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
                           <Component id="jXButton1" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="btnHapus" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="btnDetailPakaianPenyerahan" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="btnCetakPenyerahan" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="83" max="32767" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -229,10 +227,9 @@
                           <EmptySpace max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="btnCetakPenyerahan" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="btnDetailPakaianPenyerahan" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="btnHapus" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jXButton1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="btnTambahPakaianPenyerahan" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnTambahKurangPakaianPenyerahan" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="txtJumlahPakaianPenyerahan" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="txtTambahPakaianPenyerahan" alignment="3" max="32767" attributes="0"/>
                           </Group>
@@ -272,14 +269,6 @@
                     <AuxValue name="JLayeredPane.layer" type="java.lang.Integer" value="200"/>
                   </AuxValues>
                 </Component>
-                <Component class="org.jdesktop.swingx.JXButton" name="btnDetailPakaianPenyerahan">
-                  <Properties>
-                    <Property name="text" type="java.lang.String" value="Detail"/>
-                  </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnDetailPakaianPenyerahanActionPerformed"/>
-                  </Events>
-                </Component>
                 <Component class="org.jdesktop.swingx.JXButton" name="btnCetakPenyerahan">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Cetak"/>
@@ -292,13 +281,10 @@
                     <AuxValue name="JLayeredPane.layer" type="java.lang.Integer" value="200"/>
                   </AuxValues>
                 </Component>
-                <Component class="org.jdesktop.swingx.JXButton" name="btnTambahPakaianPenyerahan">
+                <Component class="org.jdesktop.swingx.JXButton" name="btnTambahKurangPakaianPenyerahan">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="+"/>
+                    <Property name="text" type="java.lang.String" value="&#xb1;"/>
                   </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnTambahPakaianPenyerahanActionPerformed"/>
-                  </Events>
                 </Component>
               </SubComponents>
             </Container>
@@ -534,11 +520,9 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="txtTambahPakaianPenyerahan1" min="-2" pref="182" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="txtJumlahPakaianPenyerahan1" min="-2" pref="22" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="btnTambahPakaianPenyerahan1" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
+                          <Component id="btnCariPenyerahan" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="93" max="-2" attributes="0"/>
                           <Component id="jXButton2" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="btnHapus1" min="-2" max="-2" attributes="0"/>
@@ -546,7 +530,7 @@
                           <Component id="btnDetailPakaianPenyerahan1" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="btnCetakPenyerahan1" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="83" max="32767" attributes="0"/>
+                          <EmptySpace pref="67" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -559,8 +543,7 @@
                               <Component id="btnDetailPakaianPenyerahan1" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="btnHapus1" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jXButton2" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="btnTambahPakaianPenyerahan1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtJumlahPakaianPenyerahan1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnCariPenyerahan" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="txtTambahPakaianPenyerahan1" alignment="3" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
@@ -590,15 +573,6 @@
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnHapus1ActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JTextField" name="txtJumlahPakaianPenyerahan1">
-                  <Properties>
-                    <Property name="horizontalAlignment" type="int" value="0"/>
-                    <Property name="toolTipText" type="java.lang.String" value=""/>
-                  </Properties>
-                  <AuxValues>
-                    <AuxValue name="JLayeredPane.layer" type="java.lang.Integer" value="200"/>
-                  </AuxValues>
-                </Component>
                 <Component class="org.jdesktop.swingx.JXButton" name="btnDetailPakaianPenyerahan1">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Detail"/>
@@ -619,13 +593,10 @@
                     <AuxValue name="JLayeredPane.layer" type="java.lang.Integer" value="200"/>
                   </AuxValues>
                 </Component>
-                <Component class="org.jdesktop.swingx.JXButton" name="btnTambahPakaianPenyerahan1">
+                <Component class="org.jdesktop.swingx.JXButton" name="btnCariPenyerahan">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="+"/>
+                    <Property name="text" type="java.lang.String" value="Cari"/>
                   </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnTambahPakaianPenyerahan1ActionPerformed"/>
-                  </Events>
                 </Component>
               </SubComponents>
             </Container>
