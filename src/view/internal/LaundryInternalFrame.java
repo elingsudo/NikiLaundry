@@ -62,8 +62,8 @@ public class LaundryInternalFrame extends javax.swing.JInternalFrame {
     txtBanyakCuciPenyerahan = new javax.swing.JTextField();
     jLayeredPane1 = new javax.swing.JLayeredPane();
     txtTambahPakaianPenyerahan = new javax.swing.JTextField();
-    jXButton1 = new org.jdesktop.swingx.JXButton();
-    btnHapus = new org.jdesktop.swingx.JXButton();
+    btnSimpanPenyerahan = new org.jdesktop.swingx.JXButton();
+    btnHapusPenyerahan = new org.jdesktop.swingx.JXButton();
     txtJumlahPakaianPenyerahan = new javax.swing.JTextField();
     btnCetakPenyerahan = new org.jdesktop.swingx.JXButton();
     btnTambahKurangPakaianPenyerahan = new org.jdesktop.swingx.JXButton();
@@ -83,12 +83,12 @@ public class LaundryInternalFrame extends javax.swing.JInternalFrame {
     txtDiskonPengambilan = new javax.swing.JTextField();
     txtKembaliPengambilan = new javax.swing.JTextField();
     jLayeredPane2 = new javax.swing.JLayeredPane();
-    txtTambahPakaianPenyerahan1 = new javax.swing.JTextField();
-    jXButton2 = new org.jdesktop.swingx.JXButton();
-    btnHapus1 = new org.jdesktop.swingx.JXButton();
-    btnDetailPakaianPenyerahan1 = new org.jdesktop.swingx.JXButton();
-    btnCetakPenyerahan1 = new org.jdesktop.swingx.JXButton();
-    btnCariPenyerahan = new org.jdesktop.swingx.JXButton();
+    txtCariPengambilan = new javax.swing.JTextField();
+    btnSimpanPengambilan = new org.jdesktop.swingx.JXButton();
+    btnHapusPengambilan = new org.jdesktop.swingx.JXButton();
+    btnDetailPakaianPengambilan = new org.jdesktop.swingx.JXButton();
+    btnCetakPengambilan = new org.jdesktop.swingx.JXButton();
+    btnCariPengambilan = new org.jdesktop.swingx.JXButton();
     txtTglJadiPengambilan = new org.jdesktop.swingx.JXDatePicker();
     txtTglAmbilPengambilan = new org.jdesktop.swingx.JXDatePicker();
 
@@ -172,17 +172,17 @@ public class LaundryInternalFrame extends javax.swing.JInternalFrame {
 
     txtTambahPakaianPenyerahan.setToolTipText("");
 
-    jXButton1.setText("Simpan");
-    jXButton1.addActionListener(new java.awt.event.ActionListener() {
+    btnSimpanPenyerahan.setText("Simpan");
+    btnSimpanPenyerahan.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jXButton1ActionPerformed(evt);
+        btnSimpanPenyerahanActionPerformed(evt);
       }
     });
 
-    btnHapus.setText("Hapus");
-    btnHapus.addActionListener(new java.awt.event.ActionListener() {
+    btnHapusPenyerahan.setText("Hapus");
+    btnHapusPenyerahan.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
-        btnHapusActionPerformed(evt);
+        btnHapusPenyerahanActionPerformed(evt);
       }
     });
 
@@ -200,8 +200,8 @@ public class LaundryInternalFrame extends javax.swing.JInternalFrame {
     btnTambahKurangPakaianPenyerahan.setText("±");
 
     jLayeredPane1.setLayer(txtTambahPakaianPenyerahan, javax.swing.JLayeredPane.DEFAULT_LAYER);
-    jLayeredPane1.setLayer(jXButton1, javax.swing.JLayeredPane.DEFAULT_LAYER);
-    jLayeredPane1.setLayer(btnHapus, javax.swing.JLayeredPane.DEFAULT_LAYER);
+    jLayeredPane1.setLayer(btnSimpanPenyerahan, javax.swing.JLayeredPane.DEFAULT_LAYER);
+    jLayeredPane1.setLayer(btnHapusPenyerahan, javax.swing.JLayeredPane.DEFAULT_LAYER);
     jLayeredPane1.setLayer(txtJumlahPakaianPenyerahan, javax.swing.JLayeredPane.MODAL_LAYER);
     jLayeredPane1.setLayer(btnCetakPenyerahan, javax.swing.JLayeredPane.MODAL_LAYER);
     jLayeredPane1.setLayer(btnTambahKurangPakaianPenyerahan, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -218,9 +218,9 @@ public class LaundryInternalFrame extends javax.swing.JInternalFrame {
         .addGap(18, 18, 18)
         .addComponent(btnTambahKurangPakaianPenyerahan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         .addGap(65, 65, 65)
-        .addComponent(jXButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        .addComponent(btnSimpanPenyerahan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-        .addComponent(btnHapus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        .addComponent(btnHapusPenyerahan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
         .addComponent(btnCetakPenyerahan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -231,8 +231,8 @@ public class LaundryInternalFrame extends javax.swing.JInternalFrame {
         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
           .addComponent(btnCetakPenyerahan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-          .addComponent(btnHapus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-          .addComponent(jXButton1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+          .addComponent(btnHapusPenyerahan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+          .addComponent(btnSimpanPenyerahan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
           .addComponent(btnTambahKurangPakaianPenyerahan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
           .addComponent(txtJumlahPakaianPenyerahan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
           .addComponent(txtTambahPakaianPenyerahan))
@@ -381,45 +381,45 @@ public class LaundryInternalFrame extends javax.swing.JInternalFrame {
     jLayeredPane2.setBackground(new java.awt.Color(54, 33, 89));
     jLayeredPane2.setOpaque(true);
 
-    txtTambahPakaianPenyerahan1.setToolTipText("");
+    txtCariPengambilan.setToolTipText("");
 
-    jXButton2.setText("Simpan");
-    jXButton2.addActionListener(new java.awt.event.ActionListener() {
+    btnSimpanPengambilan.setText("Simpan");
+    btnSimpanPengambilan.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
-        jXButton2ActionPerformed(evt);
+        btnSimpanPengambilanActionPerformed(evt);
       }
     });
 
-    btnHapus1.setText("Hapus");
-    btnHapus1.addActionListener(new java.awt.event.ActionListener() {
+    btnHapusPengambilan.setText("Hapus");
+    btnHapusPengambilan.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
-        btnHapus1ActionPerformed(evt);
+        btnHapusPengambilanActionPerformed(evt);
       }
     });
 
-    btnDetailPakaianPenyerahan1.setText("Detail");
-    btnDetailPakaianPenyerahan1.addActionListener(new java.awt.event.ActionListener() {
+    btnDetailPakaianPengambilan.setText("Detail");
+    btnDetailPakaianPengambilan.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
-        btnDetailPakaianPenyerahan1ActionPerformed(evt);
+        btnDetailPakaianPengambilanActionPerformed(evt);
       }
     });
 
-    btnCetakPenyerahan1.setText("Cetak");
-    btnCetakPenyerahan1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-    btnCetakPenyerahan1.addActionListener(new java.awt.event.ActionListener() {
+    btnCetakPengambilan.setText("Cetak");
+    btnCetakPengambilan.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+    btnCetakPengambilan.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
-        btnCetakPenyerahan1ActionPerformed(evt);
+        btnCetakPengambilanActionPerformed(evt);
       }
     });
 
-    btnCariPenyerahan.setText("Cari");
+    btnCariPengambilan.setText("Cari");
 
-    jLayeredPane2.setLayer(txtTambahPakaianPenyerahan1, javax.swing.JLayeredPane.DEFAULT_LAYER);
-    jLayeredPane2.setLayer(jXButton2, javax.swing.JLayeredPane.DEFAULT_LAYER);
-    jLayeredPane2.setLayer(btnHapus1, javax.swing.JLayeredPane.DEFAULT_LAYER);
-    jLayeredPane2.setLayer(btnDetailPakaianPenyerahan1, javax.swing.JLayeredPane.DEFAULT_LAYER);
-    jLayeredPane2.setLayer(btnCetakPenyerahan1, javax.swing.JLayeredPane.MODAL_LAYER);
-    jLayeredPane2.setLayer(btnCariPenyerahan, javax.swing.JLayeredPane.DEFAULT_LAYER);
+    jLayeredPane2.setLayer(txtCariPengambilan, javax.swing.JLayeredPane.DEFAULT_LAYER);
+    jLayeredPane2.setLayer(btnSimpanPengambilan, javax.swing.JLayeredPane.DEFAULT_LAYER);
+    jLayeredPane2.setLayer(btnHapusPengambilan, javax.swing.JLayeredPane.DEFAULT_LAYER);
+    jLayeredPane2.setLayer(btnDetailPakaianPengambilan, javax.swing.JLayeredPane.DEFAULT_LAYER);
+    jLayeredPane2.setLayer(btnCetakPengambilan, javax.swing.JLayeredPane.MODAL_LAYER);
+    jLayeredPane2.setLayer(btnCariPengambilan, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
     javax.swing.GroupLayout jLayeredPane2Layout = new javax.swing.GroupLayout(jLayeredPane2);
     jLayeredPane2.setLayout(jLayeredPane2Layout);
@@ -427,17 +427,17 @@ public class LaundryInternalFrame extends javax.swing.JInternalFrame {
       jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
       .addGroup(jLayeredPane2Layout.createSequentialGroup()
         .addContainerGap()
-        .addComponent(txtTambahPakaianPenyerahan1, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
+        .addComponent(txtCariPengambilan, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
         .addGap(18, 18, 18)
-        .addComponent(btnCariPenyerahan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        .addComponent(btnCariPengambilan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         .addGap(93, 93, 93)
-        .addComponent(jXButton2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        .addComponent(btnSimpanPengambilan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-        .addComponent(btnHapus1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        .addComponent(btnHapusPengambilan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-        .addComponent(btnDetailPakaianPenyerahan1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        .addComponent(btnDetailPakaianPengambilan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-        .addComponent(btnCetakPenyerahan1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        .addComponent(btnCetakPengambilan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         .addContainerGap(67, Short.MAX_VALUE))
     );
     jLayeredPane2Layout.setVerticalGroup(
@@ -445,12 +445,12 @@ public class LaundryInternalFrame extends javax.swing.JInternalFrame {
       .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jLayeredPane2Layout.createSequentialGroup()
         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-          .addComponent(btnCetakPenyerahan1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-          .addComponent(btnDetailPakaianPenyerahan1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-          .addComponent(btnHapus1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-          .addComponent(jXButton2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-          .addComponent(btnCariPenyerahan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-          .addComponent(txtTambahPakaianPenyerahan1))
+          .addComponent(btnCetakPengambilan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+          .addComponent(btnDetailPakaianPengambilan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+          .addComponent(btnHapusPengambilan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+          .addComponent(btnSimpanPengambilan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+          .addComponent(btnCariPengambilan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+          .addComponent(txtCariPengambilan))
         .addContainerGap())
     );
 
@@ -562,13 +562,13 @@ public class LaundryInternalFrame extends javax.swing.JInternalFrame {
      controller.tabItemChangeState(this, evt);
    }//GEN-LAST:event_menuLaundryStateChanged
 
-  private void jXButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jXButton1ActionPerformed
+  private void btnSimpanPenyerahanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSimpanPenyerahanActionPerformed
     controller.simpanPenyerahan(this);
-  }//GEN-LAST:event_jXButton1ActionPerformed
+  }//GEN-LAST:event_btnSimpanPenyerahanActionPerformed
 
-  private void btnHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHapusActionPerformed
+  private void btnHapusPenyerahanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHapusPenyerahanActionPerformed
     // TODO add your handling code here:
-  }//GEN-LAST:event_btnHapusActionPerformed
+  }//GEN-LAST:event_btnHapusPenyerahanActionPerformed
 
   private void cbLayananPenyerahanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbLayananPenyerahanActionPerformed
     txtTglTerimaPenyerahan.requestFocus();
@@ -614,21 +614,21 @@ public class LaundryInternalFrame extends javax.swing.JInternalFrame {
     // TODO add your handling code here:
   }//GEN-LAST:event_txtKembaliPengambilanActionPerformed
 
-  private void jXButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jXButton2ActionPerformed
+  private void btnSimpanPengambilanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSimpanPengambilanActionPerformed
     // TODO add your handling code here:
-  }//GEN-LAST:event_jXButton2ActionPerformed
+  }//GEN-LAST:event_btnSimpanPengambilanActionPerformed
 
-  private void btnHapus1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHapus1ActionPerformed
+  private void btnHapusPengambilanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHapusPengambilanActionPerformed
     // TODO add your handling code here:
-  }//GEN-LAST:event_btnHapus1ActionPerformed
+  }//GEN-LAST:event_btnHapusPengambilanActionPerformed
 
-  private void btnDetailPakaianPenyerahan1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDetailPakaianPenyerahan1ActionPerformed
+  private void btnDetailPakaianPengambilanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDetailPakaianPengambilanActionPerformed
     // TODO add your handling code here:
-  }//GEN-LAST:event_btnDetailPakaianPenyerahan1ActionPerformed
+  }//GEN-LAST:event_btnDetailPakaianPengambilanActionPerformed
 
-  private void btnCetakPenyerahan1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCetakPenyerahan1ActionPerformed
+  private void btnCetakPengambilanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCetakPengambilanActionPerformed
     // TODO add your handling code here:
-  }//GEN-LAST:event_btnCetakPenyerahan1ActionPerformed
+  }//GEN-LAST:event_btnCetakPengambilanActionPerformed
 
   public JComboBox<String> getCbLayananPenyerahan() {
     return cbLayananPenyerahan;
@@ -724,12 +724,14 @@ public class LaundryInternalFrame extends javax.swing.JInternalFrame {
   
 
   // Variables declaration - do not modify//GEN-BEGIN:variables
-  private org.jdesktop.swingx.JXButton btnCariPenyerahan;
+  private org.jdesktop.swingx.JXButton btnCariPengambilan;
+  private org.jdesktop.swingx.JXButton btnCetakPengambilan;
   private org.jdesktop.swingx.JXButton btnCetakPenyerahan;
-  private org.jdesktop.swingx.JXButton btnCetakPenyerahan1;
-  private org.jdesktop.swingx.JXButton btnDetailPakaianPenyerahan1;
-  private org.jdesktop.swingx.JXButton btnHapus;
-  private org.jdesktop.swingx.JXButton btnHapus1;
+  private org.jdesktop.swingx.JXButton btnDetailPakaianPengambilan;
+  private org.jdesktop.swingx.JXButton btnHapusPengambilan;
+  private org.jdesktop.swingx.JXButton btnHapusPenyerahan;
+  private org.jdesktop.swingx.JXButton btnSimpanPengambilan;
+  private org.jdesktop.swingx.JXButton btnSimpanPenyerahan;
   private org.jdesktop.swingx.JXButton btnTambahKurangPakaianPenyerahan;
   private javax.swing.JComboBox<String> cbLayananPengambilan;
   private javax.swing.JComboBox<String> cbLayananPenyerahan;
@@ -739,8 +741,6 @@ public class LaundryInternalFrame extends javax.swing.JInternalFrame {
   private javax.swing.JLayeredPane jLayeredPane2;
   private javax.swing.JScrollPane jScrollPane2;
   private javax.swing.JScrollPane jScrollPane6;
-  private org.jdesktop.swingx.JXButton jXButton1;
-  private org.jdesktop.swingx.JXButton jXButton2;
   private javax.swing.JTabbedPane menuLaundry;
   private javax.swing.JPanel tabPengambilan;
   private javax.swing.JPanel tabPenyerahan;
@@ -749,6 +749,7 @@ public class LaundryInternalFrame extends javax.swing.JInternalFrame {
   private javax.swing.JTextField txtBanyakCuciPenyerahan;
   private javax.swing.JTextField txtBanyaknyaCuciPengambilan;
   private javax.swing.JTextField txtBayarPengambilan;
+  private javax.swing.JTextField txtCariPengambilan;
   private javax.swing.JTextField txtDiskonPengambilan;
   private javax.swing.JTextField txtJumlahBayarPengambilan;
   private javax.swing.JTextField txtJumlahPakaianPenyerahan;
@@ -760,7 +761,6 @@ public class LaundryInternalFrame extends javax.swing.JInternalFrame {
   private javax.swing.JTextField txtNoNotaPengambilan;
   private javax.swing.JTextField txtNoNotaPenyerahan;
   private javax.swing.JTextField txtTambahPakaianPenyerahan;
-  private javax.swing.JTextField txtTambahPakaianPenyerahan1;
   private org.jdesktop.swingx.JXDatePicker txtTglAmbilPengambilan;
   private org.jdesktop.swingx.JXDatePicker txtTglJadiPengambilan;
   private org.jdesktop.swingx.JXDatePicker txtTglJadiPenyerahan;
