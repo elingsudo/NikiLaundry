@@ -344,10 +344,6 @@ public class LaundryInternalFrame extends javax.swing.JInternalFrame {
     ));
     jScrollPane6.setViewportView(tabelPengambilan);
 
-    cbPewangiPengambilan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-    cbLayananPengambilan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
     txtBanyaknyaCuciPengambilan.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
         txtBanyaknyaCuciPengambilanActionPerformed(evt);
