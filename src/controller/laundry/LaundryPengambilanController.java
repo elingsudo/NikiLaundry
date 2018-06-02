@@ -59,7 +59,7 @@ public class LaundryPengambilanController {
     PromptSupport.setPrompt("Jumlah (Kg)", view.getTxtJumlahPengambilan());
     PromptSupport.setPrompt("Tgl Jadi", view.getTxtTglJadiPengambilan().getEditor());
     PromptSupport.setPrompt("Tgl Ambil", view.getTxtTglAmbilPengambilan().getEditor());
-    PromptSupport.setPrompt("Banyaknya Cuci", view.getTxtBanyaknyaCuciPengambilan());
+//    PromptSupport.setPrompt("Banyaknya Cuci", view.getTxtBanyaknyaCuciPengambilan());
     PromptSupport.setPrompt("Jumlah Bayar", view.getTxtJumlahBayarPengambilan());
     PromptSupport.setPrompt("Bayar", view.getTxtBayarPengambilan());
     PromptSupport.setPrompt("Diskon", view.getTxtDiskonPengambilan());

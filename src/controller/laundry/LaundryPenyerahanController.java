@@ -70,7 +70,7 @@ public class LaundryPenyerahanController {
     PromptSupport.setPrompt("Tgl. Jadi", view.getTxtTglJadiPenyerahan().getEditor());
     PromptSupport.setPrompt("Tgl. Terima", view.getTxtTglTerimaPenyerahan().getEditor());
     PromptSupport.setPrompt("Jumlah (Kg)", view.getTxtJumlahPenyerahan());
-    PromptSupport.setPrompt("Banyaknya Cuci", view.getTxtBanyakCuciPenyerahan());
+//    PromptSupport.setPrompt("Banyaknya Cuci", view.getTxtBanyakCuciPenyerahan());
     PromptSupport.setPrompt("Tambah Pakaian", view.getTxtTambahPakaianPenyerahan());
     PromptSupport.setPrompt("Jml", view.getTxtJumlahPakaianPenyerahan());
 
@@ -92,7 +92,7 @@ public class LaundryPenyerahanController {
     model.setTanggalTerima(GeneralHelper.validasiNullDate(view.getTxtTglTerimaPenyerahan().getDate()));
     model.setTanggalJadi(GeneralHelper.validasiNullDate(view.getTxtTglJadiPenyerahan().getDate()));
     model.setJumlah(GeneralHelper.validasiNullInteger(view.getTxtJumlahPenyerahan().getText()));
-    model.setBanyakCuci(GeneralHelper.validasiNullInteger(view.getTxtBanyakCuciPenyerahan().getText()));
+//    model.setBanyakCuci(GeneralHelper.validasiNullInteger(view.getTxtBanyakCuciPenyerahan().getText()));
     penyerahanService.save(model);
     
     // Simpan lalu reload table model
